@@ -11,9 +11,14 @@ int main(void)
 
 void alturaDosBlocos(int n)
 {
-    
-    for(int i = 1; i < n; i++)
+    int largura = n;
+
+    for(int i = 1; i < largura; i++)
     {
-        printf(" ")
+        printf(" ");
+    }
+    for(int i = largura; i > 0; i--)
+    {
+        printf("#");
     }
 }
