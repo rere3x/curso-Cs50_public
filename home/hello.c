@@ -9,7 +9,7 @@ int main(void)
 
 }
 
-void alturaDosBlocos(int n)
+int alturaDosBlocos(int n)
 {
     int largura = n;
 
