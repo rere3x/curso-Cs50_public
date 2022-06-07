@@ -2,13 +2,16 @@
 #include <cs50.h>
 
 int alturaDosBlocos(int n);
+int positive_int(void);
+
+
 int main(void)
 {
 
-    int n = get_int("escolha a altura \n");
+    int i = positive_int();
 
 
-    alturaDosBlocos(n);
+    alturaDosBlocos(i);
 
 }
 
@@ -24,5 +27,16 @@ void alturaDosBlocos(int n)
     {
         printf("#");
     }
-    
+
+}
+
+int positive_int(void)
+{
+    int n;
+    do
+    {
+        n = get_int("Escolha um numero positivo: "\n);
+    }
+    while (n < 1);
+    return n;
 }
