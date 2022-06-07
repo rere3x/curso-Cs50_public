@@ -11,11 +11,11 @@ int main(void)
     int i = positive_int();
 
 
-    //alturaDosBlocos(i);
 
+    alturaDosBlocos(i);
 }
 
-/*void alturaDosBlocos(int n)
+void alturaDosBlocos(int n)
 {
     int largura = n;
 
@@ -33,7 +33,7 @@ int main(void)
         }
     }
 }
-*/
+
 
 int positive_int(void)
 {
