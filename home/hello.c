@@ -9,7 +9,10 @@ int main(void)
 
 }
 
-void alturaDosBlocos()
+void alturaDosBlocos(int n)
 {
-    
+    for(int i = 0; i < n; i++)
+    {
+        printf()
+    }
 }
