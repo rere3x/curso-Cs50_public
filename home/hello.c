@@ -7,12 +7,12 @@ int main(void)
 
     int n = get_int("escolha a altura \n");
 
-    printf("%i",n);
+
     alturaDosBlocos(n);
 
 }
 
-int alturaDosBlocos(int n)
+void alturaDosBlocos(int n)
 {
     int largura = n;
 
@@ -24,4 +24,5 @@ int alturaDosBlocos(int n)
     {
         printf("#");
     }
+    
 }
