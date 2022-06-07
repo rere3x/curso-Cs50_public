@@ -11,11 +11,11 @@ int main(void)
     int i = positive_int();
 
 
-    alturaDosBlocos(i);
+    //alturaDosBlocos(i);
 
 }
 
-void alturaDosBlocos(int n)
+/*void alturaDosBlocos(int n)
 {
     int largura = n;
 
@@ -32,15 +32,15 @@ void alturaDosBlocos(int n)
             printf("#");
         }
     }
-
 }
+*/
 
 int positive_int(void)
 {
     int n;
     do
     {
-        n = get_int("Escolha um numero positivo: "\n);
+        n = get_int("Escolha um numero positivo: \n");
     }
     while (n < 1);
     return n;
