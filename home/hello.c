@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <cs50.h>
 
-int alturaDosBlocos(int);
+void alturaDosBlocos(int n);
 int positive_int(void);
 
 
@@ -15,7 +15,7 @@ int main(void)
     alturaDosBlocos(i);
 }
 
-void alturaDosBlocos(int)
+void alturaDosBlocos(int n)
 {
     int largura = n;
 
