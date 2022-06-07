@@ -1,10 +1,13 @@
 #include <stdio.h>
 #include <cs50.h>
 
+int alturaDosBlocos(int n);
 int main(void)
 {
 
     int n = get_int("escolha a altura \n");
+
+    printf("%i",n);
     alturaDosBlocos(n);
 
 }
