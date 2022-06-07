@@ -3,5 +3,13 @@
 
 int main(void)
 {
+
+    int n = get_int("escolha a altura \n");
+
+
+}
+
+void alturaDosBlocos()
+{
     
 }
