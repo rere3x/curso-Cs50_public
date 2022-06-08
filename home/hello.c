@@ -33,8 +33,12 @@ void alturaDosBlocos(int n)
         }
         tLargura--;
         jlargura++;
+        printf("  ");
+        for(int l = tLargura ; l < largura; l++)
+        {
+            printf("#");
+        }
         printf("\n");
-
     }
 }
 
