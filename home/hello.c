@@ -9,24 +9,22 @@ int main(void)
 {
 
     int i = positive_int();
-
-
-
     alturaDosBlocos(i);
 }
+
 
 void alturaDosBlocos(int n)
 {
     int largura = n;
     int tLargura = n - 1;
-
+    int jlargura = 0;
 
     for(int i = 0; i < largura; i++)
     {
 
-        for(int j = tLargura; j < largura; j++)
+        for(int j = jlargura; j < largura; j++)
         {
-            printf("  ");
+            printf(" ");
         }
 
         for(int l = tLargura ; l < largura; l++)
@@ -34,6 +32,7 @@ void alturaDosBlocos(int n)
             printf("#");
         }
         tLargura--;
+        jlargura++;
         printf("\n");
 
     }
