@@ -8,7 +8,7 @@ float troco(float v, float m);
 int main(void)
 {
     float p = get_float("Qual valor do item? ");
-    float i = get_money();
+    float i = get_money("Quanto voce tem? ");
     float t = troco(p,i);
     printf("A sobra é: %f", t);
 
@@ -17,7 +17,7 @@ int main(void)
 
 float troco(float v, float m)
 {
-    
+
     float resultado = v - m;
 
     //converte valor para positivo
@@ -28,7 +28,7 @@ float troco(float v, float m)
 
 
 
-float get_money(void)
+float get_money(get_string)
 {
     float n;
     do
