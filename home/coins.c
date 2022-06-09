@@ -15,14 +15,19 @@ int main(void)
 }
 
 
+
 float troco(float v, float m)
 {
 
-    float resultado = v - m;
-
     //converte valor para positivo
+    float resultado = v - m;
     if(resultado < 0){resultado *= -1;}
-    return resultado;
+
+
+    do
+    {
+        resultado / 100
+    }
 
 }
 
