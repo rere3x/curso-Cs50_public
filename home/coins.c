@@ -17,13 +17,13 @@ int main(void)
 
 float troco(float v, float m)
 {
-    //100 50 25 10 5 2 1 0.50 0.25 0.10 0.5 0.1
+    
     float resultado = v - m;
 
     //converte valor para positivo
     if(resultado < 0){resultado *= -1;}
     return resultado;
-    //if(resultado > 100 and)
+
 }
 
 
