@@ -46,6 +46,6 @@ int numbercheck(long cartao)
 
 
     }
-    return;
+    return 0;
 
 }
