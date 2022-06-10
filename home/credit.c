@@ -7,7 +7,7 @@ int numbercheck(long cartao);
 int main(void)
 {
 
-    long cartao = get_long("Teste seu cartão de credito: \n");
+    long cartao = get_long("Teste seu cartão de credito: ");
     int numerchecked = numbercheck(cartao);
 
    //remender test
