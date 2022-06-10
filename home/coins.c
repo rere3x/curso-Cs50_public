@@ -69,7 +69,7 @@ int troco(float vI, float vD)
     int coin = round(resultado * 100);
 
 
-    return resultado;
+    return coin;
 
 }
 
