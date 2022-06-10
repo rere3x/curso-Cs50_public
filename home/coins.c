@@ -23,7 +23,7 @@ int main(void)
  if (trocoInt >= 25)
     {
         coin25 = trocoInt / 25;
-        trocoInt = trocoInt % 25 ;
+        trocoInt = trocoInt % 25;
     }
      if (trocoInt >= 10)
     {
