@@ -25,7 +25,6 @@ int main(void)
         coin25 = sacodocarai / 25;
         sacodocarai = sacodocarai % 25 ;
         if(sacodocarai == 1){sacodocarai = 0;}
-
     }
 
     else if (sacodocarai >= 10)
@@ -37,6 +36,7 @@ int main(void)
 
     else if  (sacodocarai >= 5)
     {
+     printf(" test = %i\n", sacodocarai);
         coin05 = sacodocarai / 5;
         sacodocarai = sacodocarai % 5 ;
         if(sacodocarai == 1){sacodocarai = 0;}
@@ -47,7 +47,7 @@ int main(void)
         coin10 = 1;
     }
 
-    printf("de o troco em %i moedas de 25, %i moedas de 10, %i moedas de 5,%i moedas de 1\n", coin25,coin10,coin05,coin01);
+    printf("de o troco em %i moedas de 25, %i moedas de 10, %i moedas de 5, %i moedas de 1\n", coin25,coin10,coin05,coin01);
 
 
 }
