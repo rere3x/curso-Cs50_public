@@ -13,7 +13,7 @@ int main(void)
    //remender test
 
     long remender = cartao % 10000000000000000;
-    
+
 
 }
 
@@ -34,14 +34,14 @@ int numbercheck(long cartao)
 
         if(tracknumber % 2 == 0)
         {
-            int r = cardnumber * 2;
-            if(r >= 10)
+            test = cardnumber * 2;
+            if(test >= 10)
             {
-                r %= 10;
-                r++;
+                test %= 10;
+                test++;
             }
 
-        printf("testttt = %i\n", r);
+        printf("testttt = %i\n", test);
         }
 
 
