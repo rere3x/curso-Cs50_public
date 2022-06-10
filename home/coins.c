@@ -7,8 +7,8 @@ int troco(float v, float m);
 
 int main(void)
 {
-    float valoritem = get_float("Qual valor do item? ");
-    float valorDinheiro = get_money();
+    double valoritem = get_float("Qual valor do item? ");
+    double valorDinheiro = get_money();
     int trocoInt = troco (valoritem,valorDinheiro);
 
 
@@ -54,11 +54,11 @@ int main(void)
 
 
 
-int troco(float vI, float vD)
+int troco(double vI, double vD)
 {
 
     //converte valor para positivo
-    doble resultado = vI - vD;
+    double resultado = vI - vD;
     if(resultado < 0)
     {resultado *= -1;}
 
