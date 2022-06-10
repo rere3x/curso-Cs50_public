@@ -8,7 +8,7 @@ float troco(float v, float m);
 int main(void)
 {
     float p = get_float("Qual valor do item? ");
-    float i = get_money("Quanto voce tem? ");
+    float i = get_money();
     float t = troco(p,i);
     printf("A sobra é: %f", t);
 
