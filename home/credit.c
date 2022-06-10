@@ -26,7 +26,7 @@ int numbercheck(long cartao)
     {
         long cardnumber = cartao % rstnumber;
         rstnumber *= 10;
-        cardnumber = 
+        cardnumber /= antRstNumber;
         antRstNumber *= 10;
 
 
