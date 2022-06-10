@@ -24,22 +24,23 @@ int main(void)
     {
         coin25 = sacodocarai / 25;
         sacodocarai = sacodocarai % 25 ;
+        if(sacodocarai == 1){}
 
     }
 
-    if (sacodocarai >= 10)
+    else if (sacodocarai >= 10)
     {
         coin10 = sacodocarai / 10;
         sacodocarai = sacodocarai % 10 ;
     }
 
-    if (sacodocarai >= 5)
+    else if  (sacodocarai >= 5)
     {
         coin05 = sacodocarai / 5;
         sacodocarai = sacodocarai % 5 ;
     }
-    
-    if (sacodocarai >= 1)
+
+    else if  (sacodocarai >= 1)
     {
         coin10 = 1;
     }
