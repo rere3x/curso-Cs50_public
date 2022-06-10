@@ -58,13 +58,13 @@ int troco(float vI, float vD)
 {
 
     //converte valor para positivo
-    float resultado = vI - vD;
+    doble resultado = vI - vD;
     if(resultado < 0)
     {resultado *= -1;}
-     printf("test = %f\n", resultado);
 
     //coverte pra centavos
     resultado *= 100.00;
+     printf("test = %f\n", resultado);
     int newResultado = (int)resultado;
     printf("test = %i\n", newResultado);
 
