@@ -16,11 +16,12 @@ int main(void)
     int coin05;
     int coin01;
     float resultado;
-    printf("T = %.2f\n", t);
+
+    t = t*100;
+    
  if (t >= 0.25)
     {
-        coin25 = t / 0.25;
-        t = t*100;
+        coin25 = t / 25;
         t = t % 25;
         printf("coin25 = %i e t = %.2f\n", coin25,t);
     }
