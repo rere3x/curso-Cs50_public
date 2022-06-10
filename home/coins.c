@@ -7,9 +7,9 @@ float troco(float v, float m);
 
 int main(void)
 {
-    float valorItem = get_float("Qual valor do item? ");
-    float valorDinheiro = get_money();
-    float troco = troco (valorItem,valorDinheiro);
+    float p = get_float("Qual valor do item? ");
+    float i = get_money();
+    float t = troco (p,i);
 
     int coin25;
     int coin10;
@@ -17,13 +17,13 @@ int main(void)
     int coin01;
     float resultado;
 
-    /*t = t*100;
-*/
-    float sacodocarai = troco;
- if (sacodocarai >= 0.25)
+    t = t*100;
+    int sacodocarai = (int)t;
+    
+ if (sacodocarai >= 25)
     {
-        coin25 = sacodocarai / 0.25;
-        sacodocarai = sacodocarai % 0.25 ;
+        coin25 = sacodocarai / 25;
+        sacodocarai = sacodocarai % 25 ;
 
     }
 /*
@@ -53,11 +53,11 @@ int main(void)
 
 
 
-float troco(float valorItem, float valorDinheiro)
+float troco(float v, float m)
 {
 
     //converte valor para positivo
-    float resultado = valorItem - valorDinheiro;
+    float resultado = v - m;
     if(resultado < 0)
     {resultado *= -1;}
 
