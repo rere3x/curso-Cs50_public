@@ -11,10 +11,10 @@ int main(void)
     float i = get_money();
     float t = troco (p,i);
 
-    int coin25;
-    int coin10;
-    int coin05;
-    int coin01;
+    int coin25 = 0;
+    int coin10 = 0;
+    int coin05 = 0;
+    int coin01 = 0;
     float resultado;
 
     t = t*100;
@@ -24,7 +24,7 @@ int main(void)
     {
         coin25 = sacodocarai / 25;
         sacodocarai = sacodocarai % 25 ;
-        if(sacodocarai == 1){}
+        if(sacodocarai == 1){sacodocarai = 0;}
 
     }
 
@@ -32,12 +32,14 @@ int main(void)
     {
         coin10 = sacodocarai / 10;
         sacodocarai = sacodocarai % 10 ;
+        if(sacodocarai == 1){sacodocarai = 0;}
     }
 
     else if  (sacodocarai >= 5)
     {
         coin05 = sacodocarai / 5;
         sacodocarai = sacodocarai % 5 ;
+        if(sacodocarai == 1){sacodocarai = 0;}
     }
 
     else if  (sacodocarai >= 1)
@@ -45,7 +47,7 @@ int main(void)
         coin10 = 1;
     }
 
-  //  printf("de o troco em %i moedas de 25, %i moedas de 10, %i moedas de 5,%i moedas de 1", coin25,coin10,coin05,coin01);
+    printf("de o troco em %i moedas de 25, %i moedas de 10, %i moedas de 5,%i moedas de 1\n", coin25,coin10,coin05,coin01);
 
 
 }
