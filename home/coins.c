@@ -7,7 +7,7 @@ float troco(float v, float m);
 
 int main(void)
 {
-    float p = get_float("Qual valor do item? ");
+    float valor = get_float("Qual valor do item? ");
     float i = get_money();
     float t = troco (p,i);
 
@@ -17,9 +17,9 @@ int main(void)
     int coin01;
     float resultado;
 
-    t = t*100;
+    /*t = t*100;
     int sacodocarai = (int)t;
-    
+*/
  if (sacodocarai >= 25)
     {
         coin25 = sacodocarai / 25;
