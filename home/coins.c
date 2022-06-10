@@ -22,7 +22,7 @@ int main(void)
 
     if (trocoInt >= 25)
     {
-        coin25 = trocoInt / 25;
+        coin25  = trocoInt / 25;
         trocoInt = trocoInt % 25 ;
         if(trocoInt == 1){trocoInt = 0;}
     }
@@ -56,11 +56,11 @@ int main(void)
 
 
 
-float troco(float v, float m)
+float troco(float vI, float vD)
 {
 
     //converte valor para positivo
-    float resultado = v - m;
+    float resultado = vI - vD;
     if(resultado < 0)
     {resultado *= -1;}
 
