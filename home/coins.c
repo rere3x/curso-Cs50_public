@@ -19,11 +19,12 @@ int main(void)
 
     t = t*100;
     int sacodocarai = (int)t;
+    
  if (sacodocarai >= 25)
     {
         coin25 = sacodocarai / 25;
         sacodocarai = sacodocarai % 25 ;
-        printf("coin25 = %i e t = %i\n", coin25,sacodocarai);
+
     }
 /*
         coin25 = t / 0.25;
