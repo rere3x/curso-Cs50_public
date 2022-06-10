@@ -25,12 +25,9 @@ int numbercheck(long cartao)
     {
         long cardnumber = cartao % rstnumber;
         rstnumber *= 10;
-        darnumberCheck = (rstnumber / )
-        if(cardnumber == cardnumberCheck)
-        {
+        int rstnumberCheck = ;
+        printf("testttt = %i\n", rstnumberCheck);
 
-
-        }
     }
     return test;
 
