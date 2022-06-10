@@ -10,9 +10,6 @@ int main(void)
     long cartao = get_long("Teste seu cartão de credito: ");
     int numerchecked = numbercheck(cartao);
 
-   //remender test
-
-    long remender = cartao % 10000000000000000;
 
 
 }
