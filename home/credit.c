@@ -28,8 +28,10 @@ int numbercheck(long cartao)
         rstnumber *= 10;
         if(cardnumber == cardnumberCheck)
         {
+            cardnumberCheck = cardnumber;
+            cardnumber = 0;
         printf("test = %li\n",cardnumber);
-            
+
         }
     }
     return test;
