@@ -32,6 +32,10 @@ int numbercheck(long cartao)
         if(tracknumber % 2 == 0)
         {
             int r = cardnumber * 2;
+            if(r >= 10)
+            {
+                
+            }
         }
 
         printf("testttt = %li\n", cardnumber);
