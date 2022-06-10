@@ -18,7 +18,7 @@ int main(void)
 
     t = t * 100;
         printf("test = %.2f\n",t);
-    int trocoInt = (int)t;
+    int trocoInt = t;
         printf("test = %i\n",trocoInt);
 
     if (trocoInt >= 25)
