@@ -16,7 +16,7 @@ int main(void)
     int coin01 = 0;
     float resultado;
 
-    t = t*100;
+    t = t * 100;
         printf("test = %.2f\n",t);
     int trocoInt = (int)t;
         printf("test = %i\n",trocoInt);
