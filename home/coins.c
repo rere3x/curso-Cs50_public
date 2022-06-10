@@ -63,8 +63,8 @@ int troco(double vI, double vD)
     {resultado *= -1.00;}
 
     //coverte pra centavos
-    resultado *= 100.00;
      printf("test = %f\n", resultado);
+    resultado *= 100.00;
     int newResultado = (int)resultado;
     printf("test = %i\n", newResultado);
 
