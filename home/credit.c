@@ -29,8 +29,9 @@ int numbercheck(long cartao)
         cardnumber /= antRstNumber;
         antRstNumber *= 10;
 
-        int tracknumber++;
-        
+        int tracknumber = 0;
+        tracknumber++;
+
         if(tracknumber % 2 == 0)
         {
             int r = cardnumber * 2;
@@ -40,9 +41,9 @@ int numbercheck(long cartao)
                 r++;
             }
 
+        printf("testttt = %i\n", r);
         }
 
-        printf("testttt = %i\n", r);
 
     }
     return test;
