@@ -24,22 +24,24 @@ int main(void)
     {
         coin25 = sacodocarai / 25;
         sacodocarai = sacodocarai % 25 ;
-        printf("coin25 = %i e t = %i\n", coin25,sacodocarai);
+
     }
 
     if (sacodocarai >= 10)
     {
         coin10 = sacodocarai / 10;
         sacodocarai = sacodocarai % 10 ;
-        printf("coin10 = %i e t = %i\n", coin25,sacodocarai);
     }
 
     if (sacodocarai >= 5)
     {
         coin05 = sacodocarai / 5;
         sacodocarai = sacodocarai % 5 ;
-        printf("%i\n",sacodocarai);
-       // printf("coin05 = %i e t = %i\n", coin25,sacodocarai);
+    }
+    
+    if (sacodocarai >= 1)
+    {
+        coin10 = 1;
     }
 
   //  printf("de o troco em %i moedas de 25, %i moedas de 10, %i moedas de 5,%i moedas de 1", coin25,coin10,coin05,coin01);
