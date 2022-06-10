@@ -25,7 +25,6 @@ int main(void)
     printf("test r = %i\n", trocoInt);
     printf("test c = %i\n", coin25);
         trocoInt = trocoInt % 25 ;
-        printf("test t = %i\n", trocoInt);
 
     }
 
@@ -43,6 +42,7 @@ int main(void)
 
     }
 
+        printf("test t = %i\n", trocoInt);
     if  (trocoInt >= 1)
     {
         coin01 = 1;
