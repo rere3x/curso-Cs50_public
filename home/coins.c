@@ -10,7 +10,7 @@ int main(void)
     float p = get_float("Qual valor do item? ");
     float i = get_money();
     float t = troco (p,i);
-    printf("A sobra é: %f", t);
+    printf("A sobra é: %.2f", t);
 
 }
 
@@ -31,9 +31,9 @@ float troco(float v, float m)
     if(resultado < 0)
     {resultado *= -1;}
 
-/*
     //coverte pra centavos
     resultado = resultado - (int)resultado;
+/*
     if(resultado > 0.25)
     {
         resultado /= 0.25;
