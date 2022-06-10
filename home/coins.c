@@ -18,12 +18,12 @@ int main(void)
     float resultado;
 
     t = t*100;
-    t = (int)t;
+    (int)t = (int)t;
  if (t >= 25)
     {
         coin25 = t / 25;
-        t = t * coin25;
-        printf("coin25 = %i e t = %.2f\n", coin25,t);
+        t = 25 * coin25 - t;
+        printf("coin25 = %i e t = %i\n", coin25,t);
     }
 /*
         coin25 = t / 0.25;
