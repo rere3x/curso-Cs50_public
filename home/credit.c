@@ -25,10 +25,11 @@ int numbercheck(long cartao)
     {
         long cardnumber = cartao % rstnumber;
         rstnumber *= 10;
-        printf("test = %li\n",cardnumber);
         if(cardnumber == cardnumber)
         {
-            card
+            cardnumber = 0;
+        printf("test = %li\n",cardnumber);
+            
         }
     }
     return test;
