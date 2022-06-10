@@ -3,7 +3,7 @@
 
 
 float get_money();
-int troco(float v, float m);
+int troco(double v, double m);
 
 int main(void)
 {
