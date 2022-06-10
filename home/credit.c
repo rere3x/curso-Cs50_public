@@ -1,6 +1,9 @@
 #include<stdio.h>
 #include<cs50.h>
 
+int numbercheck(long cartao);
+
+
 int main(void)
 {
 
@@ -16,13 +19,13 @@ int main(void)
 
 int numbercheck(long cartao)
 {
-    test = 0
-    rstnumber = 10;
+    int test = 0;
+    long rstnumber = 10;
     for (int i = 0; i < 16; i++)
     {
         long cardnumber = cartao % rstnumber;
         rstnumber *= 10;
-        printf("test = %li\n",cardnumber)
+        printf("test = %li\n",cardnumber);
     }
     return test;
 
