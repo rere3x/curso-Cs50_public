@@ -4,7 +4,7 @@
 int main(void)
 {
 
-   int cartao = get_int("Teste seu cartão de credito: \n");
+   long cartao = get_int("Teste seu cartão de credito: \n");
 
    //remender test
 
