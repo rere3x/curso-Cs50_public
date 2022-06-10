@@ -24,12 +24,13 @@ int numbercheck(long cartao)
     for (int i = 0; i < 16; i++)
     {
         long cardnumber = cartao % rstnumber;
+        long cardnumber2 = cardnumber;
         rstnumber *= 10;
         if(cardnumber == cardnumber)
         {
             cardnumber = 0;
         printf("test = %li\n",cardnumber);
-            
+            cardnumber = cardnumber2;
         }
     }
     return test;
