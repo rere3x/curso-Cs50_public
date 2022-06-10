@@ -22,7 +22,7 @@ int main(void)
  if (sacodocarai >= 25)
     {
         coin25 = sacodocarai / 25;
-        sacodocarai = sacodocarai - 25 * coin25 ;
+        sacodocarai = sacodocarai % 25 ;
         printf("coin25 = %i e t = %i\n", coin25,sacodocarai);
     }
 /*
