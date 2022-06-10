@@ -27,17 +27,17 @@ int main(void)
     }
      if (trocoInt >= 10)
     {
-        coin25 = trocoInt / 10;
+        coin10 = trocoInt / 10;
         trocoInt = trocoInt % 10 ;
     }
      if (trocoInt >= 5)
     {
-        coin25 = trocoInt / 5;
+        coin05 = trocoInt / 5;
         trocoInt = trocoInt % 5 ;
     }
      if (trocoInt >= 1)
     {
-        coin25 = trocoInt / 1;
+        coin01 = trocoInt / 1;
     }
 
     printf("de o troco em %i moedas de 25, %i moedas de 10, %i moedas de 5,%i moedas de 1", coin25,coin10,coin05,coin01);
