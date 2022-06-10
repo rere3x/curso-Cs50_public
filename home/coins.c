@@ -64,7 +64,10 @@ int troco(float vI, float vD)
 
     //coverte pra centavos
 
-    
+    int newResultado = (int)resultado;
+    resultado -= (float)newResultado;
+    int newResultado2 = 
+    printf("test = %.2f\n", resultado);
 
 
     return newResultado;
