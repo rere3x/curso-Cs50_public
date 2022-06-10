@@ -35,11 +35,11 @@ int numbercheck(long cartao)
 
         if(tracknumber % 2 == 0)
         {
-            int calc = cardnumber * 2;
+            calc = cardnumber * 2;
             if(calc >= 10)
             {
-                test %= 10;
-                test++;
+                calc %= 10;
+                calc++;
             }else{return calc;}
 
         }
