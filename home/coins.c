@@ -22,7 +22,7 @@ int main(void)
  if (t >= 25)
     {
         coin25 = t / 25;
-        t = t % 25;
+        t = t * coin25
         printf("coin25 = %i e t = %.2f\n", coin25,t);
     }
 /*
@@ -44,7 +44,7 @@ int main(void)
 
     }
     printf("de o troco em %i moedas de 25, %i moedas de 10, %i moedas de 5,%i moedas de 1", coin25,coin10,coin05,coin01);
-    
+
 */
 }
 
