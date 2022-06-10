@@ -10,21 +10,22 @@ int main(void)
     float p = get_float("Qual valor do item? ");
     float i = get_money();
     float t = troco (p,i);
-    printf("A sobra é: %.2f", t);
+    float 
+
 
 }
+
+
+    int coin25;
+    int coin10;
+    int coin05;
+    int coin01;
+
 
 
 
 float troco(float v, float m)
 {
-
-    /*numero de moedas
-    int coin25;
-    int coin10;
-    int coin05;
-    int coin01;
-*/
 
     //converte valor para positivo
     float resultado = v - m;
@@ -33,36 +34,10 @@ float troco(float v, float m)
 
     //coverte pra centavos
     resultado = resultado - (int)resultado;
-/*
-    if(resultado > 0.25)
-    {
-        resultado /= 0.25;
 
-
-    }
-    if(resultado > 0.10)
-    {
-        resultado /= 0.10;
-
-    }
-    if(resultado > 0.05)
-    {
-        resultado /= 0.05;
-
-    }
-    if(resultado > 0.01)
-    {
-        resultado /= 0.01;
-
-    }
-    */
     return resultado;
 
-
 }
-
-
-
 
 
 
@@ -77,5 +52,11 @@ float get_money(get_string)
         while(n < 0.009);
         return n;
 }
+
+
+
+
+
+
 
 
