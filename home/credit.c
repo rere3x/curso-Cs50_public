@@ -10,4 +10,5 @@ int main(void)
 
     long remender = cartao % 1000000000000000000;
     printf("remender = %li\n", remender);
+    
 }
