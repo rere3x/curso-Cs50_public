@@ -3,13 +3,13 @@
 
 
 float get_money();
-float troco(float v, float m);
+int troco(float v, float m);
 
 int main(void)
 {
     float valoritem = get_float("Qual valor do item? ");
     float valorDinheiro = get_money();
-    float t = troco (valoritem,valorDinheiro);
+    int trocoInt = troco (valoritem,valorDinheiro);
 
 
     int coin25 = 0;
@@ -54,7 +54,7 @@ int main(void)
 
 
 
-float troco(float vI, float vD)
+int troco(float vI, float vD)
 {
 
     //converte valor para positivo
@@ -63,13 +63,12 @@ float troco(float vI, float vD)
     {resultado *= -1;}
 
     //coverte pra centavos
-    float newResultado = (int)resultado
-    resultado = resultado - newResultado;
-    resultado *= 100.00;
+    resultado *= 100;
+    newResultado = (int)resultado;
+    printf("test = %i", newResultado);
 
 
-
-    return resultado;
+    return newResultado;
 
 }
 
