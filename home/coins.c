@@ -15,30 +15,31 @@ int main(void)
     int coin10;
     int coin05;
     int coin01;
+    float resultado;
 
  if(t > 0.25)
     {
-        resultado /= 0.25;
+        coin25 = t / 0.25;
 
 
     }
     if(t > 0.10)
     {
-        resultado /= 0.10;
+       coin10 = t / 0.10;
 
     }
     if(t > 0.05)
     {
-        resultado /= 0.05;
+        coin05 = t / 0.05;
 
     }
     if(t > 0.01)
     {
-        resultado /= 0.01;
+        coin01 = t / 0.01;
 
     }
 
-
+    printf("de o troco em %i moedas de 25, %i moedas de 10, %i moedas de 5,%i moedas de 1", coin25,coin10,coin05,coin01);
 
 }
 
