@@ -66,7 +66,7 @@ int troco(float vI, float vD)
 
     resultado -= (int)resultado;
     int coin = round(resultado * 100);
-    printf("test r = %i\n", coin);
+    
 
 
     return resultado;
