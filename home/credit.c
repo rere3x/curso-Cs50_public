@@ -34,7 +34,7 @@ int numbercheck(long cartao)
 
         if(tracknumber % 2 == 0)
         {
-            test = cardnumber * 2;
+            int calc = cardnumber * 2;
             if(test >= 10)
             {
                 test %= 10;
