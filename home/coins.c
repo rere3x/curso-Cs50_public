@@ -24,11 +24,11 @@ float troco(float v, float m)
     if(resultado < 0)
     {resultado *= -1;}
 
-
-
-
-
 }
+
+
+
+
 
 
 
