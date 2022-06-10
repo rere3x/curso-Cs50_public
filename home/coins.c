@@ -18,10 +18,6 @@ int main(void)
     int coin01 = 0;
     float resultado;
 
-    t = t * 100;
-        printf("test = %.2f\n",t);
-    int trocoInt = t;
-        printf("test = %i\n",trocoInt);
 
     if (trocoInt >= 25)
     {
@@ -70,7 +66,7 @@ float troco(float vI, float vD)
     float newResultado = (int)resultado
     resultado = resultado - newResultado;
     resultado *= 100.00;
-    
+
 
 
     return resultado;
