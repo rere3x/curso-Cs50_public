@@ -37,8 +37,8 @@ int main(void)
     if (sacodocarai >= 5)
     {
         coin05 = sacodocarai / 5;
-        printf(sacodocarai);
         sacodocarai = sacodocarai % 5 ;
+        printf("%i\n",sacodocarai);
        // printf("coin05 = %i e t = %i\n", coin25,sacodocarai);
     }
 
