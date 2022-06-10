@@ -44,7 +44,7 @@ int main(void)
 
     if  (trocoInt >= 1)
     {
-        coin10 = 1;
+        coin01 = 1;
     }
 
     printf("de o troco em %i moedas de 25, %i moedas de 10, %i moedas de 5, %i moedas de 1\n", coin25,coin10,coin05,coin01);
