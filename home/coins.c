@@ -59,7 +59,7 @@ int troco(double vI, double vD)
 
     //converte valor para positivo
     double resultado = vI - vD;
-    if(resultado < 0)
+    if(resultado < 0.00)
     {resultado *= -1.00;}
 
     //coverte pra centavos
