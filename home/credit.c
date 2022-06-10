@@ -29,7 +29,7 @@ int numbercheck(long cartao)
         cardnumber /= antRstNumber;
         antRstNumber *= 10;
 
-        int tracknumber = 0;
+        int tracknumber = 1;
         tracknumber++;
         printf("testtrack = %i\n", tracknumber);
 
