@@ -44,7 +44,7 @@ int main(void)
 
     }
     printf("de o troco em %i moedas de 25, %i moedas de 10, %i moedas de 5,%i moedas de 1", coin25,coin10,coin05,coin01);
-    printf("quantidade de moeda 25 %i e valor de T %f", coin25,t);
+    
 */
 }
 
