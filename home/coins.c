@@ -22,8 +22,8 @@ float troco(float v, float m)
     //converte valor para positivo
     float resultado = v - m;
     if(resultado < 0){resultado *= -1;}
-
     
+
 
 
 
