@@ -4,10 +4,10 @@
 int main(void)
 {
 
-   long cartao = get_int("Teste seu cartão de credito: \n");
+   long cartao = get_long("Teste seu cartão de credito: \n");
 
    //remender test
 
-    int remender = cartao % 10;
-    printf("remender = %i", remender);
+    int remender = cartao % 100;
+    printf("remender = %i\n", remender);
 }
