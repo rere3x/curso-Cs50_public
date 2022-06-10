@@ -63,11 +63,15 @@ int troco(double vI, double vD)
     {resultado *= -1.00;}
 
     //coverte pra centavos
-     printf("test = %f\n", resultado);
-    resultado *= 100.00;
-    int newResultado = (int)resultado;
-    printf("test = %i\n", newResultado);
 
+
+    int newResultado =  (int)resultado;
+    resultado -= (float)newResultado;
+    resultado *=100.00;
+    int calcResultado =  (int)resultado;
+
+    printf("test = %i\n", calcResultado);
+    printf("test = %.2f\n", resultado);
 
     return newResultado;
 
