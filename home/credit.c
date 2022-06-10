@@ -8,6 +8,6 @@ int main(void)
 
    //remender test
 
-    long remender = cartao % 1000000000000000;
+    long remender = cartao % 1000000000000000000;
     printf("remender = %li\n", remender);
 }
