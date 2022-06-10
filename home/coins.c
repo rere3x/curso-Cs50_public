@@ -64,10 +64,10 @@ int troco(double vI, double vD)
 
     //coverte pra centavos
 
-   
 
 
-    return newResultado;
+
+    
 
 }
 
