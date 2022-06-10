@@ -20,7 +20,8 @@ int main(void)
  if (t >= 0.25)
     {
         coin25 = t / 0.25;
-        t = t % 0.25;
+        t = t*100;
+        t = t % 25;
         printf("coin25 = %i e t = %.2f\n", coin25,t);
     }
 /*
