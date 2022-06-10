@@ -8,8 +8,8 @@ float troco(float v, float m);
 int main(void)
 {
     float valoritem = get_float("Qual valor do item? ");
-    float i = get_money();
-    float t = troco (valoritem,i);
+    float valorDinheiro = get_money();
+    float t = troco (valoritem,valorDinheiro);
 
     int coin25 = 0;
     int coin10 = 0;
