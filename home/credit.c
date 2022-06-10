@@ -31,6 +31,7 @@ int numbercheck(long cartao)
 
         int tracknumber = 0;
         tracknumber++;
+        printf("testtrack = %i\n", tracknumber);
 
         if(tracknumber % 2 == 0)
         {
@@ -41,7 +42,6 @@ int numbercheck(long cartao)
                 test++;
             }
 
-        printf("testttt = %i\n", test);
         }
 
 
