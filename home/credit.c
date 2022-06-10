@@ -34,8 +34,9 @@ int numbercheck(long cartao)
             int r = cardnumber * 2;
             if(r >= 10)
             {
-                
+                valormairodez = 
             }
+
         }
 
         printf("testttt = %li\n", cardnumber);
