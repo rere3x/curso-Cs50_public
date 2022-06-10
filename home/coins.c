@@ -16,7 +16,7 @@ int main(void)
     int coin05 = 0;
     int coin01 = 0;
     float resultado;
-
+    
     t = t*100;
     int trocoInt = (int)t;
 
@@ -31,7 +31,7 @@ int main(void)
     {
         coin10 = trocoInt / 10;
         trocoInt = trocoInt % 10 ;
-
+        printf("test = %i\n",trocoInt);
     }
 
 
@@ -39,7 +39,7 @@ int main(void)
     {
         coin05 = trocoInt / 5;
         trocoInt = trocoInt % 5 ;
-        
+
     }
 
     if  (trocoInt >= 1)
