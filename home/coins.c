@@ -18,8 +18,8 @@ int main(void)
     float resultado;
 
     t = t*100;
-    
- if (t >= 0.25)
+
+ if (t >= 25)
     {
         coin25 = t / 25;
         t = t % 25;
