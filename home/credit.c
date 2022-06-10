@@ -28,10 +28,13 @@ int numbercheck(long cartao)
         rstnumber *= 10;
         cardnumber /= antRstNumber;
         antRstNumber *= 10;
+        int tracknumber++;
+        if(tracknumber % 2 == 0)
+        {
+            
+        }
 
-
-        int rstnumberCheck = cardnumber;
-        printf("testttt = %i\n", rstnumberCheck);
+        printf("testttt = %li\n", cardnumber);
 
     }
     return test;
