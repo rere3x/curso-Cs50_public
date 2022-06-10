@@ -24,8 +24,8 @@ int numbercheck(long cartao)
     for (int i = 0; i < 16; i++)
     {
         long cardnumber = cartao % rstnumber;
-        
         rstnumber *= 10;
+        darnumberCheck = (rstnumber / )
         if(cardnumber == cardnumberCheck)
         {
 
