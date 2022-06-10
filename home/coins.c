@@ -24,14 +24,14 @@ int main(void)
     {
         coin25  = trocoInt / 25;
         trocoInt = trocoInt % 25 ;
-        if(trocoInt == 1){trocoInt = 0;}
+
     }
 
     if (trocoInt >= 10)
     {
         coin10 = trocoInt / 10;
         trocoInt = trocoInt % 10 ;
-        if(trocoInt == 1){trocoInt = 0;}
+
     }
 
 
@@ -39,7 +39,7 @@ int main(void)
     {
         coin05 = trocoInt / 5;
         trocoInt = trocoInt % 5 ;
-        if(trocoInt == 1){trocoInt = 0;}
+        
     }
 
     if  (trocoInt >= 1)
