@@ -19,7 +19,7 @@ int main(void)
 
 int numbercheck(long cartao)
 {
-
+    int calc;
     long rstnumber = 10;
     long antRstNumber = 1;
     for (int i = 0; i < 16; i++)
@@ -36,11 +36,11 @@ int numbercheck(long cartao)
         if(tracknumber % 2 == 0)
         {
             int calc = cardnumber * 2;
-            if(test >= 10)
+            if(calc >= 10)
             {
                 test %= 10;
                 test++;
-            }
+            }else{return calc;}
 
         }
 
