@@ -10,15 +10,16 @@ int main(void)
     float valoritem = get_float("Qual valor do item? ");
     float valorDinheiro = get_money();
     float t = troco (valoritem,valorDinheiro);
-
+    printf("test = %.2f\n",t);
     int coin25 = 0;
     int coin10 = 0;
     int coin05 = 0;
     int coin01 = 0;
     float resultado;
-    
+
     t = t*100;
     int trocoInt = (int)t;
+        printf("test = %i\n",trocoInt);
 
     if (trocoInt >= 25)
     {
@@ -31,7 +32,6 @@ int main(void)
     {
         coin10 = trocoInt / 10;
         trocoInt = trocoInt % 10 ;
-        printf("test = %i\n",trocoInt);
     }
 
 
