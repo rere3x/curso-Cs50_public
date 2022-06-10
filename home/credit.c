@@ -26,7 +26,10 @@ int numbercheck(long cartao)
     {
         long cardnumber = cartao % rstnumber;
         rstnumber *= 10;
+        card
         antRstNumber *= 10;
+
+
         int rstnumberCheck = cardnumber;
         printf("testttt = %i\n", rstnumberCheck);
 
