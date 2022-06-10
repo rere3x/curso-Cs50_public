@@ -21,11 +21,13 @@ int numbercheck(long cartao)
 {
     int test = 0;
     long rstnumber = 10;
+    long antRstNumber = 1;
     for (int i = 0; i < 16; i++)
     {
         long cardnumber = cartao % rstnumber;
         rstnumber *= 10;
-        int rstnumberCheck = ;
+        antRstNumber *= 10;
+        int rstnumberCheck = cardnumber;
         printf("testttt = %i\n", rstnumberCheck);
 
     }
