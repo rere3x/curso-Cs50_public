@@ -16,7 +16,14 @@ int main(void)
 
 int numbercheck(long cartao)
 {
-    for ()
-
+    test = 0
+    rstnumber = 10;
+    for (int i = 0; i < 16; i++)
+    {
+        long cardnumber = cartao % rstnumber;
+        rstnumber *= 10;
+        printf("test = %li\n",cardnumber)
+    }
+    return test;
 
 }
