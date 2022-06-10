@@ -19,19 +19,19 @@ int main(void)
 float troco(float v, float m)
 {
 
-    //numero de moedas
+    /*numero de moedas
     int coin25;
     int coin10;
     int coin05;
     int coin01;
-
+*/
 
     //converte valor para positivo
     float resultado = v - m;
-
     if(resultado < 0)
     {resultado *= -1;}
 
+/*
     //coverte pra centavos
     resultado = resultado - (int)resultado;
     if(resultado > 0.25)
@@ -55,6 +55,7 @@ float troco(float v, float m)
         resultado /= 0.01;
 
     }
+    */
     return resultado;
 
 
