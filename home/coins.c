@@ -67,9 +67,11 @@ float troco(float vI, float vD)
     {resultado *= -1;}
 
     //coverte pra centavos
-    resultado = resultado - (int)resultado;
+    float newResultado = (int)resultado
+    resultado = resultado - newResultado;
     resultado *= 100.00;
     
+
 
     return resultado;
 
