@@ -10,7 +10,6 @@ int main(void)
     float valoritem = get_float("Qual valor do item? ");
     float valorDinheiro = get_money();
     float t = troco (valoritem,valorDinheiro);
-    printf("test = %.2f\n",t);
     int coin25 = 0;
     int coin10 = 0;
     int coin05 = 0;
@@ -18,6 +17,7 @@ int main(void)
     float resultado;
 
     t = t*100;
+        printf("test = %.2f\n",t);
     int trocoInt = (int)t;
         printf("test = %i\n",trocoInt);
 
