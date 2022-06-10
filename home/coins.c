@@ -19,33 +19,24 @@ int main(void)
 
     t = t*100;
     int sacodocarai = (int)t;
+
  if (sacodocarai >= 25)
     {
         coin25 = sacodocarai / 25;
         sacodocarai = sacodocarai % 25 ;
         printf("coin25 = %i e t = %i\n", coin25,sacodocarai);
     }
-/*
-        coin25 = t / 0.25;
-    t = t % 0.25;
-    if(t > 0.10)
+
+    if (sacodocarai >= 10)
     {
-       coin10 = t / 0.10;
-
+        coin10 = sacodocarai / 10;
+        sacodocarai = sacodocarai % 10 ;
+        printf("coin10 = %i e t = %i\n", coin25,sacodocarai);
     }
-    if(t > 0.05)
-    {
-        coin05 = t / 0.05;
 
-    }
-    if(t > 0.01)
-    {
-        coin01 = t / 0.01;
+  //  printf("de o troco em %i moedas de 25, %i moedas de 10, %i moedas de 5,%i moedas de 1", coin25,coin10,coin05,coin01);
 
-    }
-    printf("de o troco em %i moedas de 25, %i moedas de 10, %i moedas de 5,%i moedas de 1", coin25,coin10,coin05,coin01);
 
-*/
 }
 
 
