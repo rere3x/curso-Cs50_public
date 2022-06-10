@@ -58,14 +58,14 @@ int troco(float vI, float vD)
 {
 
     //converte valor para positivo
-    float resultado = vI - vD;
-    if(resultado < 0.00)
-    {resultado *= -1.00;}
+    float resultado = vD - vI;
+    /*if(resultado < 0.00)
+    {resultado *= -1.00;}*/
 
     //coverte pra centavos
 
-
     
+
 
     return newResultado;
 
