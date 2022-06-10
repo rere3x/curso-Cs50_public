@@ -18,31 +18,31 @@ int main(void)
     float resultado;
 
     t = t*100;
-    int sacodocarai = (int)t;
+    int trocoInt = (int)t;
 
- if (sacodocarai >= 25)
+    if (trocoInt >= 25)
     {
-        coin25 = sacodocarai / 25;
-        sacodocarai = sacodocarai % 25 ;
-        if(sacodocarai == 1){sacodocarai = 0;}
+        coin25 = trocoInt / 25;
+        trocoInt = trocoInt % 25 ;
+        if(trocoInt == 1){trocoInt = 0;}
     }
 
-    else if (sacodocarai >= 10)
+    if (trocoInt >= 10)
     {
-        coin10 = sacodocarai / 10;
-        sacodocarai = sacodocarai % 10 ;
-        if(sacodocarai == 1){sacodocarai = 0;}
+        coin10 = trocoInt / 10;
+        trocoInt = trocoInt % 10 ;
+        if(trocoInt == 1){trocoInt = 0;}
     }
 
-    else if  (sacodocarai >= 5)
+     
+    if  (trocoInt >= 5)
     {
-     printf(" test = %i\n", sacodocarai);
-        coin05 = sacodocarai / 5;
-        sacodocarai = sacodocarai % 5 ;
-        if(sacodocarai == 1){sacodocarai = 0;}
+        coin05 = trocoInt / 5;
+        trocoInt = trocoInt % 5 ;
+        if(trocoInt == 1){trocoInt = 0;}
     }
 
-    else if  (sacodocarai >= 1)
+    if  (trocoInt >= 1)
     {
         coin10 = 1;
     }
