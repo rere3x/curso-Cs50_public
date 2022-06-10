@@ -19,7 +19,7 @@ int main(void)
 
 int numbercheck(long cartao)
 {
-    int test = 0;
+
     long rstnumber = 10;
     long antRstNumber = 1;
     for (int i = 0; i < 16; i++)
@@ -46,6 +46,6 @@ int numbercheck(long cartao)
 
 
     }
-    return test;
+    return;
 
 }
