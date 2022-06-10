@@ -16,13 +16,16 @@ int main(void)
     int coin05;
     int coin01;
     float resultado;
-
+    printf("T = %.2f\n", t);
  if (t >= 0.25)
     {
         coin25 = t / 0.25;
-    //t = t % 0.25;
+        t = t % 0.25;
+        printf("coin25 = %i e t = %.2f\n", coin25,t);
     }
 /*
+        coin25 = t / 0.25;
+    t = t % 0.25;
     if(t > 0.10)
     {
        coin10 = t / 0.10;
@@ -39,8 +42,8 @@ int main(void)
 
     }
     printf("de o troco em %i moedas de 25, %i moedas de 10, %i moedas de 5,%i moedas de 1", coin25,coin10,coin05,coin01);
-*/
     printf("quantidade de moeda 25 %i e valor de T %f", coin25,t);
+*/
 }
 
 
