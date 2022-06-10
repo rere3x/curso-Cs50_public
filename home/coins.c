@@ -18,12 +18,12 @@ int main(void)
     float resultado;
 
     t = t*100;
-    (int)t = (int)t;
- if (t >= 25)
+    int sacodocarai = (int)t;
+ if (sacodocarai >= 25)
     {
-        coin25 = t / 25;
-        t = 25 * coin25 - t;
-        printf("coin25 = %i e t = %i\n", coin25,t);
+        coin25 = sacodocarai / 25;
+        sacodocarai = sacodocarai - 25 * coin25 ;
+        printf("coin25 = %i e t = %i\n", coin25,sacodocarai);
     }
 /*
         coin25 = t / 0.25;
