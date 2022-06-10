@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<cs50.h>
+#include<math.h>
 
 
 float get_money();
@@ -67,7 +68,7 @@ int troco(double vI, double vD)
 
 
 
-    
+
 
 }
 
