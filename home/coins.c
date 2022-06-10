@@ -11,6 +11,7 @@ int main(void)
     float valorDinheiro = get_money();
     int trocoInt = troco (valoritem,valorDinheiro);
 
+    printf("test r = %i\n", trocoInt);
 
     int coin25 = 0;
     int coin10 = 0;
@@ -66,7 +67,6 @@ int troco(float vI, float vD)
 
     resultado -= (int)resultado;
     int coin = round(resultado * 100);
-    
 
 
     return resultado;
