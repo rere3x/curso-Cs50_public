@@ -2,14 +2,13 @@
 #include<cs50.h>
 #include<math.h>
 
-
 float get_money();
-int troco(double vI, double vD);
+int troco(float vI, float vD);
 
 int main(void)
 {
-    double valoritem = get_float("Qual valor do item? ");
-    double valorDinheiro = get_money();
+    float valoritem = get_float("Qual valor do item? ");
+    float valorDinheiro = get_money();
     int trocoInt = troco (valoritem,valorDinheiro);
 
 
@@ -55,20 +54,22 @@ int main(void)
 
 
 
-int troco(double vI, double vD)
+int troco(float vI, float vD)
 {
 
     //converte valor para positivo
-    double resultado = vD - vI;
+    float resultado = vD - vI;
     /*if(resultado < 0.00)
     {resultado *= -1.00;}*/
 
     //coverte pra centavos
 
-    int centavos = round(resultado * 100);
-    printf("test = %i\n", centavos);
+    resultado -= (int)resultado;
+    int coin = round(resultado * 100);
+    printf("test r = %i\n", coin);
 
-    return centavos;
+
+    return resultado;
 
 }
 
