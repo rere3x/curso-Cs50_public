@@ -65,10 +65,10 @@ int troco(double vI, double vD)
 
     //coverte pra centavos
 
+    int centavos = round(resultado * 100);
+    printf("test = %i\n", centavos);
 
-
-
-
+    return centavos;
 
 }
 
