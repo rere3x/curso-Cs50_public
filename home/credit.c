@@ -28,7 +28,7 @@ int numbercheck(long cartao)
 
         int tracknumber = 1;
         tracknumber++;
-        printf("testtrack = %i\n", tracknumber);
+        printf("testtrack = %li\n", cardnumber);
 
         if(tracknumber % 2 == 0)
         {
