@@ -56,9 +56,6 @@ int main(void)
 }
 
 
-
-
-
 int troco(float vI, float vD)
 {
 
@@ -74,8 +71,6 @@ int troco(float vI, float vD)
     return coin;
 
 }
-
-
 
 
 float get_money(get_string)
