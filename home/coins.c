@@ -82,7 +82,7 @@ float get_money(get_string)
     float n;
     do
     {
-        n = get_float("Coloque o valor do troco\n");
+        n = get_float("Coloque o valor do pagamento\n");
     }
         while(n < 0.009);
         return n;
