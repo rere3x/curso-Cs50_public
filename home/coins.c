@@ -4,10 +4,11 @@
 
 float get_money();
 int troco(float vI, float vD);
+float positive_int(void);
 
 int main(void)
 {
-    float valoritem = get_float("Qual valor do item? ");
+    float valoritem = positive_int();
     float valorDinheiro = get_money();
     int trocoInt = troco (valoritem,valorDinheiro);
 
@@ -88,7 +89,16 @@ float get_money(get_string)
         return n;
 }
 
-
+float positive_int(void)
+{
+    float n;
+    do
+    {
+        n = get_float("Qual valor do item: \n");
+    }
+    while (n < 1);
+    return n;
+}
 
 
 
