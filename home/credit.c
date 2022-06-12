@@ -28,10 +28,10 @@ int numbercheck(long cartao)
 
         int tracknumber = 1;
         tracknumber++;
-        printf("testtrack = %li\n", cardnumber);
 
         if(tracknumber % 2 == 0)
         {
+        printf("testtrack = %li\n", cardnumber);
             calc = cardnumber * 2;
             if(calc >= 10)
             {
