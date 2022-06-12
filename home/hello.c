@@ -10,6 +10,7 @@ int main(void)
 
     int i = positive_int();
     alturaDosBlocos(i);
+    
 }
 
 
