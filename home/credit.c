@@ -26,7 +26,6 @@ int main(void)
     }
 
 
-        printf("testtrack = %i\n", valid);
 
 }
 
@@ -100,5 +99,23 @@ long positive_int(void)
     return n;
 
     n = round (n / 1000000000000);
-    if (n > 9999)
+    if (n < 10)
+    {
+        lastdigit = 13;
+    }
+    if (n > 10 && n < 100)
+    {
+        lastdigit = 14;
+    }
+    if (n > 100 && n < 1000)
+    {
+        lastdigit = 15;
+    }
+    if (n > 1000 && n < 10000)
+    {
+        lastdigit = 16;
+    }
+
+        printf("testtrack = %i\n", lastdidigit);
+
 }
