@@ -5,6 +5,7 @@
 
     int trackNumber = 0;
     int digit;
+    int lastdigit;
     bool validCheck(int n);
     int numbercheck(long cartao);
     showflag();
@@ -28,7 +29,10 @@ int main(void)
 
 showflag()
 {
-    
+    if (digit == 12 || digit == 16 && lastdigit == 4 )
+    {
+        printf("É um cartão visa");
+    }
 }
 
 bool validCheck(int n)
@@ -50,7 +54,7 @@ int numbercheck(long cartao)
     int parVariable = 0;
     int imparVariable = 0;
 
-    for (int i = 0; i < 16; i++)
+    for (int i = 0; i < lastdigit; i++)
     {
         long cardnumber = cartao % rstnumber;
         rstnumber *= 10;
