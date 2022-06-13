@@ -95,7 +95,7 @@ long get_validcard(void)
     {
         n = get_long("Escolha um numero de cartão de credito valido: \n");
     }
-    while (n < 1000000000000 && n > 1000000000000000);
+    while (n < 1000000000000 || n > 1000000000000000);
 
     n = round (n / 1000000000000);
     if (n < 10)
