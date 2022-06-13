@@ -22,9 +22,12 @@ int main(void)
 
     if(valid == 1)
     {
-        
-       void showflag();
+        printf("Seu cartão é: VALIDO");
+        void showflag();
     }
+    else{
+        printf("Seu cartão é: VALIDO");
+        }
 
 
 
