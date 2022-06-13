@@ -73,7 +73,7 @@ int numbercheck(long cartao)
         rstnumber *= 10;
         cardnumber /= antRstNumber;
         antRstNumber *= 10;
-        digit = round(cardnumber * 1);
+        int digit = round(cardnumber * 1);
         int lastdigit = digit;
         printf("%i\n", digit);
 
