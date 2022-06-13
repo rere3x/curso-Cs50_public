@@ -4,7 +4,7 @@
 
 
     int digitCount;
-    int lastdigit;
+    int lastdigit = 0;
     int trackNumber = 0;
 
 
@@ -74,8 +74,8 @@ int numbercheck(long cartao)
         cardnumber /= antRstNumber;
         antRstNumber *= 10;
         int digit = round(cardnumber * 1);
-        int lastdigit = digit;
-        printf("%i\n", digit);
+        lastdigit = digit;
+        
 
 
         trackNumber++;
