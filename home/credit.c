@@ -23,7 +23,7 @@ int main(void)
     if(valid == 1)
     {
         printf("Seu cartão é: VALIDO\n");
-        void showflag();
+        showflag();
     }
     else{
         printf("Seu cartão é: INVALIDO\n");
@@ -34,7 +34,7 @@ int main(void)
 
 }
 
-void showflag(void)
+void showflag()
 {
     if ((digitCount == 13 || digitCount == 16) && lastdigit == 4)
     {
