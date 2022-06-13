@@ -42,7 +42,7 @@ void showflag(void)
     }
     if (digitCount == 15 && lastdigit == 3)
     {
-        printf("É um cartão visa");
+        printf("É um cartão American Express");
     }
 }
 
