@@ -4,7 +4,7 @@
 
 
     int digitCount;
-    int digit;
+    int lastdigit;
     int trackNumber = 0;
 
 
@@ -34,15 +34,15 @@ int main(void)
 
 void showflag(void)
 {
-    if ((digitCount == 13 || digitCount == 16) && digit == 4)
+    if ((digitCount == 13 || digitCount == 16) && lastdigit == 4)
     {
         printf("É um cartão Visa");
     }
-    if (digitCount == 16 && digit == 5)
+    if (digitCount == 16 && lastdigit == 5)
     {
         printf("É um cartão MasterCard");
     }
-    if (digitCount == 15 && digit == 3)
+    if (digitCount == 15 && lastdigit == 3)
     {
         printf("É um cartão visa");
     }
@@ -74,7 +74,7 @@ int numbercheck(long cartao)
         cardnumber /= antRstNumber;
         antRstNumber *= 10;
         digit = round(cardnumber * 1);
-        lastdigit = digit;
+        int lastdigit = digit;
         printf("%i\n", digit);
 
 
