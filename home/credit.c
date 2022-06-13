@@ -22,22 +22,30 @@ int main(void)
 
     if(valid == 1)
     {
-        printf("valido\n");
+        showflag();
     }
 
-        printf("testtrack = %li\n", cartao);
+
 
 
 }
-/*
+
 void showflag()
 {
-    if (digit == 12 || digit == 16 && lastdigit == 4 )
+    if (lastdigit == 13 || lastdigit == 16 && digit == 4)
+    {
+        printf("É um cartão Visa");
+    }
+    if (lastdigit == 16 && digit == 5)
+    {
+        printf("É um cartão MasterCard");
+    }
+    if (lastdigit == 15 && digit == 3)
     {
         printf("É um cartão visa");
     }
 }
-*/
+
 bool validCheck(int n)
 {
     n %= 10;
