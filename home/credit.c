@@ -11,6 +11,7 @@
     long get_validcard();
     bool validCheck(int n);
     int numbercheck(long cartao);
+    void showflag();
 
 
 int main(void)
@@ -22,7 +23,7 @@ int main(void)
 
     if(valid == 1)
     {
-        showflag();
+        void showflag();
     }
 
 
