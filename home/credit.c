@@ -37,16 +37,16 @@ int main(void)
 void showflag()
 {
     if ((digitCount == 13 || digitCount == 16) && lastdigit == 4)
-    {
-        printf("É um cartão Visa");
-    }
+    
+        printf("É um cartão Visa\n");
+
     if (digitCount == 16 && lastdigit == 5)
     {
-        printf("É um cartão MasterCard");
+        printf("É um cartão MasterCard\n");
     }
     if (digitCount == 15 && lastdigit == 3)
     {
-        printf("É um cartão American Express");
+        printf("É um cartão American Express\n");
     }
 }
 
