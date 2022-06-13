@@ -22,7 +22,8 @@ int main(void)
 
     if(valid == 1)
     {
-        void showflag();
+        
+       void showflag();
     }
 
 
