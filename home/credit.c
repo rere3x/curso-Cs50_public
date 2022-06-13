@@ -3,7 +3,7 @@
 #include<math.h>
 
 
-    int lastdigit;
+    int digitCount;
     int digit;
     int trackNumber = 0;
 
@@ -34,15 +34,15 @@ int main(void)
 
 void showflag(void)
 {
-    if ((lastdigit == 13 || lastdigit == 16) && digit == 4)
+    if ((digitCount == 13 || digitCount == 16) && digit == 4)
     {
         printf("É um cartão Visa");
     }
-    if (lastdigit == 16 && digit == 5)
+    if (digitCount == 16 && digit == 5)
     {
         printf("É um cartão MasterCard");
     }
-    if (lastdigit == 15 && digit == 3)
+    if (digitCount == 15 && digit == 3)
     {
         printf("É um cartão visa");
     }
@@ -67,14 +67,14 @@ int numbercheck(long cartao)
     int parVariable = 0;
     int imparVariable = 0;
 
-    for (int i = 0; i < lastdigit; i++)
+    for (int i = 0; i < digitCount; i++)
     {
         long cardnumber = cartao % rstnumber;
         rstnumber *= 10;
         cardnumber /= antRstNumber;
         antRstNumber *= 10;
         digit = round(cardnumber * 1);
-
+        lastdigit = digit;
         printf("%i\n", digit);
 
 
@@ -112,19 +112,19 @@ long get_validcard(void)
     int testN = round (n / 1000000000000);
     if (n < 10)
     {
-        lastdigit = 13;
+        digitCount = 13;
     }
     if (n > 10 && n < 100)
     {
-        lastdigit = 14;
+        digitCount = 14;
     }
     if (n > 100 && n < 1000)
     {
-        lastdigit = 15;
+        digitCount = 15;
     }
     if (n > 1000)
     {
-        lastdigit = 16;
+        digitCount = 16;
     }
 
     return n;
