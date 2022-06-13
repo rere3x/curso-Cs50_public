@@ -30,15 +30,15 @@ int numbercheck(long cartao)
         trackNumber++;
         printf("testtrack = %i\n", trackNumber);
 
-        if(tracknumber % 2 == 0)
+        if(trackNumber % 2 == 0)
         {
-            calc = cardnumber * 2;
+           /* calc = cardnumber * 2;
             if(calc >= 10)
             {
                 calc %= 10;
                 calc++;
             }else{return calc;}
-
+            */
         }
 
 
