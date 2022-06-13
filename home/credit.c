@@ -8,10 +8,10 @@
     int trackNumber = 0;
 
 
-    get_validcard();
+    long get_validcard();
     bool validCheck(int n);
     int numbercheck(long cartao);
-    showflag();
+    void showflag();
 
 int main(void)
 {
@@ -29,7 +29,7 @@ int main(void)
 
 }
 
-showflag()
+void showflag()
 {
     if (digit == 12 || digit == 16 && lastdigit == 4 )
     {
