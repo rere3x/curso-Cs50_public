@@ -10,7 +10,7 @@
     long get_validcard();
     bool validCheck(int n);
     int numbercheck(long cartao);
-    void showflag();
+    void showflag(void);
 
 
 int main(void)
@@ -22,11 +22,11 @@ int main(void)
 
     if(valid == 1)
     {
-        printf("Seu cartão é: VALIDO");
+        printf("Seu cartão é: VALIDO\n");
         void showflag();
     }
     else{
-        printf("Seu cartão é: INVALIDO");
+        printf("Seu cartão é: INVALIDO\n");
         }
 
 
