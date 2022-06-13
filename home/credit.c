@@ -16,7 +16,7 @@ int main(void)
 
 int numbercheck(long cartao)
 {
-    int calc;
+    int trackNumber;
     long rstnumber = 10;
     long antRstNumber = 1;
     for (int i = 0; i < 16; i++)
@@ -26,9 +26,9 @@ int numbercheck(long cartao)
         cardnumber /= antRstNumber;
         antRstNumber *= 10;
 
-        int tracknumber = 1;
-        tracknumber++;
-        printf("testtrack = %li\n", cardnumber);
+        trackNumber = 1;
+        trackNumber++;
+        printf("testtrack = %i\n", trackNumber);
 
         if(tracknumber % 2 == 0)
         {
