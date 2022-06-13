@@ -20,8 +20,8 @@ int numbercheck(long cartao)
     int trackNumber = 0;
     long rstnumber = 10;
     long antRstNumber = 1;
-    int parVariable;
-    int imparVariable;
+    int parVariable = 0;
+    int imparVariable = 0;
 
     for (int i = 0; i < 16; i++)
     {
@@ -31,7 +31,6 @@ int numbercheck(long cartao)
         antRstNumber *= 10;
         int digit = round(cardnumber * 1);
 
-        printf("testtrack = %i\n", digit);
 
 
         trackNumber++;
@@ -40,15 +39,17 @@ int numbercheck(long cartao)
             digit *= 2;
             if(digit > 10)
             {
-                digit 
+                digit %= 10;
+                digit++;
             }
-
+            parVariable += digit;
         }
         else
         {
-
+            imparVariable += digit;
         }
 
+        printf("testtrack = %i / %i\n", parVariable,imparVariable);
 
     }
     return 0;
