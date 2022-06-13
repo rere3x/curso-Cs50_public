@@ -16,7 +16,15 @@ int main(void)
 
 }
 
+bool validCheck(int n)
+{
+    n %= 10;
+    if(n == 0)
+    {
+        
+    }
 
+}
 
 
 int numbercheck(long cartao)
