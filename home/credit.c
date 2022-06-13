@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<cs50.h>
+#include<math.h>
 
 int numbercheck(long cartao);
 
@@ -28,14 +29,19 @@ int numbercheck(long cartao)
         rstnumber *= 10;
         cardnumber /= antRstNumber;
         antRstNumber *= 10;
+        int digit = round(cardnumber * 1);
 
-        printf("testtrack = %li\n", cardnumber);
+        printf("testtrack = %i\n", digit);
 
 
         trackNumber++;
         if(trackNumber % 2 == 0)
         {
-
+            digit *= 2;
+            if(digit > 10)
+            {
+                digit 
+            }
 
         }
         else
