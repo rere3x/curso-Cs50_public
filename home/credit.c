@@ -31,7 +31,7 @@ int main(void)
 
 }
 
-void showflag()
+void showflag(void)
 {
     if (lastdigit == 13 || lastdigit == 16 && digit == 4)
     {
