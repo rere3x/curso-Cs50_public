@@ -26,7 +26,7 @@ int main(void)
         void showflag();
     }
     else{
-        printf("Seu cartão é: VALIDO");
+        printf("Seu cartão é: INVALIDO");
         }
 
 
