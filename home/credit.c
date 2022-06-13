@@ -24,6 +24,7 @@ int main(void)
     if(valid == 1)
     {
         void showflag();
+        
 
     }
 
@@ -75,7 +76,6 @@ int numbercheck(long cartao)
         antRstNumber *= 10;
         int digit = round(cardnumber * 1);
         lastdigit = digit;
-        
 
 
         trackNumber++;
