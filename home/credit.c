@@ -4,7 +4,7 @@
 
 
     int trackNumber = 0;
-    int validCheck(int n);
+    bool validCheck(int n);
     int numbercheck(long cartao);
 
 
@@ -13,9 +13,11 @@ int main(void)
 
     long cartao = get_long("Teste seu cartão de credito: ");
     int numberchecked = numbercheck(cartao);
-    int valid = validCheck(numberchecked);
+    bool valid = validCheck(numberchecked);
 
-        printf("testtrack = %i", valid);
+    
+
+        printf("testtrack = %i\n", valid);
 
 }
 
