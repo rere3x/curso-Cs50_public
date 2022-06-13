@@ -2,6 +2,7 @@
 #include<cs50.h>
 #include<math.h>
 
+
     int trackNumber = 0;
     bool validCheck(int n);
 int numbercheck(long cartao);
@@ -14,7 +15,7 @@ int main(void)
     int numberchecked = numbercheck(cartao);
     bool valid = validCheck(numberchecked);
 
-        printf("testtrack = %);
+        printf("testtrack = ");
 
 }
 
