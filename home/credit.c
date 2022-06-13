@@ -24,7 +24,6 @@ int main(void)
     if(valid == 1)
     {
         void showflag();
-        printf("%i\n", digit);
 
     }
 
@@ -76,6 +75,7 @@ int numbercheck(long cartao)
         antRstNumber *= 10;
         digit = round(cardnumber * 1);
 
+        printf("%i\n", digit);
 
 
         trackNumber++;
