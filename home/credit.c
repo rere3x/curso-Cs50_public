@@ -22,7 +22,7 @@ int main(void)
 
     if(valid == 1)
     {
-
+        printf("valido\n");
     }
 
 
@@ -116,6 +116,6 @@ long get_validcard(void)
         lastdigit = 16;
     }
 
-        printf("testtrack = %i\n", lastdigit);
+        printf("testtrack = %li\n", n);
 
 }
