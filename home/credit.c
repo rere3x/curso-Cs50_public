@@ -3,9 +3,12 @@
 #include<math.h>
 
 
-    int trackNumber = 0;
-    int digit;
     int lastdigit;
+    int digit;
+    int trackNumber = 0;
+
+
+    get_validcard();
     bool validCheck(int n);
     int numbercheck(long cartao);
     showflag();
@@ -13,7 +16,7 @@
 int main(void)
 {
 
-    long cartao = get_long("Teste seu cartão de credito: ");
+    long cartao = get_validcard();
     int numberchecked = numbercheck(cartao);
     bool valid = validCheck(numberchecked);
 
@@ -84,4 +87,17 @@ int numbercheck(long cartao)
     }
     return parVariable + imparVariable;
 
+}
+
+ positive_int(void)
+{
+    long n;
+    do
+    {
+        n = get_long("Escolha um numero de cartão de credito valido: \n");
+    }
+    while (n < 1);
+    return n;
+
+    
 }
