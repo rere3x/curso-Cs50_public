@@ -99,5 +99,6 @@ long positive_int(void)
     while (n < 1000000000000);
     return n;
 
-
+    n = round (n / 1000000000000);
+    if (n > 9999)
 }
