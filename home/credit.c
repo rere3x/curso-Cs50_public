@@ -3,6 +3,7 @@
 #include<math.h>
 
     int trackNumber = 0;
+    bool validCheck(int n);
 int numbercheck(long cartao);
 
 
@@ -13,6 +14,7 @@ int main(void)
     int numberchecked = numbercheck(cartao);
     bool valid = validCheck(numberchecked);
 
+        printf("testtrack = %);
 
 }
 
@@ -61,7 +63,6 @@ int numbercheck(long cartao)
             imparVariable += digit;
         }
 
-        printf("testtrack = %i / %i\n", parVariable,imparVariable);
 
     }
     return parVariable + imparVariable;
