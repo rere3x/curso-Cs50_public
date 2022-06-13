@@ -5,7 +5,6 @@
 
     int digitCount;
     int lastdigit = 0;
-    int trackNumber = 0;
 
 
     long get_validcard();
@@ -24,8 +23,6 @@ int main(void)
     if(valid == 1)
     {
         void showflag();
-        
-
     }
 
 
@@ -49,6 +46,8 @@ void showflag(void)
     }
 }
 
+
+
 bool validCheck(int n)
 {
     n %= 10;
@@ -67,6 +66,7 @@ int numbercheck(long cartao)
     long antRstNumber = 1;
     int parVariable = 0;
     int imparVariable = 0;
+    int trackNumber = 0;
 
     for (int i = 0; i < digitCount; i++)
     {
