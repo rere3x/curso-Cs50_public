@@ -19,6 +19,7 @@ int main(void)
     long cartao = get_validcard();
     int numberchecked = numbercheck(cartao);
     bool valid = validCheck(numberchecked);
+        printf("testtrack = %li\n", cartao);
 
     if(valid == 1)
     {
@@ -95,7 +96,7 @@ long get_validcard(void)
     {
         n = get_long("Escolha um numero de cartão de credito valido: \n");
     }
-    while (n < 1000000000000 || n > 1000000000000000);
+    while (n < 1000000000000);
 
     n = round (n / 1000000000000);
     if (n < 10)
@@ -115,7 +116,6 @@ long get_validcard(void)
         lastdigit = 16;
     }
 
-        printf("testtrack = %li\n", n);
     return n * 1000000000000;
 
 }
