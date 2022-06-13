@@ -11,7 +11,7 @@
     long get_validcard();
     bool validCheck(int n);
     int numbercheck(long cartao);
-    void showflag();
+
 
 int main(void)
 {
@@ -22,13 +22,13 @@ int main(void)
 
     if(valid == 1)
     {
-        showflag();
+
     }
 
 
 
 }
-
+/*
 void showflag()
 {
     if (digit == 12 || digit == 16 && lastdigit == 4 )
@@ -36,7 +36,7 @@ void showflag()
         printf("É um cartão visa");
     }
 }
-
+*/
 bool validCheck(int n)
 {
     n %= 10;
@@ -88,7 +88,7 @@ int numbercheck(long cartao)
 
 }
 
-long positive_int(void)
+long get_validcard(void)
 {
     long n;
     do
@@ -116,6 +116,6 @@ long positive_int(void)
         lastdigit = 16;
     }
 
-        printf("testtrack = %i\n", lastdidigit);
+        printf("testtrack = %i\n", lastdigit);
 
 }
