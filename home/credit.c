@@ -96,8 +96,8 @@ int numbercheck(long cartao)
     {
         n = get_long("Escolha um numero de cartão de credito valido: \n");
     }
-    while (n < 1);
+    while (n < 1000000000000);
     return n;
 
-    
+
 }
