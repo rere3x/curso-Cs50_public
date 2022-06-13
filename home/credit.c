@@ -2,6 +2,7 @@
 #include<cs50.h>
 #include<math.h>
 
+    int trackNumber = 0;
 int numbercheck(long cartao);
 
 
@@ -9,15 +10,17 @@ int main(void)
 {
 
     long cartao = get_long("Teste seu cartão de credito: ");
-    int numerchecked = numbercheck(cartao);
-
+    int numberchecked = numbercheck(cartao);
+    bool valid = validCheck(numberchecked);
 
 
 }
 
+
+
+
 int numbercheck(long cartao)
 {
-    int trackNumber = 0;
     long rstnumber = 10;
     long antRstNumber = 1;
     int parVariable = 0;
@@ -50,8 +53,8 @@ int numbercheck(long cartao)
         }
 
         printf("testtrack = %i / %i\n", parVariable,imparVariable);
-        
+
     }
-    return 0;
+    return parVariable + imparVariable;
 
 }
