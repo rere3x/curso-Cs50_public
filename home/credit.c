@@ -89,7 +89,7 @@ int numbercheck(long cartao)
 
 }
 
- positive_int(void)
+long positive_int(void)
 {
     long n;
     do
