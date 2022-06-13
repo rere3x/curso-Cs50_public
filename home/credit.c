@@ -24,7 +24,7 @@ int main(void)
     if(valid == 1)
     {
         void showflag();
-        printf("É um cartão Visa");
+        printf("%i\n", digit);
 
     }
 
