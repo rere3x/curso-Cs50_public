@@ -19,13 +19,13 @@ int main(void)
     long cartao = get_validcard();
     int numberchecked = numbercheck(cartao);
     bool valid = validCheck(numberchecked);
-        printf("testtrack = %li\n", cartao);
 
     if(valid == 1)
     {
         printf("valido\n");
     }
 
+        printf("testtrack = %li\n", cartao);
 
 
 }
@@ -98,7 +98,7 @@ long get_validcard(void)
     }
     while (n < 1000000000000);
 
-    n = round (n / 1000000000000);
+    int testN = round (n / 1000000000000);
     if (n < 10)
     {
         lastdigit = 13;
@@ -116,6 +116,6 @@ long get_validcard(void)
         lastdigit = 16;
     }
 
-    return n * 1000000000000;
+    return n;
 
 }
