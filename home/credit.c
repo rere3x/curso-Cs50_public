@@ -50,7 +50,7 @@ int numbercheck(long cartao)
         }
 
         printf("testtrack = %i / %i\n", parVariable,imparVariable);
-
+        
     }
     return 0;
 
