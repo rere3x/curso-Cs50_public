@@ -95,8 +95,7 @@ long get_validcard(void)
     {
         n = get_long("Escolha um numero de cartão de credito valido: \n");
     }
-    while (n < 1000000000000);
-    return n;
+    while (n < 1000000000000 && n > 1000000000000000);
 
     n = round (n / 1000000000000);
     if (n < 10)
@@ -111,11 +110,12 @@ long get_validcard(void)
     {
         lastdigit = 15;
     }
-    if (n > 1000 && n < 10000)
+    if (n > 1000)
     {
         lastdigit = 16;
     }
 
         printf("testtrack = %li\n", n);
+    return n * 1000000000000;
 
 }
