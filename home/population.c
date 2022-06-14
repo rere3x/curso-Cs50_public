@@ -11,8 +11,8 @@ int main(void)
     Years: 9
     */
 
-   int n = positive_int("test1");
-   int b = positive_int("test2");
+   int n = positive_int("Qual tamanho inicial da população: \n");
+   int b = positive_int("Qual tamanho final da população: \n");
 
 
 }
