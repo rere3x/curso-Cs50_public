@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<cs50.h>
+#include<math.h>
 
 int yearsToLimit(int population,int endSize);
 int positive_int(string s);
