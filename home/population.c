@@ -17,7 +17,7 @@ int main(void)
 
     population = positive_int("Qual tamanho inicial da população: \n");
     endSize = positive_int("Qual tamanho final da população: \n");
-    int years = yearsToLimit(population,endSize);
+    int years = yearsToLimit(population , endSize);
 
 }
 
@@ -40,7 +40,7 @@ int yearsToLimit(int n, int b)
 {
     int years = 0;
     int newPopulation;
-    
+
     do
     {
 
