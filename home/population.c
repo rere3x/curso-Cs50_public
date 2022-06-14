@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<cs50.h>
 
-int yearsToLimit(population,endSize);
+int yearsToLimit(int population,int endSize);
 int positive_int(string s);
 
 
@@ -44,10 +44,10 @@ int yearsToLimit(int n, int b)
     do
     {
 
-    int newPopulation = population + n - b;
+    newPopulation = population + n - b;
     years++;
     }
-    while (newPpulation != endSize)
+    while (newPopulation != endSize);
 
     return years;
 }
