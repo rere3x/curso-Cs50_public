@@ -49,7 +49,7 @@ int yearsToLimit(int n, int b)
     {
 
 
-        newPopulation = newPopulation + (newPopulation/3) - (newPopulation/4) ;
+        newPopulation = ceil( newPopulation + (newPopulation/3) - (newPopulation/4) );
         years++;
     }
     while (newPopulation < b );
