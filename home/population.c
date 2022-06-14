@@ -6,8 +6,7 @@ int yearsToLimit(int population,int endSize);
 int positive_int(string s);
 
 
-int population;
-int endSize;
+
 
 int main(void)
 {
@@ -16,8 +15,8 @@ int main(void)
     Years: 9
     */
 
-    population = positive_int("Qual tamanho inicial da população: \n");
-    endSize = positive_int("Qual tamanho final da população: \n");
+    int population = positive_int("Qual tamanho inicial da população: \n");
+    int endSize = positive_int("Qual tamanho final da população: \n");
     int years = yearsToLimit(population , endSize);
 }
 
@@ -42,10 +41,10 @@ int yearsToLimit(int n, int b)
 
 
     int years = 0;
-    int newPopulation = 0;
+    int newPopulation = n + (n/3) - (n/4);
 
 
-    while (newPopulation < b)
+    while (newPopulation < b )
     {
 
 
