@@ -8,19 +8,20 @@ int main(void)
     Years: 9
     */
 
-   int n = positive_int();
-   int b = positive_int();
+   int n = positive_int("test1");
+   int b = positive_int("test2");
 
 
 }
 
 
-int positive_int(void)
+int positive_int(string s)
 {
-    float n;
+
+    int n;
     do
     {
-        n = get_float("Qual tamanho inicial da população: \n");
+        n = get_float("%s", s);
     }
     while (n < 1);
     return n;
