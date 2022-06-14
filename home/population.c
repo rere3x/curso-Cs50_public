@@ -46,6 +46,7 @@ int yearsToLimit(int n, int b)
 
     newPopulation = population + n - b;
     years++;
+    
     }
     while (newPopulation != endSize);
 
