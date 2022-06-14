@@ -32,7 +32,7 @@ int positive_int(string s)
     {
         n = get_float("%s", s);
     }
-    while (n < 1);
+    while (n < population);
     return n;
 }
 
@@ -47,7 +47,7 @@ int yearsToLimit(int n, int b)
     do
     {
         newPopulation = n + (n/3) - (n/4) ;
-        
+
         years++;
     }
     while (newPopulation == endSize);
