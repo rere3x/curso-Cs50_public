@@ -45,13 +45,14 @@ int yearsToLimit(int n, int b)
     int newPopulation = n + (n/3) - (n/4);
 
 
-    while (newPopulation < b )
+    do
     {
 
 
         newPopulation = newPopulation + (newPopulation/3) - (newPopulation/4) ;
         years++;
     }
+    while (newPopulation < b );
 
     return years;
 
