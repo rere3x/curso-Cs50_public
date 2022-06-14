@@ -48,7 +48,7 @@ int yearsToLimit(int n, int b)
     {
 
 
-        newPopulation = n + (n/3) - (n/4) ;
+        newPopulation = newPopulation + (newPopulation/3) - (newPopulation/4) ;
     printf("%i\n", newPopulation);
         years++;
     }
