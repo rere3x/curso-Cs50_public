@@ -44,10 +44,10 @@ int yearsToLimit(int n, int b)
     do
     {
         newPopulation = population + n - b;
-        printf("%i", newPopulation);
+        printf("%i\n", newPopulation);
         years++;
     }
-    while (newPopulation != endSize);
+    while (newPopulation == endSize);
 
     return years;
 }
