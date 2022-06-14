@@ -1,6 +1,9 @@
 #include<stdio.h>
 #include<cs50.h>
 
+
+int positive_int(string s);
+
 int main(void)
 {
    /* Start size: 100
