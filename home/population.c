@@ -38,11 +38,11 @@ int positive_int(string s)
 
 int yearsToLimit(int n, int b)
 {
-    if (n == b) return years = 0;
-
 
     int years = 0;
     int newPopulation = n + (n/3) - (n/4);
+
+    if (n == b) return years = 0;
 
 
     do
