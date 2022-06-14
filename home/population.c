@@ -49,7 +49,7 @@ int yearsToLimit(int n, int b)
     while (newPopulation >= endSize)
     {
         newPopulation = n + (n/3) - (n/4) ;
-
+    printf
         years++;
     }
 
