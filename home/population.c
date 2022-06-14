@@ -47,9 +47,9 @@ int yearsToLimit(int n, int b)
 
     do
     {
-
-
         newPopulation = ceil( newPopulation + (newPopulation/3) - (newPopulation/4) );
+        years++;
+        if(newPopulation > b)
         years++;
     }
     while (newPopulation < b );
