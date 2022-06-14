@@ -38,7 +38,7 @@ int positive_int(string s)
 
 int yearsToLimit(int n, int b)
 {
-
+    if (n == b) return years = 0;
 
 
     int years = 0;
