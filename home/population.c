@@ -5,7 +5,7 @@
 int yearsToLimit(int population,int endSize);
 int positive_int(string s);
 
-int population;
+int population = 9;
 
 
 int main(void)
