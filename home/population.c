@@ -5,7 +5,7 @@
 int yearsToLimit(int population,int endSize);
 int positive_int(string s);
 
-int population = 8;
+
 
 
 int main(void)
@@ -13,7 +13,7 @@ int main(void)
 
 
 
-    population = positive_int("Qual tamanho inicial da população: \n");
+    int population = positive_int("Qual tamanho inicial da população: \n");
 
     int endSize = positive_int("Qual tamanho final da população: \n");
 
@@ -28,13 +28,13 @@ int main(void)
 
 int positive_int(string s)
 {
-
+    int pop = 8;
     int n;
     do
     {
         n = get_int("%s", s);
     }
-    while (n < population);
+    while (n < pop);
     return n;
 }
 
