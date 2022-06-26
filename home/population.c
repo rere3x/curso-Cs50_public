@@ -28,13 +28,14 @@ int main(void)
 
 int positive_int(string s)
 {
-
+    int pop = 8;
     int n;
     do
     {
         n = get_int("%s", s);
     }
-    while (n < n);
+    while (n < pop);
+    pop = n;
     return n;
 }
 
