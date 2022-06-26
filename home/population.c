@@ -41,11 +41,13 @@ int positive_int(string s)
 
 int yearsToLimit(int n, int b)
 {
+    int years = 0;
     if (n == b)
-    return = 0;
+    return 0;
 
     newpop = n + (n / 3) + (n / 4);
-    
+    while (newpop < b)
+        int newpop = newpop + (newpop / 3) + (newpop / 4);
 
 
     return years;
