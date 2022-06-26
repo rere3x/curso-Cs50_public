@@ -46,6 +46,7 @@ int yearsToLimit(int n, int b)
     return 0;
 
     int newpop = n + (n / 3) + (n / 4);
+    printf ("%i", newpop);
 
     while (newpop < b)
 
