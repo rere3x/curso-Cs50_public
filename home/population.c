@@ -20,7 +20,7 @@ int main(void)
     int years = yearsToLimit(population , endSize);
 
     printf("Years: %i\n", years);
-    
+
 }
 
 
@@ -32,7 +32,7 @@ int positive_int(string s)
     int n;
     do
     {
-        n = get_float("%s", s);
+        n = get_int("%s", s);
     }
     while (n < population);
     return n;
