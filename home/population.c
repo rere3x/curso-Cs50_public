@@ -41,8 +41,10 @@ int positive_int(string s)
 
 int yearsToLimit(int n, int b)
 {
-
-    
+    if (n == b)
+    return = 0;
+    else
+    newpop = n + (n / 3) + (n / 4)
 
     return years;
 
