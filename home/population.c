@@ -42,20 +42,7 @@ int positive_int(string s)
 int yearsToLimit(int n, int b)
 {
 
-    int years = 0;
-    int newPopulation = n + (n/3) - (n/4);
-
-    if (n == b) return years = 0;
-
-
-    do
-    {
-        newPopulation = ceil( newPopulation + (newPopulation/3) - (newPopulation/4) );
-        years++;
-        if(newPopulation > b)
-        years++;
-    }
-    while (newPopulation < b );
+    
 
     return years;
 
