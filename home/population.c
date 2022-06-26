@@ -10,10 +10,8 @@ int population = 8;
 
 int main(void)
 {
-   /* Start size: 100
-    End size: 200
-    Years: 9
-    */
+
+   
 
     population = positive_int("Qual tamanho inicial da população: \n");
     int endSize = positive_int("Qual tamanho final da população: \n");
