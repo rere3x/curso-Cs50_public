@@ -34,7 +34,7 @@ int positive_int(string s)
     {
         n = get_int("%s", s);
     }
-    while (n  8);
+    while (n < 9);
     return n;
 }
 
