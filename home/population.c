@@ -45,9 +45,9 @@ int yearsToLimit(int n, int b)
     if (n == b)
     return 0;
 
-    newpop = n + (n / 3) + (n / 4);
+    int newpop = n + (n / 3) + (n / 4);
     while (newpop < b)
-        int newpop = newpop + (newpop / 3) + (newpop / 4);
+        newpop = newpop + (newpop / 3) + (newpop / 4);
 
 
     return years;
