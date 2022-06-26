@@ -11,12 +11,16 @@ int population = 8;
 int main(void)
 {
 
-   
+
 
     population = positive_int("Qual tamanho inicial da população: \n");
+
     int endSize = positive_int("Qual tamanho final da população: \n");
+
     int years = yearsToLimit(population , endSize);
+
     printf("Years: %i\n", years);
+    
 }
 
 
