@@ -62,8 +62,8 @@ int textFormula(string text)
 
 
     //average number between words
-    float newLetters = (letters / words) * 100.00;
-    float newSentenses = (sentenses / words) * 100.00;
+    float newLetters = (letters / (float)words) * 100.00;
+    float newSentenses = (sentenses / (float)words) * 100.00;
 
     grade = (0.0588 * newLetters) - (0.296 * newSentenses) - 15.8;
 
