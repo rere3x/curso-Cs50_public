@@ -22,7 +22,7 @@ int main (void)
 
     printf ("Before Grade 1");
 
-    if(Grade >= 16)
+    else if(grade >= 16)
 
         printf ("Before Grade 1");
 
@@ -43,7 +43,7 @@ int textFormula(string text)
 
 
     //walking char by char
-    for (i=0, n = strlen(text); i < n; i++)
+    for (int i = 0 , n = strlen(text); i < n; i++)
     {
         //checking blank spaces to cout words
         if(isspace(text[i]) == 1 )
