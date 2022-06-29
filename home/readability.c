@@ -3,7 +3,7 @@
 #include <ctype.h>
 #include <string.h>
 
-int grade = textFormula(string text);
+int textFormula(string text);
 
 int main (void)
 {
@@ -33,7 +33,7 @@ int main (void)
 
 
 
-int grade = textFormula(string text)
+int textFormula(string text)
 {
 
     int words = 1;
