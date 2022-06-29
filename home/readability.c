@@ -56,7 +56,7 @@ int textFormula(string text)
             letters++;
 
         //checking for non-lettlers like ". , ? :"
-        if(isalnum(t[i]) )
+        if(!isalnum(t[i]))
             sentenses++;
     }
 
