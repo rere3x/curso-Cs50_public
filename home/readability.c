@@ -60,9 +60,10 @@ int textFormula(string text)
             sentenses++;
     }
 
-    float newLetters = letters 
+    float newLetters = (letters / words) * 100.00;
+    
 
-    grade = (0.0588 * ) - (0.296 * sentenses) - 15.8;
+    grade = (0.0588 * newLetters) - (0.296 * sentenses) - 15.8;
 
     return grade;
 }
