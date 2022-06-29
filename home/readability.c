@@ -60,10 +60,12 @@ int textFormula(string text)
             sentenses++;
     }
 
-    float newLetters = (letters / words) * 100.00;
-    
 
-    grade = (0.0588 * newLetters) - (0.296 * sentenses) - 15.8;
+    //average number between words
+    float newLetters = (letters / words) * 100.00;
+    float newSentenses = (sentenses / words) * 100.00;
+
+    grade = (0.0588 * newLetters) - (0.296 * newSentenses) - 15.8;
 
     return grade;
 }
