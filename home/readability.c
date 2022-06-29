@@ -26,3 +26,8 @@ int main (void)
         printf ("Grade %i", grade);
 
 }
+
+int grade = textFormula(string text)
+{
+    
+}
