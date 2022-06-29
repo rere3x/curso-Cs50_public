@@ -47,6 +47,7 @@ int textFormula(string text)
     {
         //checking for blank spaces
         if(isspace(text[i]) == 1 )
+        printf("true");
             words++;
 
         //checking for lettlers
