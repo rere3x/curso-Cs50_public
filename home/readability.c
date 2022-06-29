@@ -28,7 +28,10 @@ int main (void)
 
 }
 
+
+
 int grade = textFormula(string text)
 {
 
+    for (i=0, text)
 }
