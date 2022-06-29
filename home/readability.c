@@ -33,11 +33,21 @@ int main (void)
 
 int grade = textFormula(string text)
 {
-    
 
+    int words = 1;
+
+
+
+    //walking char by char
     for (i=0, n = strlen(text); i < n; i++)
     {
-        if(isspace(text[i]) == 0 )
+        //checking blank spaces to cout words
+        if(isspace(text[i]) == 1 )
+            words++;
+
+        if( == 1 )
+
+
 
     }
 }
