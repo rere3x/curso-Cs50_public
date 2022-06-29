@@ -56,8 +56,8 @@ int textFormula(string text)
         if(isalpha(t[i]) )
             letters++;
 
-        //checking for non-lettlers like ". , ? :"
-        if(t[i] == '?' || t[i] == '!' || t[i] == '.' || t[i] == ';')
+        //checking for final punctuation  ". ? !"
+        if(t[i] == '?' || t[i] == '!' || t[i] == '.')
             sentenses++;
     }
 
