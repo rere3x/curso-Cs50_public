@@ -45,6 +45,8 @@ int textFormula(string text)
     //walking char by char
     for (int i = 0 , n = strlen(t); i < n; i++)
     {
+        printf ("%c", t[i]);
+
         //checking for blank spaces
         if(isspace(t[i]) == 1 )
         printf("\ntrue\n");
