@@ -45,19 +45,18 @@ int textFormula(string text)
     //walking char by char
     for (int i = 0 , n = strlen(t); i < n; i++)
     {
-        printf (isspace(t[i]));
 
         //checking for blank spaces
-        if(isspace(t[i]) == 1 )
-        printf("\ntrue\n");
+        if(isspace(t[i]) )
+        
             words++;
 
         //checking for lettlers
-        if(isalpha(t[i]) == 1 )
+        if(isalpha(t[i]) )
             letters++;
 
         //checking for non-lettlers like ". , ? :"
-        if(isalpha(t[i]) == 0 )
+        if(!isalpha(t[i]) )
             sentenses++;
     }
 
