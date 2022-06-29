@@ -48,7 +48,7 @@ int textFormula(string text)
 
         //checking for blank spaces
         if(isspace(t[i]) )
-        
+
             words++;
 
         //checking for lettlers
@@ -56,7 +56,7 @@ int textFormula(string text)
             letters++;
 
         //checking for non-lettlers like ". , ? :"
-        if(!isalpha(t[i]) )
+        else
             sentenses++;
     }
 
