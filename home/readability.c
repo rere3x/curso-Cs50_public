@@ -57,7 +57,7 @@ int textFormula(string text)
             letters++;
 
         //checking for non-lettlers like ". , ? :"
-        if(t[i] == '?' && t[i] == '!' && t[i] == '.')
+        if(t[i] == '?' && t[i] == '!' && t[i] == '.' && t[i] == ';')
             sentenses++;
     }
 
