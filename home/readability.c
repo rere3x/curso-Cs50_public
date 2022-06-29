@@ -37,7 +37,7 @@ int grade = textFormula(string text)
     int words = 1;
     int letters = 0;
     int sentenses = 0;
-
+    float grade = 0;
 
 
     //walking char by char
@@ -56,5 +56,6 @@ int grade = textFormula(string text)
             sentenses++;
     }
 
+    grade = (0.0588 * letters) - (0.296 * sentenses) - 15.8
     
 }
