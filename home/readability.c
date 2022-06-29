@@ -54,8 +54,7 @@ int grade = textFormula(string text)
         //checking for non-lettlers like ". , ? :"
         if(isalpha(text[i]) == 0 )
             sentenses++;
-
-
-
     }
+
+    
 }
