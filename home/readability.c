@@ -37,6 +37,7 @@ int grade = textFormula(string text)
 
     for (i=0, n = strlen(text); i < n; i++)
     {
-        if(text[i] )
+        if(isspace(text[i]) == 0 )
+        
     }
 }
