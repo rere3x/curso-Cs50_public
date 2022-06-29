@@ -20,14 +20,14 @@ int main (void)
 
    if(grade < 1)
 
-    printf ("Before Grade 1\n");
+    printf ("\nBefore Grade 1\n");
 
     else if(grade >= 16)
 
-        printf ("Before Grade 1\n");
+        printf ("\nBefore Grade 1\n");
 
         else
-        printf ("Grade %i\n", grade);
+        printf ("\nGrade %i\n", grade);
 
 }
 
@@ -35,7 +35,7 @@ int main (void)
 
 int textFormula(string text)
 {
-
+    string t = text;
     int words = 1;
     int letters = 0;
     int sentenses = 0;
@@ -43,19 +43,19 @@ int textFormula(string text)
 
 
     //walking char by char
-    for (int i = 0 , n = strlen(text); i < n; i++)
+    for (int i = 0 , n = strlen(t); i < n; i++)
     {
         //checking for blank spaces
-        if(isspace(text[i]) == 1 )
-        printf("true");
+        if(isspace(t[i]) == 1 )
+        printf("\ntrue\n");
             words++;
 
         //checking for lettlers
-        if(isalpha(text[i]) == 1 )
+        if(isalpha(t[i]) == 1 )
             letters++;
 
         //checking for non-lettlers like ". , ? :"
-        if(isalpha(text[i]) == 0 )
+        if(isalpha(t[i]) == 0 )
             sentenses++;
     }
 
