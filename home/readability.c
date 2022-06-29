@@ -11,6 +11,18 @@ int main (void)
     */
 
    string text = get_string("Text: ");
-   
+   int grade = textFormula(text);
+
+
+   if(grade < 1)
+
+    printf ("Before Grade 1");
+
+    if else(Grade >= 16)
+
+        printf ("Before Grade 1");
+
+        else
+        printf ("Grade %i", grade);
 
 }
