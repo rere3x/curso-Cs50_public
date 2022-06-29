@@ -56,6 +56,7 @@ int grade = textFormula(string text)
             sentenses++;
     }
 
-    grade = (0.0588 * letters) - (0.296 * sentenses) - 15.8
-    
+    grade = (0.0588 * letters) - (0.296 * sentenses) - 15.8;
+
+    return grade;
 }
