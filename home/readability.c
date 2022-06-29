@@ -45,7 +45,7 @@ int textFormula(string text)
     //walking char by char
     for (int i = 0 , n = strlen(text); i < n; i++)
     {
-        //checking blank spaces to cout words
+        //checking for blank spaces
         if(isspace(text[i]) == 1 )
             words++;
 
