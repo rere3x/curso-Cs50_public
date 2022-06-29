@@ -36,6 +36,7 @@ int grade = textFormula(string text)
 
     int words = 1;
     int letters = 0;
+    int sentenses = 0;
 
 
 
@@ -46,11 +47,13 @@ int grade = textFormula(string text)
         if(isspace(text[i]) == 1 )
             words++;
 
+        //checking for lettlers
         if(isalpha(text[i]) == 1 )
             letters++;
 
-        if((text[i]) == 1 )
-            letters++;
+        //checking for non-lettlers like ". , ? :"
+        if(isalpha(text[i]) == 0 )
+            sentenses++;
 
 
 
