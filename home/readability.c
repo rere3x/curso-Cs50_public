@@ -22,7 +22,7 @@ int main (void)
 
     printf ("Before Grade 1");
 
-    if else(Grade >= 16)
+    if(Grade >= 16)
 
         printf ("Before Grade 1");
 
