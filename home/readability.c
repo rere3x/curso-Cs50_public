@@ -35,6 +35,7 @@ int grade = textFormula(string text)
 {
 
     int words = 1;
+    int letters = 0;
 
 
 
@@ -45,7 +46,11 @@ int grade = textFormula(string text)
         if(isspace(text[i]) == 1 )
             words++;
 
-        if( == 1 )
+        if(isalpha(text[i]) == 1 )
+            letters++;
+
+        if((text[i]) == 1 )
+            letters++;
 
 
 
