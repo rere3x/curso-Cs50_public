@@ -3,6 +3,8 @@
 #include <ctype.h>
 #include <string.h>
 
+int grade = textFormula(string text);
+
 int main (void)
 {
     /*
