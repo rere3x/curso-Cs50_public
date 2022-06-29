@@ -21,14 +21,14 @@ int main (void)
 
    if(grade < 1)
 
-    printf ("\nBefore Grade 1\n");
+    printf ("Before Grade 1\n");
 
     else if(grade >= 16)
 
-        printf ("\nBefore Grade 1\n");
+        printf ("Before Grade 1\n");
 
         else
-        printf ("\nGrade %i\n", grade);
+        printf ("Grade %i\n", grade);
 
 }
 
