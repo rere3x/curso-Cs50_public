@@ -25,7 +25,7 @@ int main (void)
 
     else if(grade >= 16)
 
-        printf ("Before Grade 1\n");
+        printf ("Grade 16+\n");
 
         else
         printf ("Grade %i\n", grade);
