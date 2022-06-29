@@ -68,5 +68,5 @@ int textFormula(string text)
 
     grade = (0.0588 * newLetters) - (0.296 * newSentenses) - 15.8;
 
-    return grade;
+    return round(grade);
 }
