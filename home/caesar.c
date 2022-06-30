@@ -10,7 +10,7 @@ int validKey (int length, string t[]);
 int main(int arg, string argv[])
 {
 
-    if (                validKey       (       strlen( argv[1])    , argv) == 1          )
+    if (validKey(strlen( argv[1]), argv) == 1 )
 
         printf("valid\n");
 
@@ -34,7 +34,7 @@ int validKey (int length, string t[])
     {
 
 
-   if (isdigit(t[1][i]) == 0 || !isspace(t[1][i]))
+   if (!isdigit(t[1][i]) || !isspace(t[1][i]))
    return 0;
 
     }
