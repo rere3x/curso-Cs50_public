@@ -15,6 +15,7 @@ int main(int arg, string argv[])
     {
 
         string text = get_string("Text: \n");
+        ciperText(text[1], text);
 
     }
     //print a comand line showing that the key is not valid
@@ -61,4 +62,4 @@ void ciperText(int length, string s)
 
 
 }
-*/
+
