@@ -12,7 +12,7 @@ int main(int arg, string argv[])
 
     if (                validKey       (       strlen( argv[1])    , argv)           )
 
-        printf("valid");
+        printf("valid\n");
 
 
 
@@ -34,13 +34,14 @@ int validKey (int length, string t[])
     {
 
 
-    printf ("%i\n", isdigit(t[1][i]));
-
+    if (isdigit(t[1][i]) == 0)
+    return 0;
 
     }
 
 
- return 0;
+return 1;
+
 }
 
 /*void ciperText(string s)
