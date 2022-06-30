@@ -46,7 +46,7 @@ char ciperText(string s)
 
         for (int i = 0, n = strlen(plantext); i < n ; i++)
 
-            if (isupper(s[i]))
+            if (isupper(s[1]))
         int ciper = ( s[1][1] + int atoi (argv[1])) % 26;
 
 
