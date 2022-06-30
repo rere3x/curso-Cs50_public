@@ -39,10 +39,10 @@ int validKey (void)
             return true;
 }
 
-char ciperText(string s)
+ciperText(string s)
 {
 
-        //transform any number with a key into a nume between 0 and 25
+        //ciper the text
 
         for (int i = 0, n = strlen(plantext); i < n ; i++)
 
@@ -54,14 +54,6 @@ char ciperText(string s)
 
             else
                 printf("%c", s[i])
-
-
-
-
-
-
-
-
 
 
 }
