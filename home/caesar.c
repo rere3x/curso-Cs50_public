@@ -31,11 +31,15 @@ int main(int arg, string argv[])
 int validKey (int length, string t[])
 {
     for (int i = 0; i < length; i++)
+       printf("%c\n", t[1][i]);
 
-        if (isdigit(t[1][i]))
+        if (!isdigit(t[1][i]))
             return false;
         else
             return true;
+
+
+return 0;
 }
 
 /*void ciperText(string s)
