@@ -32,7 +32,7 @@ int validKey (int length, string t[])
 {
     for (int i = 0; i < length; i++)
 
-        if (!isdigit(t[1][i]))
+        if (isdigit(t[1][i]))
             return false;
         else
             return true;
