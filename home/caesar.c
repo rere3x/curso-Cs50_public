@@ -15,7 +15,7 @@ int main(int arg, string argv[])
     {
 
         string text = get_string("Text: \n");
-        ciperText(strlen(text), text, atoi(argv[1]));
+        printf("ciphertext: ", ciperText(strlen(text), text, atoi(argv[1])));
 
     }
     //print a comand line showing that the key is not valid
@@ -56,7 +56,7 @@ void ciperText(int length, string s, int ciper)
 {
 
 
-            
+
 
             if (isupper(s[i]) && isalpha(s[i]))
                 printf("%c", (((s[i] - 65)  + ciper) % 26) + 65);
