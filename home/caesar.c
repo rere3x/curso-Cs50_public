@@ -13,7 +13,7 @@ int main(int arg, string argv[])
 
     if (validKey(strlen( argv[1]), argv) == 1 && argv[1])
     {
-
+            
         string text = get_string("Text: \n");
         ciperText(strlen(text), text, atoi(argv[1]));
 
