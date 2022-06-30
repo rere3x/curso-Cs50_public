@@ -39,3 +39,8 @@ int validKey (void)
             return true;
 }
         int ciper = (argv[1][i] + int atoi (argv[1])) % 26;
+
+char ciperText()
+{
+    
+}
