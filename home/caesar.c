@@ -11,7 +11,7 @@ int main(int arg, string argv[])
 
     if ( validKey() && argv[2] == \0 )
 
-        
+        int atoi(argv[1]);
 
 
 
