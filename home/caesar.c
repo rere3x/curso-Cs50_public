@@ -5,7 +5,7 @@
 #include <stdlib.h>
 
 
-
+int validKey (string t[]);
 
 int main(int arg, string argv[])
 {
