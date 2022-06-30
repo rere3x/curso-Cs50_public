@@ -42,5 +42,7 @@ int validKey (void)
 
 char ciperText()
 {
+
     
+
 }
