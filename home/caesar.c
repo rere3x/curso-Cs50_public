@@ -56,7 +56,7 @@ void ciperText(int length, string s, int ciper)
 {
 
 
-            
+            printf ("%i \n", (s[i] + ciper));
 
             if (isupper(s[i]) && isalpha(s[i]))
                 printf("%c", ((s[i] + ciper) % 26) + 65);
