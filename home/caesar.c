@@ -6,7 +6,7 @@
 
 
 int validKey (int length, string t[]);
-string ciperText(int length, string s, int ciper);
+int ciperText(int length, string s, int ciper);
 
 int main(int arg, string argv[])
 {
@@ -15,7 +15,7 @@ int main(int arg, string argv[])
     {
 
         string text = get_string("Text: \n");
-        printf("ciphertext: %s", ciperText(strlen(text), text, atoi(argv[1])));
+        printf("ciphertext: %c", ciperText(strlen(text), text, atoi(argv[1])));
 
     }
     //print a comand line showing that the key is not valid
@@ -47,7 +47,7 @@ return 1;
 
 }
 
-string ciperText(int length, string s, int ciper)
+int ciperText(int length, string s, int ciper)
 {
 
         //ciper the text
@@ -56,7 +56,7 @@ string ciperText(int length, string s, int ciper)
 {
 
 
-         string textCiper[length];
+         int textCiper[length];
 
             if (isupper(s[i]) && isalpha(s[i]))
                 textCiper[i] = (((s[i] - 65)  + ciper) % 26) + 65;
