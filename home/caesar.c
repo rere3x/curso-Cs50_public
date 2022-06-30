@@ -5,12 +5,12 @@
 #include <stdlib.h>
 
 
-int validKey (string t[]);
+int validKey (int length, string t[]);
 
 int main(int arg, string argv[])
 {
 
-    if ( validKey(strlen( argv[1]), argv) )
+    if (                validKey       (       strlen( argv[1])    , argv)           )
 
         printf("valid");
 
