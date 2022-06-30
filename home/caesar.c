@@ -10,7 +10,7 @@ void ciperText(int length, string s, int ciper);
 
 int main(int arg, string argv[])
 {
- printf ();
+
     if (validKey(strlen( argv[1]), argv) == 1 && argv[1])
     {
 
@@ -22,7 +22,7 @@ int main(int arg, string argv[])
     else
     printf("Usage: ./caesar Key\n");
 
-
+ return 0;
 }
 
 
