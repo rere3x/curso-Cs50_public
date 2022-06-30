@@ -4,19 +4,16 @@
 #include <ctype.h>
 #include <stdlib.h>
 
-int validKey (string t[]);
-void ciperText(string s);
+
+
 
 int main(int arg, string argv[])
 {
 
-        string plantext = get_string("Text: ");
     if ( validKey(argv[]) )
+        printf("valid");
 
-        //get the text to ciper
 
-        //convert each lettler to a ciper lettler
-        ciperText(plantext);
 
 
 
@@ -40,7 +37,7 @@ int validKey (string t[])
             return true;
 }
 
-void ciperText(string s)
+/*void ciperText(string s)
 {
 
         //ciper the text
@@ -58,3 +55,4 @@ void ciperText(string s)
 
 
 }
+*/
