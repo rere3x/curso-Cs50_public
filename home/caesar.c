@@ -20,7 +20,10 @@ int main(int arg, string argv[])
     }
     //print a comand line showing that the key is not valid
     else
+    {
     printf("Usage: ./caesar Key\n");
+    return 1;
+    }
 
  return 0;
 }
