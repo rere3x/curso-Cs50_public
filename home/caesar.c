@@ -11,10 +11,14 @@ int main(int arg, string argv[])
 
     if ( validKey() && argv[2] == \0 )
 
+        //get the text to ciper
         string plantext = get_string("Text to ciper: ");
 
-        int ciper = (argv[1][i] + int atoi (argv[1])) % 26
+        //convert each lettler to a ciper lettler
+
         
+
+
 
 
 
@@ -33,3 +37,4 @@ int validKey (void)
         else
             return true;
 }
+        int ciper = (argv[1][i] + int atoi (argv[1])) % 26;
