@@ -10,7 +10,8 @@ int validKey (string t[]);
 int main(int arg, string argv[])
 {
 
-    if ( validKey(argv[]) )
+    if ( validKey(strlen( argv[1]), argv) )
+
         printf("valid");
 
 
@@ -27,9 +28,9 @@ int main(int arg, string argv[])
 
 
 // the function thats valid the key
-int validKey (string t[])
+int validKey (int length, string t[])
 {
-    for (int i = 0, n = strlen(t[1]); i < n; i++)
+    for (int i = 0, i < length; i++)
 
         if (!isdigit(t[1][i]))
             return false;
