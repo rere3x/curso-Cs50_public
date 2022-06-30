@@ -6,19 +6,17 @@
 
 
 int validKey (int length, string t[]);
+void ciperText(int length, string s);
 
 int main(int arg, string argv[])
 {
 
     if (validKey(strlen( argv[1]), argv) == 1 )
+    {
 
-        printf("valid\n");
+        string text = get_string("Text: \n");
 
-
-
-
-
-
+    }
     //print a comand line showing that the key is not valid
     else
     printf("Usage: ./caesar Key\n");
@@ -45,12 +43,12 @@ return 1;
 
 }
 
-/*void ciperText(string s)
+void ciperText(int length, string s)
 {
 
         //ciper the text
 
-        for (int i = 0, n = strlen(plantext); i < n ; i++)
+        for (int i = 0; i < length; i++)
 
             if (isupper(s[i]) && isalphas(s[i]))
                 printf("%c", (( s[i] + int atoi (argv[1])) % 26) + 65);
