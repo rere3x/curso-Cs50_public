@@ -3,6 +3,7 @@
 #include <string.h>
 #include <ctype.h>
 
+int validKey (void);
 
 int main(int arg, string argv[])
 {
@@ -22,5 +23,8 @@ int validKey (void)
 {
     for (int i = 0, n = strlen(argv[1]); i < n; i++)
 
-        if
+        if (!isdigit(argv[1][i]))
+            return false;
+        else
+            return true;
 }
