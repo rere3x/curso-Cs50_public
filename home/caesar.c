@@ -11,7 +11,7 @@ int main(int arg, string argv[])
 {
 
         string plantext = get_string("Text: ");
-    if ( validKey(argv) )
+    if ( validKey(argv[]) )
 
         //get the text to ciper
 
