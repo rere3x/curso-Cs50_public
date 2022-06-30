@@ -16,7 +16,8 @@ int main(int arg, string argv[])
 
         //convert each lettler to a ciper lettler
 
-        
+        for (int i = 0, n = strlen(argv[1]); i < n ; i++)
+        printf("%c", ciperText());
 
 
 
