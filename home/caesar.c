@@ -16,8 +16,6 @@ int main(int arg, string argv[])
 
         //convert each lettler to a ciper lettler
 
-        for (int i = 0, n = strlen(plantext); i < n ; i++)
-        printf("%c", ciperText());
 
 
 
@@ -43,10 +41,13 @@ int validKey (void)
 
 char ciperText()
 {
-        int ciper = (argv[1][i] + int atoi (argv[1])) % 26;
+        //transform any number with a key into a nume between 0 and 25
+        int ciper = ( + int atoi (argv[1])) % 26;
+
+        for (int i = 0, n = strlen(plantext); i < n ; i++)
+
 
         
-
 
 
 }
