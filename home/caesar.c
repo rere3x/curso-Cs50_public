@@ -9,7 +9,7 @@ int validKey (void);
 int main(int arg, string argv[])
 {
 
-    if ( validKey() && argv[2] == '\0' )
+    if ( validKey() && argv[2] == 'NULL' )
 
         //get the text to ciper
         string plantext = get_string("Text to ciper: ");
