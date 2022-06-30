@@ -13,7 +13,7 @@ int main(int arg, string argv[])
 
     if (validKey(strlen( argv[1]), argv) == 1 && argv[1])
     {
-            
+
         string text = get_string("Text: \n");
         ciperText(strlen(text), text, atoi(argv[1]));
 
@@ -55,8 +55,8 @@ void ciperText(int length, string s, int ciper)
         for (int i = 0; i < length; i++)
 {
 
-            printf("%i ", s[i]);
-            printf("%i\n",  ciper);
+
+            
 
             if (isupper(s[i]) && isalpha(s[i]))
                 printf("%c", ((s[i] + ciper) % 26) + 65);
