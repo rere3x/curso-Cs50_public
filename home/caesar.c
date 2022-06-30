@@ -35,7 +35,7 @@ int validKey (int length, string t[])
 
         int digt = isdigit(t[1][i]);
         int space = isspace(t[1][i]);
-   if (digt )
+   if (digt != 0 && space == 0 )
    return 0;
 
     }
