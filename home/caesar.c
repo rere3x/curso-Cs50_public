@@ -5,14 +5,15 @@
 #include <stdlib.h>
 
 int validKey (void);
+ciperText(string s);
 
 int main(int arg, string argv[])
 {
 
+        string plantext = get_string("Text: ");
     if ( validKey() )
 
         //get the text to ciper
-        string plantext = get_string("Text: ");
 
         //convert each lettler to a ciper lettler
         ciperText(plantext);
