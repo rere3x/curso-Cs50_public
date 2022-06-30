@@ -12,7 +12,7 @@ int main(int arg, string argv[])
     if ( validKey() )
 
         //get the text to ciper
-        string plantext = get_string("Text to ciper: ");
+        string plantext = get_string("Text: ");
 
         //convert each lettler to a ciper lettler
         ciperText(plantext);
