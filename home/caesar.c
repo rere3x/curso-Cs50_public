@@ -16,19 +16,21 @@ int main(int arg, string argv[])
 
         //convert each lettler to a ciper lettler
 
-        for (int i = 0, n = strlen(argv[1]); i < n ; i++)
+        for (int i = 0, n = strlen(plantext); i < n ; i++)
         printf("%c", ciperText());
 
 
 
 
-
+    //print a comand line showing that the key is not valid
     else
     printf("Usage: ./caesar key\n");
 
 
 }
 
+
+// the function thats valid the key
 int validKey (void)
 {
     for (int i = 0, n = strlen(argv[1]); i < n; i++)
@@ -38,11 +40,13 @@ int validKey (void)
         else
             return true;
 }
-        int ciper = (argv[1][i] + int atoi (argv[1])) % 26;
 
 char ciperText()
 {
+        int ciper = (argv[1][i] + int atoi (argv[1])) % 26;
 
-    
+        
+
+
 
 }
