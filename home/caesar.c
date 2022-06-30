@@ -62,10 +62,10 @@ char ciperText(int length, string s, int ciper)
                 return(((s[i] - 65)  + ciper) % 26) + 65;
 
             else if (islower(s[i]) && isalpha(s[i]))
-                 (((s[i] - 97) + ciper) % 26) + 97;
+                 return(((s[i] - 97) + ciper) % 26) + 97;
 
             else
-                printf("%c", s[i]);
+                return s[i];
 }
 
 printf("\n");
