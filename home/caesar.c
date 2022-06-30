@@ -15,7 +15,7 @@ int main(int arg, string argv[])
         string plantext = get_string("Text to ciper: ");
 
         //convert each lettler to a ciper lettler
-
+        ciperText(plantext);
 
 
 
@@ -39,15 +39,17 @@ int validKey (void)
             return true;
 }
 
-char ciperText()
+char ciperText(string s)
 {
+
         //transform any number with a key into a nume between 0 and 25
-        int ciper = ( + int atoi (argv[1])) % 26;
 
         for (int i = 0, n = strlen(plantext); i < n ; i++)
 
+            if (isupper(s[i]))
+        int ciper = ( s[1][1] + int atoi (argv[1])) % 26;
 
-        
+
 
 
 }
