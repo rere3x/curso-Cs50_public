@@ -47,14 +47,19 @@ char ciperText(string s)
         for (int i = 0, n = strlen(plantext); i < n ; i++)
 
             if (isupper(s[i]) && isalphas(s[i]))
-        char ciper = (( s[i] + int atoi (argv[1])) % 26) + 65;
+                printf("%c", (( s[i] + int atoi (argv[1])) % 26) + 65);
+
             else if (islower(s[i]) && isalphas(s[i]))
-            return ciper
+                 printf("%c", (( s[i] + int atoi (argv[1])) % 26) + 97);
 
-        char ciper = (( s[i] + int atoi (argv[1])) % 26) + 97;
+            else
+                printf("%c", s[i])
 
 
-        return ciper
+
+
+
+
 
 
 
