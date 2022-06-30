@@ -34,15 +34,13 @@ int validKey (int length, string t[])
     {
 
 
+    printf ("%i\n", isdigit(t[1][i]));
 
-        if (!isdigit(t[1][i]))
-            return false;
-        else
-            return true;
+
     }
 
 
-
+ return 0;
 }
 
 /*void ciperText(string s)
