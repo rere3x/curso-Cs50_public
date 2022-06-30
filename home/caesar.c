@@ -6,7 +6,7 @@
 
 
 int validKey (int length, string t[]);
-char ciperText(int length, string s, int ciper);
+string ciperText(int length, string s, int ciper);
 
 int main(int arg, string argv[])
 {
@@ -47,7 +47,7 @@ return 1;
 
 }
 
-char ciperText(int length, string s, int ciper)
+string ciperText(int length, string s, int ciper)
 {
 
         //ciper the text
@@ -56,16 +56,16 @@ char ciperText(int length, string s, int ciper)
 {
 
 
-
+         string textCiper[length]
 
             if (isupper(s[i]) && isalpha(s[i]))
-                return(((s[i] - 65)  + ciper) % 26) + 65;
+                (((s[i] - 65)  + ciper) % 26) + 65;
 
             else if (islower(s[i]) && isalpha(s[i]))
-                 return(((s[i] - 97) + ciper) % 26) + 97;
+                 (((s[i] - 97) + ciper) % 26) + 97;
 
             else
-                return s[i];
+                 s[i];
 }
 
 printf("\n");
