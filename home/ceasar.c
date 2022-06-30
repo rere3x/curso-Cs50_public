@@ -5,7 +5,7 @@
 
 int main(int arg, string argv[])
 {
-
+    if (argv[1] )
 
 
 }
