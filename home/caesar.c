@@ -34,7 +34,7 @@ int validKey (int length, string t[])
     {
 
 
-    if (isdigit(t[1][i]) == 0)
+    if (isdigit(t[1][i]) == 0 && isspace(t[1][i]))
     return 0;
 
     }
