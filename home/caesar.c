@@ -4,14 +4,14 @@
 #include <ctype.h>
 #include <stdlib.h>
 
-int validKey (void);
-ciperText(string s);
+int validKey (string t);
+void ciperText(string s);
 
 int main(int arg, string argv[])
 {
 
         string plantext = get_string("Text: ");
-    if ( validKey() )
+    if ( validKey(arg) )
 
         //get the text to ciper
 
@@ -30,17 +30,17 @@ int main(int arg, string argv[])
 
 
 // the function thats valid the key
-int validKey (void)
+int validKey (string t)
 {
-    for (int i = 0, n = strlen(argv[1]); i < n; i++)
+    for (int i = 0, n = strlen(t[1]); i < n; i++)
 
-        if (!isdigit(argv[1][i]))
+        if (!isdigit(t[1][i]))
             return false;
         else
             return true;
 }
 
-ciperText(string s)
+void ciperText(string s)
 {
 
         //ciper the text
