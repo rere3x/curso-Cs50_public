@@ -11,7 +11,10 @@ int main(int arg, string argv[])
 
     if ( validKey() && argv[2] == \0 )
 
+        string plantext = get_string("Text to ciper: ");
+        
         int ciper = (argv[1][i] + int atoi (argv[1])) % 26
+        if ()
 
 
 
