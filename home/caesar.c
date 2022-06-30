@@ -9,9 +9,9 @@ int validKey (void);
 int main(int arg, string argv[])
 {
 
-    if ( validKey() )
+    if ( validKey() && argv[2] == \0 )
 
-
+        int ciper = (argv[1][i] + int atoi (argv[1])) % 26
 
 
 
