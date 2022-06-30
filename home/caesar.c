@@ -2,6 +2,7 @@
 #include <cs50.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdlib.h>
 
 int validKey (void);
 
@@ -10,6 +11,7 @@ int main(int arg, string argv[])
 
     if ( validKey() && argv[2] == \0 )
 
+        
 
 
 
