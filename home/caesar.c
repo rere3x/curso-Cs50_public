@@ -4,7 +4,7 @@
 #include <ctype.h>
 #include <stdlib.h>
 
-int validKey (string t);
+int validKey (string t[]);
 void ciperText(string s);
 
 int main(int arg, string argv[])
@@ -30,7 +30,7 @@ int main(int arg, string argv[])
 
 
 // the function thats valid the key
-int validKey (string t)
+int validKey (string t[])
 {
     for (int i = 0, n = strlen(t[1]); i < n; i++)
 
