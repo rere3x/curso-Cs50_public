@@ -21,7 +21,7 @@ int main(int arg, string argv[])
 
     //print a comand line showing that the key is not valid
     else
-    printf("Usage: ./caesar key\n");
+    printf("Usage: ./caesar Key\n");
 
 
 }
