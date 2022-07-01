@@ -84,12 +84,11 @@ void ciperText(int length, string s, string ciper)
 {
 
             if (isupper(s[i]))
-                printf("%c", ciper[i] );
-
-
+            
+                printf("%c", ciper[i(s[i] % 'A')]);
 
             else if (islower(s[i]) && isalpha(s[i]))
-
+                printf("%c", ciper[i(s[i] % 'a')]);
 
             else
                 printf("%c", s[i]);
