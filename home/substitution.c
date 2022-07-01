@@ -12,7 +12,7 @@ int main (int arg, string argv[])
 {
 
         //check if there is a key
-        if(arg == 2 && (arg[1] % 26) == 0)
+        if(arg == 2 && (strlen(argv[1]) % 26) == 0 )
         {
 
 
