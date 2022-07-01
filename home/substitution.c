@@ -6,7 +6,8 @@
 
 
 
-int main (int arg, string argv[], int arg)
+int main (int arg, string argv[], int arg);
+
 {
 
 
@@ -59,7 +60,7 @@ int validKey (int length, string t[], int arg)
 }
 
 
-void ciperText(int length, string s, int ciper)
+/*void ciperText(int length, string s, int ciper)
 {
 
         //ciper the text
@@ -81,3 +82,4 @@ void ciperText(int length, string s, int ciper)
 }
 printf("\n");
 }
+*/
