@@ -25,6 +25,7 @@ int main (int arg, string argv[])
 
 
                 string text = get_string("Text: ");
+                printf("ciphertext:  ");
                 ciperText(text[1], text, argv[1]);
 
 
