@@ -11,7 +11,7 @@ int ciperText(int length, string s, int ciper);
 int main(int arg, string argv[])
 {
 
-    if (validKey(strlen( argv[1]), argv) == 1 && argv[1])
+    if (validKey(strlen( argv[1]), argv) == 1 && arg != 0)
     {
 
         string text = get_string("Text: \n");
