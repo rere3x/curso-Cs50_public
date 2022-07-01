@@ -21,7 +21,10 @@ int main (int arg, string argv[])
             //valid a key and star to encriptate the text
         if ( validKey(strlen( argv[1]), argv, arg ) == 1 )
         {
+
+
                 string text = get_string("Text: ");
+                ciperText(text[1], text, argv[1]);
 
 
         }
@@ -71,7 +74,7 @@ int validKey (int length, string t[], int arg)
 }
 
 
-void ciperText(int length, string s, int ciper)
+void ciperText(int length, string s)
 {
 
         //ciper the text
