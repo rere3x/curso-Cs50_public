@@ -46,7 +46,13 @@ int validKey (int length, string t[], int arg)
     }
         for (int i = 0; i < length; i++)
     {
-        if (t[1][i])
+        for (int j = 1; j < length; i++)
+        {
+
+        if (t[1][i] == t[1][j])
+        printf("Digitos repetido não sao aceitos\n")
+        return 0;
+        }
     }
 
 
