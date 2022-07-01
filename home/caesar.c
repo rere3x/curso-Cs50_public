@@ -52,23 +52,23 @@ string ciperText(int length, string s, int ciper)
 
         //ciper the text
 
-         string textCiper;
+         string textCiper[1][length];
         for (int i = 0; i < length; i++)
 {
 
 
 
             if (isupper(s[i]) && isalpha(s[i]))
-                textCiper[i] = (((s[i] - 65)  + ciper) % 26) + 65;
+                textCiper[1][i] = (((s[i] - 65)  + ciper) % 26) + 65;
 
             else if (islower(s[i]) && isalpha(s[i]))
-                textCiper[i] = (((s[i] - 97) + ciper) % 26) + 97;
+                textCiper[1][i] = (((s[i] - 97) + ciper) % 26) + 97;
 
             else
-                textCiper[i] = s[i];
+                textCiper[1][i] = s[i];
 }
 
-return textCiper;
+return textCiper[1];
 
 
 }
