@@ -12,26 +12,29 @@ int main (int arg, string argv[])
 {
 
         //check if there is a key
-        if(arg != 2)
+        if(arg == 2)
+        {
+
+
+                //valid a key and star to encriptate the text
+            if ( validKey(strlen( argv[1]), argv, arg ) == 1 )
+            {
+
+
+                    string text = get_string("Text: ");
+                    printf("ciphertext:  ");
+                    ciperText(text[1], text, argv[1]);
+
+
+            }
+            else
+            return 1;
+        }
+        else
         {
             printf("muitos inputs\n");
             return 1;
         }
-
-
-            //valid a key and star to encriptate the text
-        if ( validKey(strlen( argv[1]), argv, arg ) == 1 )
-        {
-
-
-                string text = get_string("Text: ");
-                printf("ciphertext:  ");
-                ciperText(text[1], text, argv[1]);
-
-
-        }
-        else
-        return 1;
 
     //encripitar o texto
     //imprimir o texto encripitado
