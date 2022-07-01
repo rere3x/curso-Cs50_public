@@ -36,8 +36,8 @@ int main (int arg, string argv[])
             return 1;
         }
 
-    //encripitar o texto
-    //imprimir o texto encripitado
+    
+
 
 
 return 0;
