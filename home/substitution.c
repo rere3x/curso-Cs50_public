@@ -14,7 +14,7 @@ int main (int arg, string argv[])
     //ler a chave e confirmar se é valida
     if ( validKey(strlen( argv[1]), argv, arg ) == 1 )
 
-
+        
     else
     return 1;
     //pegar o texto
