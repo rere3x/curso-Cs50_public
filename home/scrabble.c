@@ -25,7 +25,7 @@ int compute_score(string word)
 {
     // Compute and return score for string
 
-    word
+    
 
     return 0;
 }
