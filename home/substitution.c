@@ -13,8 +13,9 @@ int main (int arg, string argv[])
     //ler a chave e confirmar se é valida
     if ( arg == 2 && validKey(strlen( argv[1]), argv ) == 1 )
 
+
     else
-    printf("");
+    printf("./substitution key\n");
     //pegar o texto
     //encripitar o texto
     //imprimir o texto encripitado
@@ -30,13 +31,8 @@ int validKey (int length, string t[])
 {
     for (int i = 0; i < length; i++)
     {
+        
 
-        int digt = isdigit(t[1][i]);
-        int space = isspace(t[1][i]);
-
-   if (digt == 0 || space != 0 )
-
-   return 0;
 
     }
 
