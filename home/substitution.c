@@ -74,7 +74,7 @@ int validKey (int length, string t[], int arg)
 }
 
 
-void ciperText(int length, string s)
+void ciperText(int length, string s, string ciper)
 {
 
         //ciper the text
