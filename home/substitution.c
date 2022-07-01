@@ -29,7 +29,9 @@ int main (int arg, string argv[])
 // the function thats valid the key
 int validKey (int length, string t[])
 {
+    if (length > 26)
     
+    return 0;
     for (int i = 0; i < length; i++)
     {
 
