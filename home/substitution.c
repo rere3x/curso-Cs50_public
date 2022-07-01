@@ -32,21 +32,23 @@ return 0;
 // the function thats valid the key
 int validKey (int length, string t[], int arg)
 {
-    if (length > 26)
-{
 
-}
-        printf("Chave maior que 26\n");
-        return 0;
+    if (length > 26)
+        {
+            printf("Chave maior que 26\n");
+            return 0;
+        }
 
     if(arg != 2)
+    {
         printf("muitos inputs\n");
         return 0;
+    }
 
     for (int i = 0; i < length; i++)
     {
         if(isdigit(t[1][i]))
-        printf("Digitos não são aceitos\n")
+        printf("Digitos não são aceitos\n");
         return 0;
     }
         for (int i = 0; i < length; i++)
@@ -55,12 +57,12 @@ int validKey (int length, string t[], int arg)
         {
 
         if (t[1][i] == t[1][j])
-        printf("Digitos repetido não sao aceitos\n")
+        printf("Digitos repetido não sao aceitos\n");
         return 0;
         }
     }
 
-
+ return 1;
 }
 
 
