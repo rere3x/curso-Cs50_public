@@ -46,7 +46,7 @@ int validKey (int length, string t[], int arg)
     }
         for (int i = 0; i < length; i++)
     {
-        
+        if (t[1][i])
     }
 
 
