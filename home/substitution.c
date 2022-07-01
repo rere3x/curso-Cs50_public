@@ -4,9 +4,9 @@
 #include <ctype.h>
 #include <stdlib.h>
 
+int validKey (int length, string t[], int arg);
 
-
-int main (int arg, string argv[], int arg);
+int main (int arg, string argv[])
 
 {
 
