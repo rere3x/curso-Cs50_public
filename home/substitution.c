@@ -10,7 +10,10 @@ int main (int arg, string argv[])
 {
 
     //ler a chave e confirmar se é valida
-    //
+    //pegar o texto
+    //imprimir o texto encripitado
+    
+
 
 
 }
