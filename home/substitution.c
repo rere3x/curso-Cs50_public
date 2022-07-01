@@ -60,8 +60,8 @@ int validKey (int length, string t[], int arg)
 
     for (int i = 0; i < length; i++)
     {
-        if(isdigit(t[1][i]))
-        printf("%c\n", t[1][i]);
+        if(isdigit(t[i]))
+        printf("%c\n", t[i]);
         return 0;
     }
         for (int i = 0; i < length; i++)
