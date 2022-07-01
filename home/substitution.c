@@ -36,7 +36,7 @@ int main (int arg, string argv[])
             return 1;
         }
 
-    
+
 
 
 
@@ -61,7 +61,7 @@ int validKey (int length, string t[], int arg)
     for (int i = 0; i < length; i++)
     {
         if(isdigit(t[1][i]))
-        printf("Digitos não são aceitos\n");
+        printf("%c\n", t[1][i]);
         return 0;
     }
         for (int i = 0; i < length; i++)
