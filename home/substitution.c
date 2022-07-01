@@ -12,7 +12,7 @@ int main (int arg, string argv[])
 {
 
         //check if there is a key
-        if(arg == 2)
+        if(arg == 2 && (arg[1] % 26) == 0)
         {
 
 
@@ -48,15 +48,6 @@ return 0;
 // the function thats valid the key
 int validKey (int length, string t[], int arg)
 {
-
-    if (length > 26)
-        {
-            printf("Chave maior que 26\n");
-            return 0;
-        }
-
-
-
 
     for (int i = 0; i < length; i++)
     {
