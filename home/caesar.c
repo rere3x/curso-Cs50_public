@@ -52,7 +52,7 @@ string ciperText(int length, string s, int ciper)
 
         //ciper the text
 
-         string textCiper[];
+         string textCiper;
         for (int i = 0; i < length; i++)
 {
 
