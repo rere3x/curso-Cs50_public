@@ -68,18 +68,19 @@ int validKey (int length, string t[], int arg)
         }
     }
         for (int i = 0; i < length; i++)
+
     {
         for (int j = 1; j < length; i++)
         {
-        char currentLocation = t[1][i];
-        char nextLocation = t[1][j];
+            char currentLocation = t[1][i];
+            char nextLocation = t[1][j];
 
-        if (currentLocation == nextLocation)
-        {
+            if (currentLocation == nextLocation)
+            {
 
-        printf("Digitos repetido não sao aceitos\n");
-        return 0;
-        }
+            printf("Digitos repetido não sao aceitos\n");
+            return 0;
+            }
         }
     }
 
