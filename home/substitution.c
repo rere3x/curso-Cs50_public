@@ -10,15 +10,22 @@ int main (int arg, string argv[])
 
 {
 
+        //check if there is a key
+        if(arg != 2)
+        {
+            printf("muitos inputs\n");
+            return 1;
+        }
 
-    //ler a chave e confirmar se é valida
-    if ( validKey(strlen( argv[1]), argv, arg ) == 1 )
-{
 
-        printf("valid key");
-}
-    else
-    return 1;
+            //valid a key and star to encriptate the text
+        if ( validKey(strlen( argv[1]), argv, arg ) == 1 )
+        {
+            
+
+        }
+        else
+        return 1;
     //pegar o texto
     //encripitar o texto
     //imprimir o texto encripitado
@@ -39,11 +46,8 @@ int validKey (int length, string t[], int arg)
             return 0;
         }
 
-    if(arg != 2)
-    {
-        printf("muitos inputs\n");
-        return 0;
-    }
+
+
 
     for (int i = 0; i < length; i++)
     {
