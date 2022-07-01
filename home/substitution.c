@@ -14,6 +14,7 @@ int main (int arg, string argv[])
     if ( arg == 2 && validKey(strlen( argv[1]), argv ) == 1 )
 
     else
+    printf("");
     //pegar o texto
     //encripitar o texto
     //imprimir o texto encripitado
