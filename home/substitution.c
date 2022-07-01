@@ -5,6 +5,7 @@
 #include <stdlib.h>
 
 int validKey (int length, string t[], int arg);
+void ciperText(int length, string s, string ciper);
 
 int main (int arg, string argv[])
 
@@ -84,11 +85,11 @@ void ciperText(int length, string s, string ciper)
 {
 
             if (isupper(s[i]))
-            
-                printf("%c", ciper[i(s[i] % 'A')]);
+
+                printf("%c", ciper[(s[i] % 'A')]);
 
             else if (islower(s[i]) && isalpha(s[i]))
-                printf("%c", ciper[i(s[i] % 'a')]);
+                printf("%c", ciper[(s[i] % 'a')]);
 
             else
                 printf("%c", s[i]);
