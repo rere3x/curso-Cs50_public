@@ -25,7 +25,14 @@ int compute_score(string word)
 {
     // Compute and return score for string
 
-    
+    sum = 0;
+        for (int i = 0, n = strlen(word); i < n; i++)
+        {
+            if (isupper(word[i]) && isalpha(word[i]))
+            sumP = POINTS[(word[i] % 'A')]
+            sum +=
+
+        }
 
     return 0;
 }
