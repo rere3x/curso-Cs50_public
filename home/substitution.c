@@ -29,9 +29,10 @@ int main (int arg, string argv[])
 // the function thats valid the key
 int validKey (int length, string t[])
 {
+    
     for (int i = 0; i < length; i++)
     {
-        
+
 
 
     }
