@@ -13,8 +13,10 @@ int main (int arg, string argv[])
 
     //ler a chave e confirmar se é valida
     if ( validKey(strlen( argv[1]), argv, arg ) == 1 )
+{
 
-        
+        printf("valid key");
+}
     else
     return 1;
     //pegar o texto
@@ -22,7 +24,7 @@ int main (int arg, string argv[])
     //imprimir o texto encripitado
 
 
-
+return 0;
 
 }
 
@@ -31,7 +33,9 @@ int main (int arg, string argv[])
 int validKey (int length, string t[], int arg)
 {
     if (length > 26)
+{
 
+}
         printf("Chave maior que 26\n");
         return 0;
 
