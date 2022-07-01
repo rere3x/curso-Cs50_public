@@ -44,11 +44,9 @@ int validKey (int length, string t[], int arg)
         printf("Digitos não são aceitos\n")
         return 0;
     }
-for (int i = 0; i < length; i++)
+        for (int i = 0; i < length; i++)
     {
-        if(isdigit(t[1][i]))
-        printf("Digitos não são aceitos\n")
-        return 0;
+        
     }
 
 
