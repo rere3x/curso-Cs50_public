@@ -11,8 +11,9 @@ int main (int arg, string argv[])
 
     //ler a chave e confirmar se é valida
     //pegar o texto
+    //encripitar o texto
     //imprimir o texto encripitado
-    
+
 
 
 
@@ -36,10 +37,10 @@ void ciperText(int length, string s, int ciper)
 
 
             if (isupper(s[i]) && isalpha(s[i]))
-                printf("%c", (((s[i] - 'A')  + ciper) % 26) + 'A');
+
 
             else if (islower(s[i]) && isalpha(s[i]))
-                printf("%c", (((s[i] - 'a')  + ciper) % 26) + 'a');
+                
 
             else
                 printf("%c", s[i]);
