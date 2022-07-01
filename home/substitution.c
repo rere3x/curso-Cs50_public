@@ -62,8 +62,11 @@ int validKey (int length, string t[], int arg)
     {
         char test = t[1][i];
         if(isdigit(test))
+        {
+
         printf("%s\n", t[i]);
         return 0;
+        }
     }
         for (int i = 0; i < length; i++)
     {
@@ -71,8 +74,11 @@ int validKey (int length, string t[], int arg)
         {
 
         if (t[1][i] == t[1][j])
+        {
+
         printf("Digitos repetido não sao aceitos\n");
         return 0;
+        }
         }
     }
 
