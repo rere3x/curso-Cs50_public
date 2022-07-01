@@ -6,12 +6,12 @@
 
 
 
-int main (int arg, string argv[])
+int main (int arg, string argv[], int arg)
 {
 
 
     //ler a chave e confirmar se é valida
-    if ( validKey(strlen( argv[1]), argv ) == 1 )
+    if ( validKey(strlen( argv[1]), argv, arg ) == 1 )
 
 
     else
@@ -27,19 +27,30 @@ int main (int arg, string argv[])
 
 
 // the function thats valid the key
-int validKey (int length, string t[])
+int validKey (int length, string t[], int arg)
 {
     if (length > 26)
-    {
-        printf
+
+        printf("Chave maior que 26\n");
         return 0;
-    }
+
+    if(arg != 2)
+        printf("muitos inputs\n");
+        return 0;
+
     for (int i = 0; i < length; i++)
     {
-
-
-
+        if(isdigit(t[1][i]))
+        printf("Digitos não são aceitos\n")
+        return 0;
     }
+for (int i = 0; i < length; i++)
+    {
+        if(isdigit(t[1][i]))
+        printf("Digitos não são aceitos\n")
+        return 0;
+    }
+
 
 }
 
