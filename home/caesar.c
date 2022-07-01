@@ -18,6 +18,7 @@ int main(int arg, string argv[])
         printf("ciphertext: %s \n", ciperText(strlen(text), text, atoi(argv[1])));
 
     }
+    
     //print a comand line showing that the key is not valid
     else
     {
