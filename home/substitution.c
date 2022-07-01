@@ -23,7 +23,7 @@ int main (int arg, string argv[])
 
                     string text = get_string("Text: ");
                     printf("ciphertext:  ");
-                    ciperText(text, text, argv[1]);
+                    ciperText(strlen(text), text, argv[1]);
 
 
             }
