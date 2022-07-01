@@ -6,7 +6,7 @@
 
 
 int validKey (int length, string t[]);
-int ciperText(int length, string s, int ciper);
+string ciperText(int length, string s, int ciper);
 
 int main(int arg, string argv[])
 {
@@ -47,12 +47,12 @@ return 1;
 
 }
 
-int ciperText(int length, string s, int ciper)
+string ciperText(int length, string s, int ciper)
 {
 
         //ciper the text
 
-         int textCiper[1][length];
+         string textCiper[1][length];
         for (int i = 0; i < length; i++)
 {
 
