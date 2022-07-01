@@ -60,7 +60,6 @@ int validKey (int length, string t[], int arg)
 
     for (int i = 0; i < length; i++)
     {
-        char test = t[1][i];
         if(isdigit(test))
         {
 
@@ -72,8 +71,10 @@ int validKey (int length, string t[], int arg)
     {
         for (int j = 1; j < length; i++)
         {
+        char currentLocation = t[1][i];
+        char nextLocation = t[1][j];
 
-        if (t[1][i] == t[1][j])
+        if ()
         {
 
         printf("Digitos repetido não sao aceitos\n");
