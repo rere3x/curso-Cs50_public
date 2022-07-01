@@ -10,7 +10,7 @@ void ciperText(int length, string s, int ciper);
 
 int main(int arg, string argv[])
 {
-
+    
     if (validKey(strlen( argv[1]), argv) == 1 )
     {
 
