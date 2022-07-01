@@ -59,10 +59,10 @@ string ciperText(int length, string s, int ciper)
 
 
             if (isupper(s[i]) && isalpha(s[i]))
-                textCiper[i] = (((s[i] - 'A')  + ciper) % 26) + 'A';
+                textCiper[i] = (char)(((s[i] - 'A')  + ciper) % 26) + 'A';
 
             else if (islower(s[i]) && isalpha(s[i]))
-                textCiper[i] = (((s[i] - 'a') + ciper) % 26) + 'a';
+                textCiper[i] = (char)(((s[i] - 'a') + ciper) % 26) + 'a';
 
             else
                 textCiper[i] = s[i];
