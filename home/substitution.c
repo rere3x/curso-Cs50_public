@@ -83,8 +83,8 @@ void ciperText(int length, string s, string ciper)
         for (int i = 0; i < length; i++)
 {
 
-            if (isupper(s[i]) && isalpha(s[i]))
-                printf();
+            if (isupper(s[i]))
+                printf("%c", ciper[i] );
 
 
 
