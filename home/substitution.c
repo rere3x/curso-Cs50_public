@@ -60,6 +60,7 @@ int validKey (int length, string t[], int arg)
 
     for (int i = 0; i < length; i++)
     {
+        char test = t[1][i];
         if(isdigit(t[1][i]))
         printf("%s\n", t[i]);
         return 0;
