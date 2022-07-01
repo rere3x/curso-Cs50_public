@@ -11,11 +11,11 @@ int main (int arg, string argv[])
 
 
     //ler a chave e confirmar se é valida
-    if ( arg == 2 && validKey(strlen( argv[1]), argv ) == 1 )
+    if ( validKey(strlen( argv[1]), argv ) == 1 )
 
 
     else
-    printf("./substitution key\n");
+    return 1;
     //pegar o texto
     //encripitar o texto
     //imprimir o texto encripitado
@@ -30,8 +30,10 @@ int main (int arg, string argv[])
 int validKey (int length, string t[])
 {
     if (length > 26)
-    
-    return 0;
+    {
+        printf
+        return 0;
+    }
     for (int i = 0; i < length; i++)
     {
 
