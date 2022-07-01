@@ -15,7 +15,7 @@ int main(int arg, string argv[])
     {
 
         string text = get_string("Text: \n");
-        printf("ciphertext:  \n");
+        printf("ciphertext:  ");
         ciperText(strlen(text), text, atoi(argv[1]));
     }
 
@@ -68,7 +68,7 @@ void ciperText(int length, string s, int ciper)
             else
                 printf("%c", s[i]);
 }
-
+printf("\n");
 
 
 
