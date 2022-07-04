@@ -77,7 +77,7 @@ void print_winner(void)
     for (int i = 0; i < candidates_count; i++)
     {
         if(candidates[i].votes > candidates[i+1].votes)
-        
+            most_voted = cadidates[i].votes
 
     }
     return;
