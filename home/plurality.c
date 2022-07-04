@@ -79,7 +79,9 @@ void print_winner(void)
         if(candidates[i].votes > candidates[i+1].votes)
             most_voted = cadidates[i].names;
         else if (candidates[i].votes == candidates[i+1].votes)
-            printf(" winner %s \n winner %s", candidates[i].votes, candidates[i+1].votes)
+            printf(" winner: %s \n winner %s", candidates[i].votes, candidates[i+1].votes)
+
+        printf("winner: %s", most_voted)
 
     }
     return;
