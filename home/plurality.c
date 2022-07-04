@@ -90,10 +90,9 @@ void print_winner(void)
 
         for(int i = 0; i < draw; i++)
 
+        if( most_voted == cadidates[i])
+            printf(" winner: %s \n", candidates[i].votes)
 
-            printf(" winner: %s \n winner %s", candidates[i].votes, candidates[i+1].votes)
-
-        printf("winner: %s", most_voted)
 
     return;
 }
