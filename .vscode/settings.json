@@ -2,5 +2,6 @@
     "files.associations": {
         "cctype": "c",
         "string": "c"
-    }
+    },
+    "gitdoc.enabled": true
 }

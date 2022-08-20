@@ -1,8 +1,11 @@
 {
   "extensions": [
     "/opt/cs50/extensions/cs50-0.0.1.vsix", 
-    "/opt/cs50/extensions/ddb50-0.0.1.vsix", 
     "/opt/cs50/extensions/phpliteadmin-0.0.1.vsix", 
+    "/opt/cs50/extensions/workspace-layout-0.0.7.vsix", 
+    "cs50.ddb50", 
+    "cs50.extension-uninstaller", 
+    "cs50.vscode-presentation-mode", 
     "ms-python.python", 
     "ms-vscode.cpptools", 
     "ms-vscode.hexeditor", 
@@ -10,7 +13,7 @@
     "tomoki1207.pdf", 
     "vsls-contrib.gitdoc"
   ], 
-  "image": "ghcr.io/cs50/codespace:96f79e22540980ba2429b3ca051314f82bc265c6", 
+  "image": "ghcr.io/cs50/codespace:c09711969f19a7a719d177419bf12822cc579728", 
   "postCreateCommand": "/opt/cs50/bin/postCreateCommand", 
   "settings": {
     "C_Cpp.autocomplete": "Disabled", 
@@ -32,7 +35,7 @@
     "editor.parameterHints.enabled": false, 
     "editor.quickSuggestions": false, 
     "editor.renderIndentGuides": false, 
-    "editor.renderWhitespace": "boundary", 
+    "editor.renderWhitespace": "selection", 
     "editor.selectionHighlight": false, 
     "editor.semanticTokenColorCustomizations": {
       "[Default Dark+]": {
@@ -49,6 +52,12 @@
       }
     }, 
     "editor.suggestOnTriggerCharacters": false, 
+    "extension-uninstaller.uninstall": [
+      "github.copilot", 
+      "github.copilot-nightly", 
+      "ms-toolsai.jupyter", 
+      "tabnine.tabnine-vscode"
+    ], 
     "extensions.ignoreRecommendations": true, 
     "files.autoSave": "afterDelay", 
     "files.exclude": {
@@ -63,7 +72,7 @@
     "git.autofetch": true, 
     "git.decorations.enabled": false, 
     "gitdoc.autoPull": "off", 
-    "gitdoc.commitMessageFormat": "ddd, MMM D, YYYY, h:mm A Z", 
+    "gitdoc.commitMessageFormat": "ccc, LLL d, kkkk, h:mm a ZZ", 
     "gitdoc.commitValidationLevel": "none", 
     "gitdoc.enabled": true, 
     "gitdoc.pullOnOpen": false, 
@@ -90,10 +99,14 @@
       }
     }, 
     "terminal.integrated.sendKeybindingsToShell": true, 
+    "terminal.integrated.shellIntegration.decorationsEnabled": "never", 
     "terminal.integrated.tabs.description": "${task}${separator}${local}", 
     "terminal.integrated.tabs.showActiveTerminal": "never", 
     "window.autoDetectColorScheme": true, 
     "workbench.colorCustomizations": {
+      "[GitHub Light Default]": {
+        "terminal.foreground": "#000000"
+      }, 
       "editor.lineHighlightBorder": "#0000", 
       "editorError.foreground": "#0000", 
       "editorGutter.addedBackground": "#0000", 
