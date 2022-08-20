@@ -67,8 +67,8 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     //conferir de "name" existe entre os candidatos e se sim atualizar a variavel "voto"
+    name == loop candidates[i].name
 
-    
 
     return false;
 }
