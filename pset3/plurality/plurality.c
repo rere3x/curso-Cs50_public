@@ -67,9 +67,12 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     //conferir de "name" existe entre os candidatos e se sim atualizar a variavel "voto"
-    for (int i = 0; i < )
+    for (int i = 0; i < candidate_count; i++)
+    {
 
-    name == loop candidates[i].name
+    }
+
+    name == candidates[i].name
 
 
     return false;
