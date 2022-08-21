@@ -95,10 +95,10 @@ void print_winner(void)
         maiorVoto = candidates[i].votes;
     }
 
-    for (int i = 0; i < candidate_count; i++)
+    for (int j = 0; j < candidate_count; j++)
     {
-        if (maiorVoto == candidates[i].votes)
-        printf(" %s \n ", candidates[i].name  );
+        if (maiorVoto == candidates[j].votes)
+        printf(" %s \n ", candidates[j].name  );
 
     }
 
