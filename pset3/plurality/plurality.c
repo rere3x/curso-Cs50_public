@@ -82,6 +82,7 @@ bool vote(string name)
 }
 
 // Print the winner (or winners) of the election
+/*
 void print_winner(void)
 {
     // mostrar o vencedor e seus empates em cada linha
@@ -96,12 +97,10 @@ void print_winner(void)
 
         if (candidates[i].votes >= voto)
         voto = candidates[i].votes;
-/*
         if (candidates[i + 1].votes >= candidates[i].votes)
             maiorVoto = candidates[i + 1].votes;
         else
             maiorVoto = candidates[i].votes;
-*/
     }
 
     for (int j = 0; j < candidate_count; j++)
@@ -111,6 +110,26 @@ void print_winner(void)
     }
 
 
+    return;
+*/
+
+void print_winner(void)
+{
+    int max_votes = candidates[0].votes ;
+    for(int i = 0; i < candidate_count; i++)
+    {
+        if(candidates[i].votes > max_votes)
+        {
+            max_votes = candidates[i].votes;
+        }
+    }
+    for (int v = 0; v < candidate_count; v++)
+    {
+        if(candidates[v].votes == max_votes)
+        {
+            printf("%s\n", candidates[v].name);
+        }
+    }
     return;
 }
 
