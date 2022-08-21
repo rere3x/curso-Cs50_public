@@ -85,7 +85,12 @@ void print_winner(void)
     checar maior voto
     chacar votos igual
 */
-    for 
+    voto < voto2 guardar voto2
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].votes < candidates[i + 1].votes)
+    }
+
 
     return;
 }
