@@ -87,6 +87,9 @@ void print_winner(void)
     // mostrar o vencedor e seus empates em cada linha
 
     int maiorVoto = 0;
+    candidates[i + 1].votes > candidates[i].votes
+
+
 
     for (int i = 0; i < candidate_count - 1; i++)
     {
