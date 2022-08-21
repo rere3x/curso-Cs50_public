@@ -86,18 +86,12 @@ bool vote(string name)
 void print_winner(void)
 {
     // mostrar o vencedor e seus empates em cada linha
-
-
     int voto = candidates[0].votes;
 
-
-
-    for (int i = 0; i < candidate_count - 1; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
-
         if (candidates[i].votes > voto)
         voto = candidates[i].votes;
-
     }
 
     for (int j = 0; j < candidate_count; j++)
@@ -109,24 +103,5 @@ void print_winner(void)
 
     return;
 
-
-void print_winner(void)
-{
-    int max_votes = candidates[0].votes ;
-    for(int i = 0; i < candidate_count; i++)
-    {
-        if(candidates[i].votes > max_votes)
-        {
-            max_votes = candidates[i].votes;
-        }
-    }
-    for (int v = 0; v < candidate_count; v++)
-    {
-        if(candidates[v].votes == max_votes)
-        {
-            printf("%s\n", candidates[v].name);
-        }
-    }
-    return;
 }
 
