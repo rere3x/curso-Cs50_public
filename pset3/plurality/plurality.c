@@ -95,7 +95,7 @@ void print_winner(void)
 
         int voto = candidates[0].votes;
         if (candidates[i].votes > voto)
-        voto = cadidates[i].votes;
+        voto = candidates[i].votes;
 /*
         if (candidates[i + 1].votes >= candidates[i].votes)
             maiorVoto = candidates[i + 1].votes;
