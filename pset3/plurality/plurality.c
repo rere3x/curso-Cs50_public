@@ -69,7 +69,7 @@ bool vote(string name)
 
     for (int i = 0; i < candidate_count; i++)
     {
-        
+
 
         if ( strcmp (name, candidates[i].name) == 0)
         {
@@ -86,10 +86,7 @@ bool vote(string name)
 void print_winner(void)
 {
     // mostrar o vencedor e seus empates em cada linha
-/*
-    checar maior voto
-    chacar votos igual
-*/
+
     int maiorVoto = 0;
 
     for (int i = 0; i < candidate_count -1; i++)
