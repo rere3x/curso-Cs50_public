@@ -66,7 +66,7 @@ int main(int argc, string argv[])
 // Update vote totals given a new vote
 bool vote(string name)
 {
-    //conferir de "name" existe entre os candidatos e se sim atualizar a variavel "voto"
+    
     for (int i = 0; i < candidate_count; i++)
     {
         if (int strcmp(name, candidates[i].name) == 0)
@@ -96,7 +96,7 @@ void print_winner(void)
     for (int i = 0; i < candidate_count; i++)
     {
         if (maiorVoto == candidates[i].votes)
-        
+        printf(candidates[i].name "\n" );
 
     }
 
