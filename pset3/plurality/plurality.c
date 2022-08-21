@@ -99,8 +99,6 @@ void print_winner(void)
         if (voto == candidates[j].votes && candidates[j].votes !=0 )
             printf("%s\n", candidates[j].name);
     }
-
-
     return;
 
 }
