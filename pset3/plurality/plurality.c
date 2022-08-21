@@ -86,14 +86,14 @@ void print_winner(void)
 {
     // mostrar o vencedor e seus empates em cada linha
 
-    int maiorVoto = 0;
+
+    int voto = candidates[0].votes;
 
 
 
     for (int i = 0; i < candidate_count - 1; i++)
     {
 
-        int voto = candidates[0].votes;
         if (candidates[i].votes > voto)
         voto = candidates[i].votes;
 /*
@@ -106,7 +106,7 @@ void print_winner(void)
 
     for (int j = 0; j < candidate_count; j++)
     {
-        if (maiorVoto == candidates[j].votes )
+        if (voto == candidates[j].votes )
             printf("%s\n", candidates[j].name);
     }
 
