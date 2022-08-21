@@ -89,17 +89,18 @@ void print_winner(void)
 
     int maiorVoto = 0;
 
-    for (int i = 0; i < candidate_count -1; i++)
+    for (int i = 0; i < candidate_count - 1; i++)
+
     {
         if (candidates[i].votes >= candidates[i + 1].votes)
         maiorVoto = candidates[i].votes;
     }
 
     for (int j = 0; j < candidate_count; j++)
+
     {
         if (maiorVoto == candidates[j].votes)
-        printf("%s\n", candidates[j].name  );
-
+        printf("%s\n", candidates[j].name);
     }
 
 
