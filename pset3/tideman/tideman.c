@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#inlcude <strio.h>
 
 // Max number of candidates
 #define MAX 9
