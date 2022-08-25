@@ -161,6 +161,8 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     // TODO
+
+    pairs[i]
     return;
 }
 
