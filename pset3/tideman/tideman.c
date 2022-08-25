@@ -162,7 +162,7 @@ void sort_pairs(void)
 {
     // TODO
 
-    pairs[i]
+    // pairs[i]
     return;
 }
 
