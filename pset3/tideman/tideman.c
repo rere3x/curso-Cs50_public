@@ -136,7 +136,7 @@ void record_preferences(int ranks[])
 void add_pairs(void)
 {
     // TODO
-    int prefSoma[candidate_count] = 0;
+    int prefSoma[candidate_count];
 
     for (int i = 0; i < candidate_count; i++)
         {
@@ -161,9 +161,11 @@ void add_pairs(void)
             }
 
             else if(prefSoma[i] < prefSoma[l] )
+            {
                 pair_count++;
                 pairs[i].winner = prefSoma[l];
                 pairs[i].loser = prefSoma[i];
+            }
         }
 
     return;
