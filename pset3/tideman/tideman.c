@@ -148,7 +148,9 @@ void add_pairs(void)
 
     for(int i = 0; i < candidate_count; i++)
         {
-            
+            i
+            l = i + 1;
+            if(prefSoma[i] > prefSoma[l] )
         }
 
     return;
