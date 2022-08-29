@@ -136,15 +136,19 @@ void record_preferences(int ranks[])
 void add_pairs(void)
 {
     // TODO
-
-
     int prefSoma[candidate_count] = 0;
+
     for (int i = 0; i < candidate_count; i++)
         {
             for (int j = 0; j < candidate_count; j++)
             {
                 prefSoma [i]+= preferences[i][j];
             }
+        }
+
+    for(int i = 0; i < candidate_count; i++)
+        {
+            
         }
 
     return;
