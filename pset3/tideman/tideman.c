@@ -143,23 +143,7 @@ preference [pessoa] [gostam menos]
         {
             for (int j = 0; j < candidate_count; j++)
             {
-                int l = j + 1;
-                if (j == candidate_count)
-                    l = 0;
-
-                if (preferences[i][j] > preferences[i][l])
-                {
-                    pair_count++;
-                    pairs[j].winner = preferences[i][j];
-                    pairs[j].loser = preferences[i][l];
-                }
-
-                else if (preferences[i][j] < preferences[i][l])
-                {
-                    pair_count++;
-                    pairs[j].loser = preferences[i][l];
-                    pairs[j].winner = preferences[i][j];
-                }
+                preferences[i] 
 
             }
         }
