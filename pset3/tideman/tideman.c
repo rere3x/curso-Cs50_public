@@ -137,14 +137,13 @@ void add_pairs(void)
 {
     // TODO
 
-preference [pessoa] [gostam menos]
 
+    int prefSoma[candidate_count] = 0;
     for (int i = 0; i < candidate_count; i++)
         {
             for (int j = 0; j < candidate_count; j++)
             {
-                preferences[i] 
-
+                prefSoma [i]+= preferences[i][j];
             }
         }
 
