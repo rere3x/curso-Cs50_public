@@ -154,8 +154,16 @@ void add_pairs(void)
             l = 0;
 
             if(prefSoma[i] > prefSoma[l] )
-            pair_count++;
+            {
+                pair_count++;
+                pairs[i].winner = prefSoma[i];
+                pairs[i].loser = prefSoma[l];
+            }
 
+            else if(prefSoma[i] < prefSoma[l] )
+                pair_count++;
+                pairs[i].winner = prefSoma[l];
+                pairs[i].loser = prefSoma[i];
         }
 
     return;
