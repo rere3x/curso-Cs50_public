@@ -120,7 +120,7 @@ void record_preferences(int ranks[])
 
 
 
-        for (int i = 0; i < candidate_count; i++)
+        for (int i = 0; i < candidate_count -1; i++)
         {
 
             for (int j = i+1; j < candidate_count; j++)
@@ -136,7 +136,7 @@ void record_preferences(int ranks[])
 void add_pairs(void)
 {
     // TODO
-    
+
    for(int i = 0; i < candidate_count; i++)
         {
         for(int j = 1 + i ; j < candidate_count; j++)
