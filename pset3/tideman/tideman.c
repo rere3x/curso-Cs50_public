@@ -150,7 +150,7 @@ void add_pairs(void)
             }
         }
 
-            pairs[count].winner = i
+            pairs[pair_count].winner =
 
     for(int i = 0; i < candidate_count; i++)
         {
@@ -159,7 +159,7 @@ void add_pairs(void)
             if(i + 1 < candidate_count)
             l = 0;
 
-            if(prefSoma[i] > prefSoma[l] )
+            if(preferences[i][j] > preferences[j][i] )
             {
                 pair_count++;
                 pairs[i].winner = prefSoma[i];
