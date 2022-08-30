@@ -160,16 +160,16 @@ void add_pairs(void)
 
                 if(preferences[i][j] > preferences[j][i] )
                 {
+                    pairs[pair_count].winner = i;
+                    pairs[pair_count].loser = j;
                     pair_count++;
-                    pairs[i].winner = prefSoma[i];
-                    pairs[i].loser = prefSoma[j];
                 }
 
                 else
                 {
+                    pairs[pair_count].winner = j;
+                    pairs[pair_count].loser = i;
                     pair_count++;
-                    pairs[i].winner = prefSoma[j];
-                    pairs[i].loser = prefSoma[i];
                 }
             }
         }
