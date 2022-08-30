@@ -136,6 +136,7 @@ void record_preferences(int ranks[])
 void add_pairs(void)
 {
     // TODO
+    /*
     int prefSoma[candidate_count];
         for(int i = 0; i < candidate_count; i++)
         {
@@ -149,31 +150,29 @@ void add_pairs(void)
                 prefSoma [i]+= preferences[i][j];
             }
         }
-
             pairs[pair_count].winner =
-
-    for(int i = 0; i < candidate_count; i++)
+    */
+   for(int i = 0; i < candidate_count; i++)
         {
-            int l;
-            l = i + 1;
-            if(i + 1 < candidate_count)
-            l = 0;
-
-            if(preferences[i][j] > preferences[j][i] )
+        for(int j = 1 + i ; j < candidate_count; j++)
             {
-                pair_count++;
-                pairs[i].winner = prefSoma[i];
-                pairs[i].loser = prefSoma[l];
-            }
 
-            else if(prefSoma[i] < prefSoma[l] )
-            {
-                pair_count++;
-                pairs[i].winner = prefSoma[l];
-                pairs[i].loser = prefSoma[i];
+
+                if(preferences[i][j] > preferences[j][i] )
+                {
+                    pair_count++;
+                    pairs[i].winner = prefSoma[i];
+                    pairs[i].loser = prefSoma[j];
+                }
+
+                else
+                {
+                    pair_count++;
+                    pairs[i].winner = prefSoma[j];
+                    pairs[i].loser = prefSoma[i];
+                }
             }
         }
-
     return;
 }
 
