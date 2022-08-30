@@ -150,6 +150,8 @@ void add_pairs(void)
             }
         }
 
+            pairs[count].winner = i
+
     for(int i = 0; i < candidate_count; i++)
         {
             int l;
