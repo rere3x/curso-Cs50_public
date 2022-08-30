@@ -137,6 +137,10 @@ void add_pairs(void)
 {
     // TODO
     int prefSoma[candidate_count];
+        for(int i = 0; i < candidate_count; i++)
+        {
+            prefSoma[i] = 0;
+        }
 
     for (int i = 0; i < candidate_count; i++)
         {
