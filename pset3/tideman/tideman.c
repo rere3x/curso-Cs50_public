@@ -183,7 +183,8 @@ void sort_pairs(void)
     for(int i = 0; i < pair_count - 1; i++)
         {
             if (pair_strengh [i] < pair_strengh [i+1])
-
+            alguma coisa recebe i marcando qual par é, e outra organiza do maior pro menor
+            x = i
 
         }
 
