@@ -137,6 +137,9 @@ void add_pairs(void)
 {
     // TODO
 
+
+
+
    for(int i = 0; i < candidate_count; i++)
         {
         for(int j = 1 + i ; j < candidate_count; j++)
@@ -157,7 +160,8 @@ void add_pairs(void)
                             pair_count++;
                         }
 
-            }
+          }
+
         }
     return;
 }
@@ -166,6 +170,9 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     // TODO
+
+
+/*
     int preferedContWin = 0;
     int preferedContloser = 0;
     int pair_strengh [pair_count];
@@ -179,7 +186,7 @@ void sort_pairs(void)
 
         }
 
-
+*/
 
 
 
