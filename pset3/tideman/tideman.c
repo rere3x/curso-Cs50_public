@@ -167,15 +167,15 @@ void sort_pairs(void)
 {
     // TODO
     int preferedContWin = 0;
-    int preferedContlose = 0;
+    int preferedContloser = 0;
     int pair_countPosition [pair_count];
 
     for(int i = 0; i <= pair_count; i++)
         {
-            int preferedContWin += preferences[pairs[pair_count].winner][i];
-            int preferedContloser += preferences[pairs[pair_count].loser][i];
+            preferedContWin += preferences[pairs[pair_count].winner][i];
+            preferedContloser += preferences[pairs[pair_count].loser][i];
 
-            int pair_countPosition [i] = preferedContWin - preferedContloser;
+            pair_countPosition [i] = preferedContWin - preferedContloser;
 
         }
 
