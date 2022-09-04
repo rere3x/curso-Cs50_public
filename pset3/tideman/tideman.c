@@ -168,14 +168,14 @@ void sort_pairs(void)
     // TODO
     int preferedContWin = 0;
     int preferedContloser = 0;
-    int pair_countPosition [pair_count];
+    int pair_strengh [pair_count];
 
     for(int i = 0; i <= pair_count; i++)
         {
             preferedContWin += preferences[pairs[pair_count].winner][i];
             preferedContloser += preferences[pairs[pair_count].loser][i];
 
-            pair_countPosition [i] = preferedContWin - preferedContloser;
+            pair_strengh [i] = preferedContWin - preferedContloser;
 
         }
 
@@ -183,7 +183,7 @@ void sort_pairs(void)
     for(int i = 0; i < pair_count - 1; i++)
         {
             if (pair_countPosition [i] < pair_countPosition [i+1])
-            
+
 
         }
 
