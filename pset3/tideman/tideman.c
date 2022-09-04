@@ -180,13 +180,18 @@ void sort_pairs(void)
         }
 
 
-    for(int i = 0; i < pair_count - 1; i++)
-        {
-            if (pair_strengh [i] < pair_strengh [i+1])
-            
+        int i = 0;
+            while (pair_strengh [i] < pair_strengh [i+1])
+                {
+
+                    int tempVar = pair_strengh [i];
+                    pair_strengh [i] = pair_strengh [i+1];
+                    pair_strengh [i+1] = tempVar;
+                    i++;
+                }
 
 
-        }
+
 
     return;
 }
