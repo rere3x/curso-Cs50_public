@@ -179,11 +179,13 @@ void sort_pairs(void)
 
         }
 
-    while(pair_countPosition [i] < pair_countPosition [i+1])
 
-
+    for(int i = 0; i < pair_count - 1; i++)
+        {
+            if (pair_countPosition [i] < pair_countPosition [i+1])
             
 
+        }
 
     return;
 }
