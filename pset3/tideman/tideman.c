@@ -170,8 +170,8 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     // TODO
-    
-preferences[pairs[i].winner][pairs[i].loser]
+
+preferences[pairs[i].winner][pairs[i].loser] < preferences[pairs[i].winner][pairs[i].loser]
 
 /*
     int preferedContWin = 0;
