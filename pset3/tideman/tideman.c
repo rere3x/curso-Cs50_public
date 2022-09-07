@@ -171,7 +171,7 @@ void sort_pairs(void)
 {
     // TODO
 
-    preferences[pairs[pair_count].winner][pairs[pair_count].loser]
+    int sortedPairs 
 
 
 /*
