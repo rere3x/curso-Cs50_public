@@ -171,7 +171,9 @@ void sort_pairs(void)
 {
     // TODO
 
-    int sortedPairs 
+    int sortedPairs [pair_count][pair_count];
+
+        sortedPairs  [pairs[pair_count].winner] [pairs[pair_count].loser] = ;
 
 
 /*
