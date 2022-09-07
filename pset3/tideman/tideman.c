@@ -174,8 +174,8 @@ void sort_pairs(void)
     int sortedPairs [pair_count][pair_count];
         for(int i = 0; i < pair_count; i++)
             {
-                sortedPairs [pairs[pair_count].winner][pairs[pair_count].loser] = preferences[pairs[pair_count].winner] % preferences[pairs[pair_count].loser];
-                
+                sortedPairs [pairs[pair_count].winner][pairs[pair_count].loser] = preferences[pairs[pair_count].winner] - preferences[pairs[pair_count].loser];
+
             }
 
 
