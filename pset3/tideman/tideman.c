@@ -170,7 +170,7 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     // TODO
-
+    
     int sortedPairs [pair_count][pair_count];
         for(int i = 0; i < pair_count; i++)
             {
