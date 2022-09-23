@@ -171,30 +171,6 @@ void sort_pairs(void)
 {
     // TODO
 
-    int sortedPairs [pair_count][pair_count];
-        for(int i = 0; i < pair_count; i++)
-            {
-                sortedPairs [pairs[i].winner][pairs[i].loser] = preferences[pairs[i].winner] - preferences[pairs[i].loser];
-
-            }
-
-
-/*
-    int preferedContWin = 0;
-    int preferedContloser = 0;
-    int pair_strengh [pair_count];
-
-    for(int i = 0; i <= pair_count; i++)
-        {
-            preferedContWin += preferences[pairs[pair_count].winner][i];
-            preferedContloser += preferences[pairs[pair_count].loser][i];
-
-            pair_strengh [i] = preferedContWin - preferedContloser;
-
-        }
-
-*/
-
 
 
 
