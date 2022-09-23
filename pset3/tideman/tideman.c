@@ -170,12 +170,13 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     // TODO
-
+    int index = 0;
     for(int i = 0; i < pair_count; i++)
         {
-            for(int j = 0; i < pair_count; j++)
+            for(int j = 0; j < pair_count; j++)
                 {
                     if (pairs[i].winner > pairs[j].winner)
+                    index[i]
                 }
         }
 
