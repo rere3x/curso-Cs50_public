@@ -171,6 +171,13 @@ void sort_pairs(void)
 {
     // TODO
 
+    for(int i = 0; i < pair_count; i++)
+        {
+            for(int j = 0; i < pair_count; j++)
+                {
+                    if (pairs[i].winner > pairs[j].winner)
+                }
+        }
 
 
 
