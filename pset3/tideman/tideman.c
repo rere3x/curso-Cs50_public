@@ -242,8 +242,10 @@ void print_winner(void)
         for(int j = 0; j < candidate_count; j++)
             {
                     if(locked[j][i] == true)
+                    break;
             }
-            printf("%s/n", candidate[i]);
+            continue;
+            printf("%s/n", candidates[i]);
         }
     return;
 }
