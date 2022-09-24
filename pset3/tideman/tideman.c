@@ -183,19 +183,20 @@ void sort_pairs(void)
                 for(int j = i + 1; j < pair_count; j++)
                     {
                         if(preferences[pairs[j].winner][pairs[j].loser] > greatNum)
-
-                        greatNum = preferences[pairs[j].winner][pairs[j].loser];
-                        indx = j;
+                        {
+                            greatNum = preferences[pairs[j].winner][pairs[j].loser];
+                            indx = j;
+                        }
                     }
-            if(indx != i)
-            {
-            pair temp = pairs[indx];
-            pairs[indx] = pairs[i];
-            pairs[i] = temp;
-            }
+
+                if(indx != i)
+                    {
+                        pair temp = pairs[indx];
+                        pairs[indx] = pairs[i];
+                        pairs[i] = temp;
+                    }
 
         }
-
 
 
     return;
