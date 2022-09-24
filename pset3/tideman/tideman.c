@@ -170,7 +170,10 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     // TODO
-    
+    for(int i = 0; i < candidate_count; i++)
+        {
+    preferences[pairs[i].winner][pairs[i].loser] >
+        }
 
 
 
