@@ -241,7 +241,7 @@ void print_winner(void)
         {
         for(int j = 0; j < candidate_count; j++)
             {
-                    if(locked[j][i] == true)
+                    if(locked[i][j] == true)
                     winner++;
             }
                     if(winner == winner)
