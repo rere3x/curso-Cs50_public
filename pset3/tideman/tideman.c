@@ -175,7 +175,7 @@ void sort_pairs(void)
         {
             for(int j = 0; j < pair_count; j++)
                 {
-                    if (pairs[i].winner > greatNum)
+                    if (pairs[j].winner > greatNum)
 
                 }
         }
