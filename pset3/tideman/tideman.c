@@ -236,7 +236,7 @@ void print_winner(void)
 {
     // TODO
 
-    printf
+    printf("");
     return;
 }
 
