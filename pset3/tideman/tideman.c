@@ -171,9 +171,24 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     // TODO
+
+        int indx;
+        int greatNum;
+
     for(int i = 0; i < candidate_count; i++)
         {
-    preferences[pairs[i].winner][pairs[i].loser] >
+            indx = i;
+            greatNum = preferences[pairs[i].winner][pairs[i].loser];
+
+                for(int j = i + 1; j < candidate_count; j++)
+                    {
+                        if(preferences[pairs[j].winner][pairs[j].loser] > greatNum)
+
+                        greatNum = preferences[pairs[j].winner][pairs[j].loser];
+                        indx = j;
+                    }
+
+
         }
 
 
