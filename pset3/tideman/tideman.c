@@ -246,7 +246,7 @@ void print_winner(void)
                     break;
             }
             continue;
-                    if(winner == winner)
+                    if(winner != i)
                         printf("%s/n", candidates[winner]);
         }
     return;
