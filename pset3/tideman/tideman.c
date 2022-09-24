@@ -190,7 +190,7 @@ void sort_pairs(void)
             if(indx != i)
             pair temp = pairs[indx];
             pairs[indx] = pairs[i];
-            pairs[i] = pairs[indx];
+            pairs[i] = temp;
 
         }
 
