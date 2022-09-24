@@ -236,7 +236,13 @@ void print_winner(void)
 {
     // TODO
 
-    printf("");
+    for(int i = 0; i < candidate_count; i++)
+        {
+        for(int j = 0; j < candidate_count; j++)
+            {
+                    locked[j][i] == true;
+            }
+        }
     return;
 }
 
