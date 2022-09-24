@@ -207,13 +207,7 @@ bool cycle(int winner, int loser)
         return true;
     }
 
-    for (int i = 0; i < candidate_count; i++)
-    {
-        if(locked[loser][i] && cycle(winner, i))
-        {
-            return true;
-        }
-    }
+    
     return false;
 }
 
