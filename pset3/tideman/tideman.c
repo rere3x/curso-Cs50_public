@@ -245,8 +245,8 @@ void print_winner(void)
                     break;
             }
             continue;
-            printf("%s/n", candidates[i]);
         }
+            printf("%s/n", candidates[i]);
     return;
 }
 
