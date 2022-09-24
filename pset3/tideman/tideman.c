@@ -170,13 +170,14 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     // TODO
-    int greatNum = pairs[i].winner;
+    int greatNum = pairs[0].winner;
     for(int i = 0; i < pair_count; i++)
         {
             for(int j = 0; j < pair_count; j++)
                 {
                     if (pairs[j].winner > greatNum)
-
+                    greatNum = pairs[j].winner;
+                    
                 }
         }
 
