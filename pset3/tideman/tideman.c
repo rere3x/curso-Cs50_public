@@ -188,7 +188,9 @@ void sort_pairs(void)
                         indx = j;
                     }
             if(indx != i)
-            int parTemp = greatNum;
+            int parTemp = pairs[indx];
+            pairs[indx] = pairs[i]
+
 
         }
 
