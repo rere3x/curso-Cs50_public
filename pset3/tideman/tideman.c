@@ -171,7 +171,6 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     // TODO
-
         int indx;
         int greatNum;
 
@@ -195,10 +194,7 @@ void sort_pairs(void)
                         pairs[indx] = pairs[i];
                         pairs[i] = temp;
                     }
-
         }
-
-
     return;
 }
 
@@ -206,6 +202,7 @@ void sort_pairs(void)
 void lock_pairs(void)
 {
     // TODO
+    
     return;
 }
 
