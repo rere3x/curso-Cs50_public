@@ -35,3 +35,23 @@ user    0m0.057s
 sys     0m0.170s
 
 sort2 / 50.000 sorted
+
+============================
+
+real    0m3.940s
+user    0m2.642s
+sys     0m0.191s
+
+sort3 / 50.000 randon
+
+real    0m3.853s
+user    0m2.653s
+sys     0m0.225s
+
+sort3 / 50.000 reversed
+
+real    0m4.101s
+user    0m2.648s
+sys     0m0.215s
+
+sort3 / 50.000 sorted
