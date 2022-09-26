@@ -1,6 +1,6 @@
-sort1 uses: TODO
+sort1 uses: buble Sort
 
-How do you know?: TODO
+How do you know?: it takes less time to solve the sorted arquives
 
 sort2 uses: TODO
 
