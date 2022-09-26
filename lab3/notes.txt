@@ -1,0 +1,7 @@
+real    0m8.378s
+user    0m6.920s
+sys     0m0.184s
+
+sort1 / 50.000
+
+
