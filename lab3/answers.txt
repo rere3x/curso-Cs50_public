@@ -8,4 +8,4 @@ How do you know?: All arquives were sorted fast and at the same time
 
 sort3 uses: Selection Sort
 
-How do you know?: They are iqualy slow 
+How do you know?: They are equally slow
