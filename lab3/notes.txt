@@ -18,3 +18,20 @@ sort1 /50.000 sorted
 
 ==================================================
 
+real    0m0.939s
+user    0m0.045s
+sys     0m0.182s
+
+sort2 / 50.000 randon
+
+real    0m0.939s
+user    0m0.045s
+sys     0m0.182s
+
+sort2 / 50.000 reversed
+
+real    0m0.939s
+user    0m0.045s
+sys     0m0.182s
+
+sort2 / 50.000 sorted
