@@ -4,14 +4,14 @@ sys     0m0.184s
 
 sort1 / 50.000 randon
 
-real    0m8.378s
-user    0m6.920s
-sys     0m0.184s
+real    0m6.344s
+user    0m4.985s
+sys     0m0.242s
 
 sort1 / 50.000 reversed
 
-real    0m8.378s
-user    0m6.920s
-sys     0m0.184s
+real    0m1.003s
+user    0m0.037s
+sys     0m0.200s
 
 sort1 /50.000 sorted
