@@ -1,10 +1,10 @@
-sort1 uses: buble Sort
+sort1 uses: Bubble Sort
 
-How do you know?: it takes less time to solve the sorted arquives
+How do you know?: It takes less time to solve the sorted arquives
 
-sort2 uses: TODO
+sort2 uses: Merge Sort
 
-How do you know?: TODO
+How do you know?: All arquives were sorted fast and at the same time
 
 sort3 uses: TODO
 
