@@ -9,8 +9,8 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j <= width; j++)
         {
-            int soma = image[i][j].rgbtGreen + image[i][j].rgbtRed + image[i][j].rgbtBlue
-            average = rond(soma / 3);
+            int soma = image[i][j].rgbtGreen + image[i][j].rgbtRed + image[i][j].rgbtBlue;
+            average = round(soma / 3);
 
             image[i][j].rgbtGreen = average;
             image[i][j].rgbtBlue = average;
