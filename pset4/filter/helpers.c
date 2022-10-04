@@ -69,10 +69,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
             if(i < 0 || i >= width && j < 0 || j >= height)
-                {
-                    average -= 5;
-                }
-            if else((i < 0 || i >= width) || (j < 0 || j >= height))
+                average -= 5;
+            if else(i < 0 || i >= width || j < 0 || j >= height)
+                average -= 3;
+
 
                 RGBTRIPLE Average[i][j]  =
                 tempImage [i - 1][j - 1].rgbtRed  +
