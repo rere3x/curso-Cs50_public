@@ -66,10 +66,16 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j <= width; j++)
         {
-
-            RGBTRIPLE tempImage [i - 1][j]
-
-
+            RGBTRIPLE Average =
+            RGBTRIPLE tempImage [i - 1][j - 1]  +
+            RGBTRIPLE tempImage [i - 1][j]      +
+            RGBTRIPLE tempImage [i - 1][j + 1]  +
+            RGBTRIPLE tempImage [i][j - 1]      +
+            RGBTRIPLE tempImage [i][j]          +
+            RGBTRIPLE tempImage [i][j + 1]      +
+            RGBTRIPLE tempImage [i + 1][j - 1]  +
+            RGBTRIPLE tempImage [i + 1][j]      +
+            RGBTRIPLE tempImage [i + 1][j + 1]  ;
 
             RGBTRIPLE Image [i][j];
         }
