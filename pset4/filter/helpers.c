@@ -97,10 +97,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         tempImage [l][t].rgbtRed    = 0;
                     }
 
-                }
-            }
-/*
-                RGBTRIPLE Average[i][j]             =
+
+                float somaRed =
                 tempImage [i - 1][j - 1].rgbtRed    +
                 tempImage [i - 1][j].rgbtRed        +
                 tempImage [i - 1][j + 1].rgbtRed    +
@@ -111,8 +109,35 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 tempImage [i + 1][j].rgbtRed        +
                 tempImage [i + 1][j + 1].rgbtRed    ;
 
+                float somaGreen =
+                tempImage [i - 1][j - 1].rgbtGreen    +
+                tempImage [i - 1][j].rgbtGreen        +
+                tempImage [i - 1][j + 1].rgbtGreen    +
+                tempImage [i][j - 1].rgbtGreen        +
+                tempImage [i][j].rgbtGreen            +
+                tempImage [i][j + 1].rgbtGreen        +
+                tempImage [i + 1][j - 1].rgbtGreen    +
+                tempImage [i + 1][j].rgbtGreen        +
+                tempImage [i + 1][j + 1].rgbtGreen    ;
+
+                float somablue =
+                tempImage [i - 1][j - 1].rgbtBlue    +
+                tempImage [i - 1][j].rgbtBlue        +
+                tempImage [i - 1][j + 1].rgbtBlue    +
+                tempImage [i][j - 1].rgbtBlue        +
+                tempImage [i][j].rgbtBlue            +
+                tempImage [i][j + 1].rgbtBlue        +
+                tempImage [i + 1][j - 1].rgbtBlue    +
+                tempImage [i + 1][j].rgbtBlue        +
+                tempImage [i + 1][j + 1].rgbtBlue    ;
+
+
+                }
+            }
+
+
             RGBTRIPLE Image [i][j];
-*/
+
         }
     }
 
