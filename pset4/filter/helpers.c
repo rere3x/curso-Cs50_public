@@ -4,11 +4,12 @@
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
+    
     for (int i = 0; i <= height; i++)
     {
         for (int j = 0; j <= width; j++)
         {
-            
+
             int soma = image[i][j].rgbtGreen + image[i][j].rgbtRed + image[i][j].rgbtBlue;
             int average = (int)round(soma / 3);
 
