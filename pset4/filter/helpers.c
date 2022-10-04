@@ -28,9 +28,9 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     int hafWidth = 0;
 
     if (width == 1)
-        hafWidth = 1;
+        hafWidth = 0;
     else if (width == 2)
-        hafWidth =1;
+        hafWidth = 0;
     else if(width % 2 == 0)
         hafWidth = (width / 2) - 1;
     else
@@ -40,7 +40,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 
      for (int i = 0; i <= height; i++)
     {
-        for (int j = 0; j < hafWidth; j++)
+        for (int j = 0; j <= hafWidth; j++)
         {
             RGBTRIPLE temp = image[i][j];
             image[i][j] = image[i][width - j];
