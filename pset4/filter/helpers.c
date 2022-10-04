@@ -29,7 +29,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     if(width % 2 == 0)
         hafWidth = (width / 2) - 1;
     else
-        hafWidth = (int)round(width / 2);
+        hafWidth = (width / 2) - 0.5;
 
 
      for (int i = 0; i <= height; i++)
