@@ -64,7 +64,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 
-     for (int i = 0; i < height; i++)
+    for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
@@ -78,9 +78,17 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 average -= 3;
             }
 
-            if(i < 0 || i >= width)
 
+            for (int l = 0; l < height; l++)
+            {
+                for (int t = 0; t < width; t++)
+                {
+                    tempImage [l][t]
 
+                    if(i < 0 || i >= width)
+                }
+            }
+/*
                 RGBTRIPLE Average[i][j]             =
                 tempImage [i - 1][j - 1].rgbtRed    +
                 tempImage [i - 1][j].rgbtRed        +
@@ -92,8 +100,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 tempImage [i + 1][j].rgbtRed        +
                 tempImage [i + 1][j + 1].rgbtRed    ;
 
-
             RGBTRIPLE Image [i][j];
+*/
         }
     }
 
