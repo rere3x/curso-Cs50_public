@@ -70,6 +70,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             RGBTRIPLE tempImage [i][j] 
 
 
+
             RGBTRIPLE Image [i][j];
         }
     }
