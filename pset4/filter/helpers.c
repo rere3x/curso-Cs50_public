@@ -55,17 +55,17 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE tempImage[height][width];
-      for (int i = 0; i <= height; i++)
+      for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j <= width; j++)
+        for (int j = 0; j < width; j++)
         {
-            tempImage [i][j];
+            tempImage [i][j] = image[i][j];
         }
     }
 
-     for (int i = 0; i <= height; i++)
+     for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j <= width; j++)
+        for (int j = 0; j < width; j++)
         {
             RGBTRIPLE Average[i][j]  =
             tempImage [i - 1][j - 1].rgbtRed  +
