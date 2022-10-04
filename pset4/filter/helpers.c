@@ -74,16 +74,18 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 average -= 3;
 
 
-                RGBTRIPLE Average[i][j]             =
-                tempImage [i - 1][j - 1].rgbtRed    +
-                tempImage [i - 1][j].rgbtRed        +
-                tempImage [i - 1][j + 1].rgbtRed    +
-                tempImage [i][j - 1].rgbtRed        +
-                tempImage [i][j].rgbtRed            +
-                tempImage [i][j + 1].rgbtRed        +
-                tempImage [i + 1][j - 1].rgbtRed    +
-                tempImage [i + 1][j].rgbtRed        +
-                tempImage [i + 1][j + 1].rgbtRed    ;
+                RGBTRIPLE Average[i][j]     =
+                tempImage [i - 1][j - 1]    +
+                tempImage [i - 1][j]        +
+                tempImage [i - 1][j + 1]    +
+                tempImage [i][j - 1]        +
+                tempImage [i][j]            +
+                tempImage [i][j + 1]        +
+                tempImage [i + 1][j - 1]    +
+                tempImage [i + 1][j]        +
+                tempImage [i + 1][j + 1]    ;
+
+
             RGBTRIPLE Image [i][j];
         }
     }
