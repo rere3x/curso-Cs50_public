@@ -28,8 +28,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     int hafWidth = 0;
     if(width % 2 == 0)
         hafWidth = (width / 2) - 1;
-
-    else if (width == 1)
+    else if (width == 2)
         hafWidth =1;
     else if (width == 1)
         hafWidth =1;
