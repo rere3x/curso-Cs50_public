@@ -132,9 +132,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     if((l >= 0 || t >=0) || (l <= height-1 || t <= width-1))
                     {
                         count++;
-                        
+                        /* l=-2 t=1 -1 2 -1
 
-
+*/
 
 
                     }
