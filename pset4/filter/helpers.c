@@ -129,6 +129,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             {
                 for (int t = j-1; t <= j+1; t++)
                 {
+                    int gline = -1;
+
                     if((l >= 0 || t >=0) || (l <= height-1 || t <= width-1))
                     {
 
@@ -137,9 +139,14 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         tempImage [l][t].rgbtBlue = 0;
                     }else
                     {
+                        int gcolun = 1;
+                        gline++;
+                        gcolun++;
+                        if(gcolun < 3)
+                        gcolun = 1;
 
-                        l += -(i-1);
-                        l++;
+
+
 
 
                     }
