@@ -1,7 +1,8 @@
 {
     "files.associations": {
         "cctype": "c",
-        "string": "c"
+        "string": "c",
+        "algorithm": "c"
     },
     "gitdoc.enabled": true
 }

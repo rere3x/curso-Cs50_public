@@ -10,7 +10,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j <= width; j++)
         {
 
-            float soma    = image[i][j].rgbtGreen + image[i][j].rgbtRed + image[i][j].rgbtBlue;
+            float soma = image[i][j].rgbtGreen + image[i][j].rgbtRed + image[i][j].rgbtBlue;
             int average = (int)round(soma / 3);
 
             image[i][j].rgbtGreen   = average;
@@ -54,11 +54,12 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    int average = 9;
+
+    // copy the data to a temp image
     RGBTRIPLE tempImage[height][width];
       for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j < width; j++)
+        for (int j = 0; j <= width; j++)
         {
             tempImage [i][j] = image[i][j];
         }
@@ -68,80 +69,35 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            if((i < 0 || i >= width) && (j < 0 || j >= height))
-            {
-                average -= 5;
-            }
 
-            else if (i < 0 || i >= width || j < 0 || j >= height)
-            {
-                average -= 3;
-            }
+            int count = 0;
+            float somaRed = 0;
+            float somaGreen = 0;
+            float somaBlue = 0;
 
-
-            for (int l = i - 1; l < (i + 1); l++)
+            for (int l = i-1; l <= i+1; l++)
             {
-                for (int t = j - 1; t < (j + 1); t++)
+                for (int t = j-1; t <= j+1; t++)
                 {
-                    if(l < 0 || l >= width)
+                    if((l >= 0 && t >=0) && (l <= height-1 && t <= width-1))
                     {
-                        tempImage [l][t].rgbtBlue   = 0;
-                        tempImage [l][t].rgbtGreen  = 0;
-                        tempImage [l][t].rgbtRed    = 0;
+                    count++;
+
+                    somaRed += tempImage [l][t].rgbtRed;
+                    somaGreen += tempImage [l][t].rgbtGreen;
+                    somaBlue += tempImage [l][t].rgbtBlue;
+
                     }
-
-                    if(t < 0 || t >= height)
-                    {
-                        tempImage [l][t].rgbtBlue   = 0;
-                        tempImage [l][t].rgbtGreen  = 0;
-                        tempImage [l][t].rgbtRed    = 0;
-                    }
-
-
-                float somaRed =
-                tempImage [i - 1][j - 1].rgbtRed    +
-                tempImage [i - 1][j].rgbtRed        +
-                tempImage [i - 1][j + 1].rgbtRed    +
-                tempImage [i][j - 1].rgbtRed        +
-                tempImage [i][j].rgbtRed            +
-                tempImage [i][j + 1].rgbtRed        +
-                tempImage [i + 1][j - 1].rgbtRed    +
-                tempImage [i + 1][j].rgbtRed        +
-                tempImage [i + 1][j + 1].rgbtRed    ;
-
-                float somaGreen =
-                tempImage [i - 1][j - 1].rgbtGreen    +
-                tempImage [i - 1][j].rgbtGreen        +
-                tempImage [i - 1][j + 1].rgbtGreen    +
-                tempImage [i][j - 1].rgbtGreen        +
-                tempImage [i][j].rgbtGreen            +
-                tempImage [i][j + 1].rgbtGreen        +
-                tempImage [i + 1][j - 1].rgbtGreen    +
-                tempImage [i + 1][j].rgbtGreen        +
-                tempImage [i + 1][j + 1].rgbtGreen    ;
-
-                float somablue =
-                tempImage [i - 1][j - 1].rgbtBlue    +
-                tempImage [i - 1][j].rgbtBlue        +
-                tempImage [i - 1][j + 1].rgbtBlue    +
-                tempImage [i][j - 1].rgbtBlue        +
-                tempImage [i][j].rgbtBlue            +
-                tempImage [i][j + 1].rgbtBlue        +
-                tempImage [i + 1][j - 1].rgbtBlue    +
-                tempImage [i + 1][j].rgbtBlue        +
-                tempImage [i + 1][j + 1].rgbtBlue    ;
-
 
                 }
             }
 
+            image[i][j].rgbtRed = round(somaRed / count);
+            image[i][j].rgbtGreen = round(somaGreen / count);
+            image[i][j].rgbtBlue = round(somaBlue / count);
 
-            RGBTRIPLE Image [i][j];
-
+            }
         }
-    }
-
-
 
     return;
 }
@@ -149,5 +105,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 // Detect edges
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
+    
     return;
 }
