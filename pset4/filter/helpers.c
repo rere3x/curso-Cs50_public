@@ -140,17 +140,17 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         tempImage [l][t].rgbtGreen = 0;
                         tempImage [l][t].rgbtBlue = 0;
 
-                        gline++;
                         int gxMultiplayer = gline * gcolum;
                         Gx += tempImage [l][t].rgbtRed * gxMultiplayer;
+                        gline++;
 
                     }else
                     {
-                        gline++;
                         int gxMultiplayer = gline * gcolum;
                         Gx[0] += tempImage [l][t].rgbtRed * gxMultiplayer;
                         Gx[1] += tempImage [l][t].rgbtGreen * gxMultiplayer;
                         Gx[2] += tempImage [l][t].rgbtBlue * gxMultiplayer;
+                        gline++;
                     }
                         //l = 1 /2 / 3 x t -1 / 0 / 1
                 }
@@ -177,24 +177,24 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         tempImage [l][t].rgbtGreen = 0;
                         tempImage [l][t].rgbtBlue = 0;
 
-                        gline++;
                         int gxMultiplayer = gline * gcolum;
                         Gy += tempImage [l][t].rgbtRed * gxMultiplayer;
+                        gcolum++;
 
                     }else
                     {
-                        gline++;
                         int gxMultiplayer = gline * gcolum;
                         Gy[0] += tempImage [l][t].rgbtRed * gxMultiplayer;
                         Gy[1] += tempImage [l][t].rgbtGreen * gxMultiplayer;
                         Gy[2] += tempImage [l][t].rgbtBlue * gxMultiplayer;
+                        gcolum++;
                     }
                         //l = 1 /2 / 3 x t -1 / 0 / 1
                 }
 
-                        gcolum++;
-                        if(gcolum < 3)
-                        gcolum = 1;
+                        gline++;
+                        if(gline < 3)
+                        gline = 1;
 
 
             }
