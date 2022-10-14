@@ -131,14 +131,14 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 {
                     if((l >= 0 || t >=0) || (l <= height-1 || t <= width-1))
                     {
-                        count++;
+
                         tempImage [l][t].rgbtRed = 0;
                         tempImage [l][t].rgbtGreen = 0;
                         tempImage [l][t].rgbtBlue = 0;
                     }else
                     {
-                        count++;
-                        l += -(i-1);
+
+                        l += -(i-1)
 
 
                     }
