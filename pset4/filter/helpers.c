@@ -138,8 +138,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     }else
                     {
                         count++;
+                        l += -(i-1);
 
-                        
 
                     }
 
