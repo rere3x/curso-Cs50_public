@@ -138,7 +138,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     }else
                     {
                         count++;
+
                         
+
                     }
 
                         //l = 1 /2 / 3 x t -1 / 0 / 1
