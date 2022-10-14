@@ -127,6 +127,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
             for (int l = i-1; l <= i+1; l++)
             {
+                int gcolum = 1;
+
                 for (int t = j-1; t <= j+1; t++)
                 {
                     int gline = -1;
@@ -137,27 +139,23 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         tempImage [l][t].rgbtRed = 0;
                         tempImage [l][t].rgbtGreen = 0;
                         tempImage [l][t].rgbtBlue = 0;
+
+                        gline++;
+                        int gxMultiplayer = gline * gcolum;
+                        Gx += tempImage [l][t].rgbtRed * gxMultiplayer;
                     }else
                     {
-                        int gcolun = 1;
                         gline++;
-                        gcolun++;
-                        if(gcolun < 3)
-                        gcolun = 1;
-
-
-
+                        int gxMultiplayer = gline * gcolum;
+                        Gx += tempImage [l][t].rgbtRed * gxMultiplayer;
 
 
                     }
-
                         //l = 1 /2 / 3 x t -1 / 0 / 1
-
-
-
-
-
                 }
+                        gcolum++;
+                        if(gcolum < 3)
+                        gcolum = 1;
             }
 
             image[i][j].rgbtRed = (int)round(somaRed / count);
