@@ -192,14 +192,10 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         Gy[2] += tempImage [l][t].rgbtBlue * gxMultiplayer;
                         gline++;
                     }
-                        //l = 1 /2 / 3 x t -1 / 0 / 1
                 }
-
                         gcolum++;
                         if(gcolum < 3)
                         gcolum = 1;
-
-
             }
 
             image[i][j].rgbtRed = sqrt( (Gx[0] * Gx[0]) + (Gy[0] * Gy[0]));
