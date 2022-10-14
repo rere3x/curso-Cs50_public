@@ -177,7 +177,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         tempImage [l][t].rgbtBlue = 0;
 
                         int gxMultiplayer = gline * gcolum;
-                        Gy += tempImage [l][t].rgbtRed * gxMultiplayer;
+                        Gy[0] += tempImage [l][t].rgbtRed * gxMultiplayer;
+                        Gy[1] += tempImage [l][t].rgbtGreen * gxMultiplayer;
+                        Gy[2] += tempImage [l][t].rgbtBlue * gxMultiplayer;
                         gline++;
 
                     }else
