@@ -199,6 +199,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         gycolum++;
 
             }
+                if(sqrt( pow(Gx[0],2) + pow(Gy[0],2)) > 255)
+                int redsqrt = 
 
             image[i][j].rgbtRed = sqrt( pow(Gx[0],2) + pow(Gy[0],2));
             image[i][j].rgbtGreen = sqrt( pow(Gx[1],2) + pow(Gy[1],2));
