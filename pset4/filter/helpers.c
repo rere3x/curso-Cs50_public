@@ -132,7 +132,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             int gline = -1;
             if(gcolum == 3)
             gcolum = 1;
-            
+
                 for (int t = j-1; t <= j+1; t++)
                 {
 
@@ -143,10 +143,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         tempImage [l][t].rgbtGreen = 0;
                         tempImage [l][t].rgbtBlue = 0;
 
-                        int gxMultiplayer = gline * gcolum;
-                        Gx[0] += tempImage [l][t].rgbtRed * gxMultiplayer;
-                        Gx[1] += tempImage [l][t].rgbtGreen * gxMultiplayer;
-                        Gx[2] += tempImage [l][t].rgbtBlue * gxMultiplayer;
                         gline++;
 
                     }else
