@@ -137,27 +137,27 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             {
 
             int gxline = -1;
+            if(gxcolum == 3)
+            gxcolum = 1;
 
                 for (int t = j-1; t <= j+1; t++)
                 {
 
                     if((l < 0 || t < 0) || (l > height-1 || t > width-1))
                     {
-                        gxline++;
+                        count++;
                         Gx[0] += 0;
                         Gx[1] += 0;
                         Gx[2] += 0;
-                        count++;
+                        gxline++;
                     }else
                     {
-                        gxline++;
-                        if(gxcolum == 3)
-                        gxcolum = 1;
+                        count++;
                         int gMultiplayer = gxline * gxcolum;
                         Gx[0] += tempImage [l][t].rgbtRed * gMultiplayer;
                         Gx[1] += tempImage [l][t].rgbtGreen * gMultiplayer;
                         Gx[2] += tempImage [l][t].rgbtBlue * gMultiplayer;
-                        count++;
+                        gxline++;
                     }
 
                         //gcolum = 1 /2 / 3 x gline -1 / 0 / 1
