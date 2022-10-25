@@ -124,6 +124,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             float Gx[3];
             float Gy[3];
             int gcolum = 1;
+            int gycolum = -1;
 
 
             for (int l = i-1; l <= i+1; l++)
@@ -161,9 +162,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             for (int l = i-1; l <= i+1; l++)
             {
 
-            int gline = 1;
-            if(gcolum == 3)
-            gcolum = 1;
+            int gyline = 1;
+            if(gycolum == 3)
+            gycolum = 1;
 
                 for (int t = j-1; t <= j+1; t++)
                 {
@@ -173,7 +174,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         Gy[0] += 0;
                         Gy[1] += 0;
                         Gy[2] += 0;
-                        gline++;
+                        gyline++;
 
                     }else
                     {
@@ -181,12 +182,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         Gx[0] += tempImage [l][t].rgbtRed * gxMultiplayer;
                         Gx[1] += tempImage [l][t].rgbtGreen * gxMultiplayer;
                         Gx[2] += tempImage [l][t].rgbtBlue * gxMultiplayer;
-                        gline++;
+                        gyline++;
                     }
 
-                        //gcolum = 1 /0 / 1 x gline 1 / 2 / 3
+                        //gcolum = -1 /0 / 1 x gline 1 / 2 / 3
                 }
-                        gcolum++;
+                        gycolum++;
 
             }
 
