@@ -143,20 +143,20 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 for (int t = j-1; t <= j+1; t++)
                 {
 
-                    if((l < 0 || t < 0) || (l > height-1 || t > width-1))
-                    {
-                        count++;
-                        Gx[0] += 0;
-                        Gx[1] += 0;
-                        Gx[2] += 0;
-                        gxline++;
-                    }else
+                    if((l >= 0 && t >=0) && (l <= height-1 && t <= width-1))
                     {
                         count++;
                         int gMultiplayer = gxline * gxcolum;
                         Gx[0] += tempImage [l][t].rgbtRed * gMultiplayer;
                         Gx[1] += tempImage [l][t].rgbtGreen * gMultiplayer;
                         Gx[2] += tempImage [l][t].rgbtBlue * gMultiplayer;
+                        gxline++;
+                    }else
+                    {
+                        count++;
+                        Gx[0] += 0;
+                        Gx[1] += 0;
+                        Gx[2] += 0;
                         gxline++;
                     }
 
@@ -174,15 +174,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 for (int t = j-1; t <= j+1; t++)
                 {
 
-                    if((l < 0 || t < 0) || (l > height-1 || t > width-1))
-                    {
-                        count++;
-                        Gy[0] += 0;
-                        Gy[1] += 0;
-                        Gy[2] += 0;
-                        gyline++;
-
-                    }else
+                    if((l >= 0 && t >=0) && (l <= height-1 && t <= width-1))
                     {
                         if(gyline == 3)
                         gyline = 1;
@@ -192,6 +184,14 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         Gy[1] += tempImage [l][t].rgbtGreen * gMultiplayer;
                         Gy[2] += tempImage [l][t].rgbtBlue * gMultiplayer;
                         gyline++;
+                    }else
+                    {
+                        count++;
+                        Gy[0] += 0;
+                        Gy[1] += 0;
+                        Gy[2] += 0;
+                        gyline++;
+
                     }
 
                         //gcolum = -1 /0 / 1 x gline 1 / 2 / 3
