@@ -163,8 +163,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             {
 
             int gyline = 1;
-            if(gycolum == 3)
-            gycolum = 1;
+            if(gyline == 3)
+            gyline = 1;
 
                 for (int t = j-1; t <= j+1; t++)
                 {
