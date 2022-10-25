@@ -138,11 +138,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
                     if((l < 0 || t < 0) || (l > height-1 || t > width-1))
                     {
-
-                        tempImage [l][t].rgbtRed = 0;
-                        tempImage [l][t].rgbtGreen = 0;
-                        tempImage [l][t].rgbtBlue = 0;
-
+                        Gx[0] += 0;
+                        Gx[1] += 0;
+                        Gx[2] += 0;
                         gline++;
 
                     }else
