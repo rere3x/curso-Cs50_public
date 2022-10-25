@@ -135,7 +135,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
             for (int l = i-1; l <= i+1; l++)
             {
-            count++;
+            
             int gxline = -1;
             if(gxcolum == 3)
             gxcolum = 1;
