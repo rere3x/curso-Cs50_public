@@ -120,7 +120,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            int count = 0;
+            
             float Gx[3];
             float Gy[3];
             int gcolum = 1;
