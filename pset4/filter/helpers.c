@@ -127,11 +127,11 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
             for (int l = i-1; l <= i+1; l++)
             {
-
+                int gcolum = -1;
 
                 for (int t = j-1; t <= j+1; t++)
                 {
-                    int gline = -1;
+                    int gline = 1;
                     if(gline < 3)
                     gline = 1;
 
