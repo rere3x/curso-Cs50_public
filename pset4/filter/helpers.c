@@ -161,7 +161,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             for (int l = i-1; l <= i+1; l++)
             {
 
-            int gline = -1;
+            int gline = 1;
             if(gcolum == 3)
             gcolum = 1;
 
@@ -184,11 +184,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         gline++;
                     }
 
-                        //gcolum = 1 /2 / 3 x gline -1 / 0 / 1
+                        //gcolum = 1 /0 / 1 x gline 1 / 2 / 3
                 }
                         gcolum++;
 
             }
+
             image[i][j].rgbtRed = sqrt( (Gx[0] * Gx[0]) + (Gy[0] * Gy[0]));
             image[i][j].rgbtGreen = sqrt( (Gx[1] * Gx[1]) + (Gy[1] * Gy[1]));
             image[i][j].rgbtBlue = sqrt( (Gx[2] * Gx[2]) + (Gy[2] * Gy[2]));
