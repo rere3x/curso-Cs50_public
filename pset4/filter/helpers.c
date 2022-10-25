@@ -170,8 +170,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             {
 
             int gyline = 1;
-            if(gyline == 3)
-            gyline = 1;
 
                 for (int t = j-1; t <= j+1; t++)
                 {
@@ -186,6 +184,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
                     }else
                     {
+                        if(gyline == 3)
+                        gyline = 1;
                         count++;
                         int gMultiplayer = gyline * gycolum;
                         Gy[0] += tempImage [l][t].rgbtRed * gMultiplayer;
