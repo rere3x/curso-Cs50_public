@@ -160,41 +160,35 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
             for (int l = i-1; l <= i+1; l++)
             {
-                int gcolum = 1;
+
+            int gline = -1;
+            if(gcolum == 3)
+            gcolum = 1;
 
                 for (int t = j-1; t <= j+1; t++)
                 {
-                    int gline = -1;
 
-                    if((l >= 0 || t >=0) || (l <= height-1 || t <= width-1))
+                    if((l < 0 || t < 0) || (l > height-1 || t > width-1))
                     {
-
-                        tempImage [l][t].rgbtRed = 0;
-                        tempImage [l][t].rgbtGreen = 0;
-                        tempImage [l][t].rgbtBlue = 0;
-
-
-                        int gxMultiplayer = gline * gcolum;
-                        Gy[0] += tempImage [l][t].rgbtRed * gxMultiplayer;
-                        Gy[1] += tempImage [l][t].rgbtGreen * gxMultiplayer;
-                        Gy[2] += tempImage [l][t].rgbtBlue * gxMultiplayer;
+                        Gy[0] += 0;
+                        Gy[1] += 0;
+                        Gy[2] += 0;
                         gline++;
 
-                    }
-                    if((l >= 0 && t >=0) && (l <= height-1 && t <= width-1))
+                    }else
                     {
                         int gxMultiplayer = gline * gcolum;
-                        Gy[0] += tempImage [l][t].rgbtRed * gxMultiplayer;
-                        Gy[1] += tempImage [l][t].rgbtGreen * gxMultiplayer;
-                        Gy[2] += tempImage [l][t].rgbtBlue * gxMultiplayer;
+                        Gx[0] += tempImage [l][t].rgbtRed * gxMultiplayer;
+                        Gx[1] += tempImage [l][t].rgbtGreen * gxMultiplayer;
+                        Gx[2] += tempImage [l][t].rgbtBlue * gxMultiplayer;
                         gline++;
                     }
+
+                        //gcolum = 1 /2 / 3 x gline -1 / 0 / 1
                 }
                         gcolum++;
-                        if(gcolum < 3)
-                        gcolum = 1;
-            }
 
+            }
             image[i][j].rgbtRed = sqrt( (Gx[0] * Gx[0]) + (Gy[0] * Gy[0]));
             image[i][j].rgbtGreen = sqrt( (Gx[1] * Gx[1]) + (Gy[1] * Gy[1]));
             image[i][j].rgbtBlue = sqrt( (Gx[2] * Gx[2]) + (Gy[2] * Gy[2]));
