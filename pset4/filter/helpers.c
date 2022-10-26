@@ -143,9 +143,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         somaGx[1] += tempImage [l][t].rgbtGreen * Gx[colum][line];
                         somaGx[2] += tempImage [l][t].rgbtBlue * Gx[colum][line];
 
-                        somaGy[0] += tempImage [l][t].rgbtRed * Gx[colum][line];
-                        somaGy[1] += tempImage [l][t].rgbtGreen * Gx[colum][line];
-                        somaGy[2] += tempImage [l][t].rgbtBlue * Gx[colum][line];
+                        somaGy[0] += tempImage [l][t].rgbtRed * Gy[colum][line];
+                        somaGy[1] += tempImage [l][t].rgbtGreen * Gy[colum][line];
+                        somaGy[2] += tempImage [l][t].rgbtBlue * Gy[colum][line];
                         line++;
 
                     }else
