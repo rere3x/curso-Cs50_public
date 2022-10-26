@@ -245,9 +245,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         gycolum++;
 
             }
-            image[i][j].rgbtRed = (int)round(sqrt( pow(somaGx[0],2) + pow(somaGy[0],2)));
-            image[i][j].rgbtGreen = (int)round(sqrt( pow(somaGx[1],2) + pow(somaGy[1],2)));
-            image[i][j].rgbtBlue = (int)round(sqrt( pow(somaGx[2],2) + pow(somaGy[2],2)));
+            image[i][j].rgbtRed = (int)round(sqrt( pow(Gx[0],2) + pow(Gy[0],2)));
+            image[i][j].rgbtGreen = (int)round(sqrt( pow(Gx[1],2) + pow(Gy[1],2)));
+            image[i][j].rgbtBlue = (int)round(sqrt( pow(Gx[2],2) + pow(Gy[2],2)));
 
             if(image[i][j].rgbtRed > 255) image[i][j].rgbtRed = 255;
             if(image[i][j].rgbtGreen > 255) image[i][j].rgbtGreen = 255;
@@ -274,5 +274,5 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             }
     return;
         }
-
+}
 
