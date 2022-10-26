@@ -164,6 +164,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 }
                 colum++;
             }
+            /*
             image[i][j].rgbtRed = (int)round(sqrt( pow(somaGx[0],2) + pow(somaGy[0],2)));
             image[i][j].rgbtGreen = (int)round(sqrt( pow(somaGx[1],2) + pow(somaGy[1],2)));
             image[i][j].rgbtBlue = (int)round(sqrt( pow(somaGx[2],2) + pow(somaGy[2],2)));
@@ -171,6 +172,22 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             if(image[i][j].rgbtRed > 255) image[i][j].rgbtRed = 255;
             if(image[i][j].rgbtGreen > 255) image[i][j].rgbtGreen = 255;
             if(image[i][j].rgbtBlue > 255) image[i][j].rgbtBlue = 255;
+            */
+
+             if(sqrt( pow(somaGx[0],2) + pow(somaGy[0],2)) > 255.00)
+                image[i][j].rgbtRed = 255;
+                else
+                image[i][j].rgbtRed = (int)round(sqrt( pow(somaGx[0],2) + pow(somaGy[0],2)));
+
+            if(sqrt( pow(somaGx[1],2) + pow(somaGy[1],2)) > 255.00)
+                image[i][j].rgbtGreen = 255;
+                else
+                image[i][j].rgbtGreen = (int)round(sqrt( pow(somaGx[1],2) + pow(somaGy[1],2)));
+
+            if(sqrt( pow(somaGx[2],2) + pow(somaGy[2],2)) > 255.00)
+                image[i][j].rgbtBlue = 255;
+                else
+                image[i][j].rgbtBlue = (int)round(sqrt( pow(somaGx[2],2) + pow(somaGy[2],2)));
         }
 
 /*
