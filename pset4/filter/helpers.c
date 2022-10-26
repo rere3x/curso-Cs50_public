@@ -119,13 +119,13 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     int Gx[3][3]  =  {{-1, 0, 1},
                       {-2, 0, 0},
                       {-1, 0, 1}};
-    float somaGx = 0;
+    float somaGx[3] = 0;
 
     int Gy[3][3]  =  {{-1,-2,-1},
                       {0, 0, 0},
                       {1, 2, 1}};
 
-    float somaGy = 0;
+    float somaGy[3] = 0;
 
     for (int i = 0; i < height; i++)
     {
@@ -139,9 +139,13 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     int line = 0;
                     if((l >= 0 && t >=0) && (l <= height-1 && t <= width-1))
                     {
-                        tempImage [l][t].rgbtRed * Gx[colum][line];
-                        tempImage [l][t].rgbtGreen * Gx[colum][line];
-                        tempImage [l][t].rgbtBlue * Gx[colum][line];
+                        somaGx[0] += tempImage [l][t].rgbtRed * Gx[colum][line];
+                        somaGx[1] += tempImage [l][t].rgbtGreen * Gx[colum][line];
+                        somaGx[2] += tempImage [l][t].rgbtBlue * Gx[colum][line];
+
+                        somaGy[0] += tempImage [l][t].rgbtRed * Gx[colum][line];
+                        somaGy[1] += tempImage [l][t].rgbtGreen * Gx[colum][line];
+                        somaGy[2] += tempImage [l][t].rgbtBlue * Gx[colum][line];
 
 
                     }
