@@ -134,12 +134,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 {
                      if((l >= 0 && t >=0) && (l <= height-1 && t <= width-1))
                     {
-                        
+                        Gx[][]
                     }
                 }
 
-    }
-
+            }
+        }
 
 /*
     for (int i = 0; i < height; i++)
