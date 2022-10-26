@@ -116,7 +116,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 
-/*
     int Gx[3][3]  =  {{-1, 0, 1},
                       {-2, 0, 2},
                       {-1, 0, 1}};
@@ -173,8 +172,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             if(image[i][j].rgbtGreen > 255) image[i][j].rgbtGreen = 255;
             if(image[i][j].rgbtBlue > 255) image[i][j].rgbtBlue = 255;
         }
-*/
 
+/*
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
@@ -267,10 +266,11 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 else
                 image[i][j].rgbtBlue = (int)round(sqrt( pow(Gx[2],2) + pow(Gy[2],2)));
 
+*/
 
 
             }
-        }
     return;
-    }
+        }
+    
 
