@@ -64,7 +64,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             tempImage [i][j] = image[i][j];
         }
     }
-/*
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
@@ -116,6 +115,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 
+/*
     int Gx[3][3]  =  {{-1, 0, 1},
                       {-2, 0, 2},
                       {-1, 0, 1}};
