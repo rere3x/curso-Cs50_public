@@ -119,13 +119,13 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     int Gx[3][3]  =  {{-1, 0, 1},
                       {-2, 0, 0},
                       {-1, 0, 1}};
-    float somaGx[3] = 0;
+    float somaGx[3] = {0, 0, 0};
 
     int Gy[3][3]  =  {{-1,-2,-1},
                       {0, 0, 0},
                       {1, 2, 1}};
 
-    float somaGy[3] = 0;
+    float somaGy[3] = {0, 0, 0};
 
     for (int i = 0; i < height; i++)
     {
@@ -152,7 +152,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 }
             }
             image[i][j].rgbtRed = (int)round(sqrt( pow(somaGx[0],2) + pow(somaGy[0],2)));
-            image[i][j].rgbtGreen = (int)round(sqrt( pow(somaGx[1],2) + pow(Gy[1],2)));
+            image[i][j].rgbtGreen = (int)round(sqrt( pow(somaGx[1],2) + pow(somaGy[1],2)));
             image[i][j].rgbtBlue = (int)round(sqrt( pow(somaGx[2],2) + pow(somaGy[2],2)));
 
             if(image[i][j].rgbtRed = (int)round(sqrt( pow(somaGx[0],2) + pow(somaGy[0],2))) > 255)
