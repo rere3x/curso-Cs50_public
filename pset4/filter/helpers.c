@@ -267,11 +267,11 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 else
                 image[i][j].rgbtBlue = (int)round(sqrt( pow(Gx[2],2) + pow(Gy[2],2)));
 
-*/
+
 
 
             }
     return;
         }
 
-
+}
