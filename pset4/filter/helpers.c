@@ -148,8 +148,17 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         somaGy[2] += tempImage [l][t].rgbtBlue * Gx[colum][line];
                         line++;
 
+                    }else
+                    {
+                        somaGx[0] += 0;
+                        somaGx[1] += 0;
+                        somaGx[2] += 0;
+
+                        somaGy[0] += 0;
+                        somaGy[1] += 0;
+                        somaGy[2] += 0;
+                        line++;
                     }
-                    line++;
                     count++;
                 }
                 colum++;
