@@ -115,63 +115,103 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 
-int Gx[3][3]  =  {{-1, 0, 1},
-                      {-2, 0, 2},
-                      {-1, 0, 1}};
-
-    float somaGx[3] = {0, 0, 0};
-
-    int Gy[3][3]  =  {{-1,-2,-1},
-                      {0, 0, 0},
-                      {1, 2, 1}};
-
-    float somaGy[3] = {0, 0, 0};
-
-    for (int i = 0; i < height; i++)
+for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
-        {int count = 0;
-            int colum = 0;
+        {
+            float Gx[3]= {0, 0, 0};
+            float Gy[3] = {0, 0, 0};
+
+            int gxcolum = 1;
+            int gycolum = -1;
+            int count = 0;
+
             for (int l = i-1; l <= i+1; l++)
             {
-                int line = 0;
+
+                int gxline = -1;
+                if(gxcolum == 3)
+                gxcolum = 1;
+
                 for (int t = j-1; t <= j+1; t++)
                 {
+
                     if((l >= 0 && t >=0) && (l <= height-1 && t <= width-1))
                     {
-                        somaGx[0] += tempImage [l][t].rgbtRed * Gx[colum][line];
-                        somaGx[1] += tempImage [l][t].rgbtGreen * Gx[colum][line];
-                        somaGx[2] += tempImage [l][t].rgbtBlue * Gx[colum][line];
-
-                        somaGy[0] += tempImage [l][t].rgbtRed * Gy[colum][line];
-                        somaGy[1] += tempImage [l][t].rgbtGreen * Gy[colum][line];
-                        somaGy[2] += tempImage [l][t].rgbtBlue * Gy[colum][line];
-                        line++;
-
+                        count++;
+                        int gMultiplayer = gxline * gxcolum;
+                        Gx[0] += tempImage [l][t].rgbtRed * gMultiplayer;
+                        Gx[1] += tempImage [l][t].rgbtGreen * gMultiplayer;
+                        Gx[2] += tempImage [l][t].rgbtBlue * gMultiplayer;
+                        gxline++;
                     }else
                     {
-                        somaGx[0] += 0;
-                        somaGx[1] += 0;
-                        somaGx[2] += 0;
-
-                        somaGy[0] += 0;
-                        somaGy[1] += 0;
-                        somaGy[2] += 0;
-                        line++;
+                        count++;
+                        Gx[0] += 0;
+                        Gx[1] += 0;
+                        Gx[2] += 0;
+                        gxline++;
                     }
-                    count++;
-                }
-                colum++;
-            }
-            image[i][j].rgbtRed = (int)round(sqrt( pow(somaGx[0],2) + pow(somaGy[0],2)));
-            image[i][j].rgbtGreen = (int)round(sqrt( pow(somaGx[1],2) + pow(somaGy[1],2)));
-            image[i][j].rgbtBlue = (int)round(sqrt( pow(somaGx[2],2) + pow(somaGy[2],2)));
 
-            if(image[i][j].rgbtRed > 255) image[i][j].rgbtRed = 255;
-            if(image[i][j].rgbtGreen > 255) image[i][j].rgbtGreen = 255;
-            if(image[i][j].rgbtBlue > 255) image[i][j].rgbtBlue = 255;
+                        //gcolum = 1 /2 / 3 x gline -1 / 0 / 1
+                }
+                        gxcolum++;
+
+            }
+
+            for (int l = i-1; l <= i+1; l++)
+            {
+
+                int gyline = 1;
+
+                for (int t = j-1; t <= j+1; t++)
+                {
+
+                    if((l >= 0 && t >=0) && (l <= height-1 && t <= width-1))
+                    {
+                        if(gyline == 3)
+                        gyline = 1;
+                        count++;
+                        int gMultiplayer = gyline * gycolum;
+                        Gy[0] += tempImage [l][t].rgbtRed * gMultiplayer;
+                        Gy[1] += tempImage [l][t].rgbtGreen * gMultiplayer;
+                        Gy[2] += tempImage [l][t].rgbtBlue * gMultiplayer;
+                        gyline++;
+                    }else
+                    {
+                        count++;
+                        Gy[0] += 0;
+                        Gy[1] += 0;
+                        Gy[2] += 0;
+                        gyline++;
+
+                    }
+
+                        //gcolum = -1 /0 / 1 x gline 1 / 2 / 3
+                }
+                        gycolum++;
+
+            }
+            if(sqrt( pow(Gx[0],2) + pow(Gy[0],2)) > 255.00)
+                image[i][j].rgbtRed = 255;
+                else
+                image[i][j].rgbtRed = (int)round(sqrt( pow(Gx[0],2) + pow(Gy[0],2)));
+
+            if(sqrt( pow(Gx[1],2) + pow(Gy[1],2)) > 255.00)
+                image[i][j].rgbtGreen = 255;
+                else
+                image[i][j].rgbtGreen = (int)round(sqrt( pow(Gx[1],2) + pow(Gy[1],2)));
+
+            if(sqrt( pow(Gx[2],2) + pow(Gy[2],2)) > 255.00)
+                image[i][j].rgbtBlue = 255;
+                else
+                image[i][j].rgbtBlue = (int)round(sqrt( pow(Gx[2],2) + pow(Gy[2],2)));
+
+
+
+
             }
         }
     return;
+        }
 
-}
