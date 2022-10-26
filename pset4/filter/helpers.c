@@ -130,11 +130,13 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         {
             for (int l = i-1; l <= i+1; l++)
             {
+                int colum
                 for (int t = j-1; t <= j+1; t++)
                 {
+                    int line = 0;
                      if((l >= 0 && t >=0) && (l <= height-1 && t <= width-1))
                     {
-                        Gx[][]
+                        Gx[][line]
                     }
                 }
 
