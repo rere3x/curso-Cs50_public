@@ -131,12 +131,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
+            int colum = 0;
             for (int l = i-1; l <= i+1; l++)
             {
-                int colum = 0;
+                int line = 0;
                 for (int t = j-1; t <= j+1; t++)
                 {
-                    int line = 0;
                     if((l >= 0 && t >=0) && (l <= height-1 && t <= width-1))
                     {
                         somaGx[0] += tempImage [l][t].rgbtRed * Gx[colum][line];
@@ -146,10 +146,10 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                         somaGy[0] += tempImage [l][t].rgbtRed * Gx[colum][line];
                         somaGy[1] += tempImage [l][t].rgbtGreen * Gx[colum][line];
                         somaGy[2] += tempImage [l][t].rgbtBlue * Gx[colum][line];
-
-
+                        line++;
                     }
                 }
+                colum++;
             }
             if(sqrt(pow(somaGx[0],2) + pow(somaGy[0],2)) > 255) image[i][j].rgbtRed = 255;
             else
