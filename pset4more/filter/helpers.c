@@ -57,7 +57,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
     // copy the data to a temp image
     RGBTRIPLE tempImage[height][width];
-      for (int i = 0; i < height; i++)
+      for (int i = 0; i <= height; i++)
     {
         for (int j = 0; j <= width; j++)
         {
