@@ -52,8 +52,6 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             if(sepiaRed > 255) image[i][j].rgbtRed = 255;
             else image[i][j].rgbtRed = sepiaRed;
 
-            printf("%i", image[i][j].rgbtRed);
-
             if(sepiaGreen > 255) image[i][j].rgbtGreen = 255;
             else image[i][j].rgbtRed = sepiaGreen;
 
