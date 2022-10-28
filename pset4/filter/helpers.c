@@ -106,16 +106,16 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            float count = 0;
-            int somaRed = 0;
-            int somaGreen = 0;
-            int somaBlue = 0;
+            float count = 0.0;
+            float somaRed = 0.0;
+            float somaGreen = 0.0;
+            float somaBlue = 0.0;
 
             for (int l = i-1; l <= i+1; l++)
             {
                 for (int t = j-1; t <= j+1; t++)
                 {
-                    if((l >= 0 && t >=0) && (l < height-1 && t < width-1))
+                    if((l >= 0 && t >=0) && (l < height && t < width))
                     {
                     count++;
 
