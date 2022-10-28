@@ -4,6 +4,7 @@
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
+
     for (int i = 0; i <= height; i++)
     {
         for (int j = 0; j <= width; j++)
@@ -21,60 +22,20 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-// Convert image to sepia
-void sepia(int height, int width, RGBTRIPLE image[height][width])
-{
-    RGBTRIPLE tempImage[height][width];
-    for (int i = 0; i < height; i++)
-    {
-        for (int j = 0; j < width; j++)
-        {
-            tempImage[i][j] = image[i][j];
-        }
-    }
-
-    for (int i = 0; i < height; i++)
-    {
-        for (int j = 0; j < width; j++)
-        {
-
-            int sepiaRed =     round(.393 * tempImage[i][j].rgbtRed
-                                +  .769 * tempImage[i][j].rgbtGreen
-                                +  .189 * tempImage[i][j].rgbtBlue);
-
-            int sepiaGreen  =  round(.349 * tempImage[i][j].rgbtRed
-                            +  .686 * tempImage[i][j].rgbtGreen
-                            +  .168 * tempImage[i][j].rgbtBlue);
-
-            int sepiaBlue   =  round(.272 * tempImage[i][j].rgbtRed
-                            +  .534 * tempImage[i][j].rgbtGreen
-                            +  .131 * tempImage[i][j].rgbtBlue);
-
-
-            if(sepiaRed > 255) image[i][j].rgbtRed = 255;
-            else image[i][j].rgbtRed = sepiaRed;
-
-            if(sepiaGreen > 255) image[i][j].rgbtGreen = 255;
-            else image[i][j].rgbtGreen = sepiaGreen;
-
-            if(sepiaBlue > 255) image[i][j].rgbtBlue = 255;
-            else image[i][j].rgbtBlue = sepiaBlue;
-        }
-    }
-    return;
-}
-
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     int hafWidth = 0;
 
-    if (width < 2)
+    if (width == 1)
+        hafWidth = 0;
+    else if (width == 2)
         hafWidth = 0;
     else if(width % 2 == 0)
         hafWidth = (width / 2) - 1;
     else
         hafWidth = (width / 2) - 0.5;
+
 
 
      for (int i = 0; i <= height; i++)
@@ -86,15 +47,67 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             image[i][(width - 1) - j] = temp;
         }
     }
+
     return;
 }
 
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+
     // copy the data to a temp image
     RGBTRIPLE tempImage[height][width];
-    for (int i = 0; i <= height; i++)
+      for (int i = 0; i <= height; i++)
+    {
+        for (int j = 0; j <= width; j++)
+        {
+            tempImage [i][j] = image[i][j];
+        }
+    }
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+
+            int count = 0;
+            float somaRed = 0;
+            float somaGreen = 0;
+            float somaBlue = 0;
+
+            for (int l = i-1; l <= i+1; l++)
+            {
+                for (int t = j-1; t <= j+1; t++)
+                {
+                    if((l >= 0 && t >=0) && (l <= height-1 && t <= width-1))
+                    {
+                    count++;
+
+                    somaRed += tempImage [l][t].rgbtRed;
+                    somaGreen += tempImage [l][t].rgbtGreen;
+                    somaBlue += tempImage [l][t].rgbtBlue;
+
+                    }
+
+                }
+            }
+
+            image[i][j].rgbtRed = (int)round(somaRed / count);
+            image[i][j].rgbtGreen = (int)round(somaGreen / count);
+            image[i][j].rgbtBlue = (int)round(somaBlue / count);
+
+            }
+        }
+
+    return;
+}
+
+// Detect edges
+void edges(int height, int width, RGBTRIPLE image[height][width])
+{
+
+    // copy the data to a temp image
+    RGBTRIPLE tempImage[height][width];
+      for (int i = 0; i < height; i++)
     {
         for (int j = 0; j <= width; j++)
         {
@@ -102,34 +115,82 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 
-    for (int i = 0; i < height; i++)
+for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
-            float count = 0.0;
-            float somaRed = 0.0;
-            float somaGreen = 0.0;
-            float somaBlue = 0.0;
+            float Gx[3]= {0, 0, 0};
+            float Gy[3] = {0, 0, 0};
+
+            int gxcolum = 1;
+            int gycolum = -1;
 
             for (int l = i-1; l <= i+1; l++)
             {
+                int gxline = -1;
+                if(gxcolum == 3)
+                gxcolum = 1;
                 for (int t = j-1; t <= j+1; t++)
                 {
-                    if(l >= 0 && t >=0 && l < height && t < width)
+                    if((l >= 0 && t >=0) && (l <= height-1 && t <= width-1))
                     {
-                    count++;
+                        int gMultiplayer = gxline * gxcolum;
+                        Gx[0] += tempImage [l][t].rgbtRed * gMultiplayer;
+                        Gx[1] += tempImage [l][t].rgbtGreen * gMultiplayer;
+                        Gx[2] += tempImage [l][t].rgbtBlue * gMultiplayer;
+                        gxline++;
+                    }else
+                    {
+                        Gx[0] += 0;
+                        Gx[1] += 0;
+                        Gx[2] += 0;
+                        gxline++;
+                    }
 
-                    somaRed += tempImage[l][t].rgbtRed;
-                    somaGreen += tempImage[l][t].rgbtGreen;
-                    somaBlue += tempImage[l][t].rgbtBlue;
+                }
+                        gxcolum++;
+            }
+
+            for (int l = i-1; l <= i+1; l++)
+            {
+                int gyline = 1;
+                for (int t = j-1; t <= j+1; t++)
+                {
+
+                    if((l >= 0 && t >=0) && (l <= height-1 && t <= width-1))
+                    {
+                        if(gyline == 3)
+                        gyline = 1;
+                        int gMultiplayer = gyline * gycolum;
+                        Gy[0] += tempImage [l][t].rgbtRed * gMultiplayer;
+                        Gy[1] += tempImage [l][t].rgbtGreen * gMultiplayer;
+                        Gy[2] += tempImage [l][t].rgbtBlue * gMultiplayer;
+                        gyline++;
+                    }else
+                    {
+                        Gy[0] += 0;
+                        Gy[1] += 0;
+                        Gy[2] += 0;
+                        gyline++;
                     }
                 }
+                        gycolum++;
             }
-            image[i][j].rgbtRed = round(somaRed / count);
-            image[i][j].rgbtGreen = round(somaGreen / count);
-            image[i][j].rgbtBlue = round(somaBlue / count);
+            if(sqrt( pow(Gx[0],2) + pow(Gy[0],2)) > 255.00)image[i][j].rgbtRed = 255;
+                else
+                image[i][j].rgbtRed = (int)round(sqrt( pow(Gx[0],2) + pow(Gy[0],2)));
+
+            if(sqrt( pow(Gx[1],2) + pow(Gy[1],2)) > 255.00) image[i][j].rgbtGreen = 255;
+                else
+                image[i][j].rgbtGreen = (int)round(sqrt( pow(Gx[1],2) + pow(Gy[1],2)));
+
+            if(sqrt( pow(Gx[2],2) + pow(Gy[2],2)) > 255.00) image[i][j].rgbtBlue = 255;
+                else
+                image[i][j].rgbtBlue = (int)round(sqrt( pow(Gx[2],2) + pow(Gy[2],2)));
+
             }
         }
-
     return;
 }
+
+
