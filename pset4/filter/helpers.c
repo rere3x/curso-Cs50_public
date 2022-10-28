@@ -94,42 +94,38 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     // copy the data to a temp image
     RGBTRIPLE tempImage[height][width];
-    for (int i = 0; i <= height; i++)
+      for (int i = 0; i < height; i++)
     {
         for (int j = 0; j <= width; j++)
         {
             tempImage [i][j] = image[i][j];
         }
     }
-
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
-            float count = 0.0;
-            float somaRed = 0.0;
-            float somaGreen = 0.0;
-            float somaBlue = 0.0;
-
+            int count = 0;
+            float somaRed = 0;
+            float somaGreen = 0;
+            float somaBlue = 0;
             for (int l = i-1; l <= i+1; l++)
             {
                 for (int t = j-1; t <= j+1; t++)
                 {
-                    if(l >= 0 && t >=0 && l <= height -1 && t <= width -1)
+                    if((l >= 0 && t >=0) && (l <= height-1 && t <= width-1))
                     {
                     count++;
-
-                    somaRed += tempImage[l][t].rgbtRed;
-                    somaGreen += tempImage[l][t].rgbtGreen;
-                    somaBlue += tempImage[l][t].rgbtBlue;
+                    somaRed += tempImage [l][t].rgbtRed;
+                    somaGreen += tempImage [l][t].rgbtGreen;
+                    somaBlue += tempImage [l][t].rgbtBlue;
                     }
                 }
             }
-            image[i][j].rgbtRed = round(somaRed / count);
-            image[i][j].rgbtGreen = round(somaGreen / count);
-            image[i][j].rgbtBlue = round(somaBlue / count);
+            image[i][j].rgbtRed = (int)round(somaRed / count);
+            image[i][j].rgbtGreen = (int)round(somaGreen / count);
+            image[i][j].rgbtBlue = (int)round(somaBlue / count);
             }
         }
-
     return;
 }
