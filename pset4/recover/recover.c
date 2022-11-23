@@ -3,12 +3,18 @@
 
 int main(int argc, char *argv[])
 {
+    //check if de file exist
     if(argv[1] == NULL)
     {
     printf("Coloque o nome do arquivo a ser recuperado Ex. /recover card.raw")
     return 1;
     }
-    
-     FILE *f = fopen(agrv[1], "r");
-     fread()
+    //open the file
+    FILE *f = fopen(agrv[1], "r");
+
+
+    fread()
+
+    fclose(f)
+    return 0;
 }
