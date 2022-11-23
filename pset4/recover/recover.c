@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 
 
     int buffer[511];
-    fread(buffer,)
+    fread(buffer, 4, number, *f)
 
 
     fclose(f)
