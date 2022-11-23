@@ -13,8 +13,8 @@ int main(int argc, char *argv[])
     FILE *f = fopen(agrv[1], "r");
 
 
-    fread()
     int buffer[511];
+    fread(buffer,)
 
 
     fclose(f)
