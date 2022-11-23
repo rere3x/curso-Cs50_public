@@ -7,10 +7,8 @@ int main(int argc, char *argv[])
     {
     printf("Coloque o nome do arquivo a ser recuperado Ex. /recover card.raw")
     return 1;
-
-     FILE *f = fopen(agrv[1], "r");
-
-     fread()
-
     }
+    
+     FILE *f = fopen(agrv[1], "r");
+     fread()
 }
