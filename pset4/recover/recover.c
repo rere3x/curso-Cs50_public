@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
 
 
     fread()
+    
 
     fclose(f)
     return 0;
