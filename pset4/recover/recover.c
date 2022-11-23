@@ -14,7 +14,8 @@ int main(int argc, char *argv[])
 
 
     fread()
-    
+    int buffer[511];
+
 
     fclose(f)
     return 0;
