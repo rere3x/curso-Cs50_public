@@ -1,17 +1,30 @@
-#include
+#include <stdio.h>
+
+int X(int a, int b);
 
 int main()
-
 {
 
-int *ip;
+int num1, num2, resp;
 
-int i, arr[2][2] = {8, 10, 12, 13};
+printf("Digite dois valores separados por espaço:\n");
 
-ip = *arr ;
+scanf("%d %d", &num1, &num2);
 
-printf("%d ", *(ip+2));
+resp = X(num1, num2);
 
-return 0;
+printf("Resposta: %d\n", resp);
 
+return 0; }
+
+
+int X(int num1, int num2){
+    
+if (num1>= num2)
+{
+return num1;
+}else{
+
+return num2;
+}
 }
