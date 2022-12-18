@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "bmp.h"
+
 int main(int argc, char *argv[])
 {
     //check if de file exist
@@ -15,8 +17,8 @@ int main(int argc, char *argv[])
 
     int buffer[511];
 
-    fread(buffer, 4, 512, *f)
-    
+    fread(&BITMAPFILEHEADER, sizeof(BITMAPFILEHEADER), 1, *f)
+
     if( buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xe0) == 0xe0)
 
     sprintf(filename, "%03i.jpg", 2);
