@@ -11,13 +11,14 @@ int main(int argc, char *argv[])
     printf("Coloque o nome do arquivo a ser recuperado Ex. /recover card.raw");
     return 1;
     }
+
     //open the file
     FILE *f = fopen(argv[1], "r");
 
-
     int buffer[511];
+    fread(buffer, sizeof(BITMAPFILEHEADER), 512, *f);
 
-    fread(&BITMAPFILEHEADER, sizeof(BITMAPFILEHEADER), 512, *f)
+
 
     if( buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xe0) == 0xe0)
 
