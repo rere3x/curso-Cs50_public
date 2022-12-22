@@ -16,6 +16,7 @@ int main(int argc, char *argv[])
     FILE *f = fopen(argv[1], "r");
 
     int buffer[511];
+    
     fread(buffer, sizeof(BITMAPFILEHEADER), 512, *f);
 
 
