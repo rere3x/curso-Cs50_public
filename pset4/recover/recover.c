@@ -16,12 +16,15 @@ int main(int argc, char *argv[])
     FILE *f = fopen(argv[1], "r");
 
     int buffer[511];
-    
+
     fread(buffer, sizeof(BITMAPFILEHEADER), 512, *f);
 
 
 
     if( buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xe0) == 0xe0)
+    {
+        
+    }
 
     sprintf(filename, "%03i.jpg", 2);
     FILE *image = fopen(filename, "w");
