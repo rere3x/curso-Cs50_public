@@ -38,11 +38,11 @@ int main(int argc, char *argv[])
 
             sprintf(image, "%03i.jpg", i);
             FILE *img = fopen(image, w);
-            fwrite (buffer, BYTE, 512, *img);
+            BYTE sucessul_write = fwrite (buffer, BYTE, 512, *img);
         }
         else
         {
-            fwrite (buffer, BYTE, 512, *img);
+            BYTE sucessul_write = fwrite (buffer, BYTE, 512, *img);
             i--;
         }
             i++;
