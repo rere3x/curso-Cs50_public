@@ -21,8 +21,8 @@ int main(int argc, char *argv[])
     int i = 0;
 
     do{
-
         fread sucessul_read(buffer, BYTE, 512, *f);
+
         if (sucessul_read != 512)
         {
         printf("Erro ao ler a memoria do arquivo.\n");
