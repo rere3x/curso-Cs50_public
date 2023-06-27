@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
             {
                 fclose(img);
             }
-            char
+            char image[10];
             sprintf(image, "%03i.jpg", i);
             FILE *img = fopen(image, "w");
             BYTE sucessul_write = fwrite (buffer, sizeof(BYTE), 512, img);
