@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
 
     //open the file
     FILE *f = fopen(argv[1], "r");
+    int i = 0;
 
     do{
 
@@ -37,9 +38,11 @@ int main(int argc, char *argv[])
         sprintf(image, "%03i.jpg", i);
 
         FILE *img = fopen(image, w);
+
     }
 
 
+        i++;
     } while (sucessul_read == 512)
 
 
