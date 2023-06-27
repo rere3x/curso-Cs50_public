@@ -22,7 +22,9 @@ int main(int argc, char *argv[])
     FILE *f = fopen(argv[1], "r");
 
 
-    fread ( ,512,512,*f)
+
+
+    fread (buffer, BYTE, 512, )
 
     // separar em blocos do tamanho FAT(512) usando fread
 
