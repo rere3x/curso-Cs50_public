@@ -20,6 +20,8 @@ int main(int argc, char *argv[])
     //open the file
     FILE *f = fopen(argv[1], "r");
 
+    while (sucessul_read == 512)
+
     fread sucessul_read(buffer, BYTE, 512, *f)
     if (sucessul_read != 512)
     {
