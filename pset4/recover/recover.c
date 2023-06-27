@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     do{
 
 
-    fread sucessul_read(buffer, BYTE, 512, *f)
+    fread sucessul_read(buffer, BYTE, 512, *f);
     if (sucessul_read != 512)
     {
     printf("Erro ao ler a memoria do arquivo.\n");
@@ -33,17 +33,16 @@ int main(int argc, char *argv[])
 
     if(buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0 )
     {
-
-
         sprintf(image, "%03i.jpg", i);
-
         FILE *img = fopen(image, w);
+        fwrite (, BYTE, 512, *img);
+
 
     }
 
 
         i++;
-    } while (sucessul_read == 512)
+    } while (sucessul_read == 512);
 
 
 
