@@ -46,7 +46,16 @@ int main(int argc, char *argv[])
             i--;
         }
             i++;
+
+        if (sucessul_read != sucessul_write)
+        {
+            printf("Erro ao gravar no arquivo de saída.\n");
+            fclose(inputFile);
+            fclose(outputFile);
+            return 1;
+        }
     }while (sucessul_read == 512);
+
 
 
     fclose(img);
