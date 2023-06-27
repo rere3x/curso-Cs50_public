@@ -20,15 +20,19 @@ int main(int argc, char *argv[])
     //open the file
     FILE *f = fopen(argv[1], "r");
 
-    do
+    do{
+
 
     fread sucessul_read(buffer, BYTE, 512, *f)
     if (sucessul_read != 512)
     {
+
     printf("Erro ao ler a memoria do arquivo.\n");
     return 2;
     }
-    while (sucessul_read == 512)
+
+
+     } while (sucessul_read == 512)
 
     if(buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0 )
     {
