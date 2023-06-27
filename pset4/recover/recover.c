@@ -20,6 +20,7 @@ int main(int argc, char *argv[])
     //open the file
     FILE *f = fopen(argv[1], "r");
     int i = 0;
+    BYTE sucessul_read;
 
     do{
         BYTE sucessul_read = fread(buffer, sizeof(BYTE), 512, f);
