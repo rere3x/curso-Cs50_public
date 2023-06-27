@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
     int i = 0;
 
     do{
-        fread sucessul_read(buffer, BYTE, 512, *f);
+        BYTE sucessul_read = fread(buffer, BYTE, 512, *f);
 
         if (sucessul_read != 512)
         {
