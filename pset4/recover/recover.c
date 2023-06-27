@@ -20,10 +20,10 @@ int main(int argc, char *argv[])
     //open the file
     FILE *f = fopen(argv[1], "r");
     int i = 0;
-    BYTE sucessul_read;
+    size_t sucessul_read;
 
     do{
-        BYTE sucessul_read = fread(buffer, sizeof(BYTE), 512, f);
+        size_t sucessul_read = fread(buffer, sizeof(BYTE), 512, f);
 
         if (sucessul_read != 512)
         {
@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
             char image[10];
             sprintf(image, "%03i.jpg", i);
             FILE *img = fopen(image, "w");
-            sucessul_write = fwrite (buffer, sizeof(BYTE), 512, img);
+            size_t sucessul_write = fwrite (buffer, sizeof(BYTE), 512, img);
 
             if (sucessul_read != sucessul_write)
                 {
