@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     int i = 0;
 
     do{
-        BYTE sucessul_read = fread(buffer, BYTE, 512, f);
+        BYTE sucessul_read = fread(buffer, sizeof(BYTE), 512, f);
 
         if (sucessul_read != 512)
         {
@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 
             sprintf(image, "%03i.jpg", i);
             FILE *img = fopen(image, w);
-            BYTE sucessul_write = fwrite (buffer, BYTE, 512, img);
+            BYTE sucessul_write = fwrite (buffer, sizeof(BYTE), 512, img);
 
             if (sucessul_read != sucessul_write)
                 {
@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
         }
         else
         {
-            BYTE sucessul_write = fwrite (buffer, BYTE, 512, img);
+            BYTE sucessul_write = fwrite (buffer, sizeof(BYTE), 512, img);
             i--;
         }
             i++;
