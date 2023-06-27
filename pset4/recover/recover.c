@@ -26,13 +26,9 @@ int main(int argc, char *argv[])
     fread sucessul_read(buffer, BYTE, 512, *f)
     if (sucessul_read != 512)
     {
-
     printf("Erro ao ler a memoria do arquivo.\n");
     }
     return 2;
-
-
-     } while (sucessul_read == 512)
 
     if(buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0 )
     {
@@ -44,10 +40,15 @@ int main(int argc, char *argv[])
     }
 
 
+    } while (sucessul_read == 512)
+
+
+
     // separar em blocos do tamanho FAT(512) usando fread
 
     //criar um meio de ler se os 4 primeiros bits do bloco são o começo de um jpg e retornar V ou F
 
     fclose(f)
+
     return 0;
 }
