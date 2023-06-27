@@ -39,6 +39,9 @@ int main(int argc, char *argv[])
 
     }
     else
+    {
+        i--;
+    }
 
 
         i++;
