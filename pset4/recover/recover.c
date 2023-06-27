@@ -13,7 +13,6 @@ int main(int argc, char *argv[])
     return 1;
     }
 
-    typedef uint8_t BYTE;
 
     BYTE buffer [512];
 
