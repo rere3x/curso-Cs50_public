@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
     //open the file
     FILE *f = fopen(argv[1], "r");
 
-    fread sucessul_read(buffer, BYTE, 512, argv[1])
+    fread sucessul_read(buffer, BYTE, 512, *f)
     if (sucessul_read != 512)
     {
     printf("Erro ao ler a memoria do arquivo.\n");
@@ -32,8 +32,9 @@ int main(int argc, char *argv[])
     {
 
 
-        sprintf(filename, "%03i.jpg", i);
-        FILE *img = fopen(filename, w);
+        sprintf(image, "%03i.jpg", i);
+
+        FILE *img = fopen(image, w);
     }
 
 
