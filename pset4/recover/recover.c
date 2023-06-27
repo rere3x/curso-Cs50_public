@@ -28,8 +28,8 @@ int main(int argc, char *argv[])
     {
 
     printf("Erro ao ler a memoria do arquivo.\n");
-    return 2;
     }
+    return 2;
 
 
      } while (sucessul_read == 512)
