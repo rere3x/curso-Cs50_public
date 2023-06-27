@@ -30,9 +30,9 @@ int main(int argc, char *argv[])
     printf("Erro ao ler a memoria do arquivo.\n");
     }
     return 2;
-    if (i != 0)
     if(buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0 )
     {
+        if (i != 0)
 
         sprintf(image, "%03i.jpg", i);
         FILE *img = fopen(image, w);
