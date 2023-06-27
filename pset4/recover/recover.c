@@ -3,6 +3,7 @@
 #include <stdint.h>
 
 #include "bmp.h"
+typedef uint8_t BYTE;
 
 int main(int argc, char *argv[])
 {
