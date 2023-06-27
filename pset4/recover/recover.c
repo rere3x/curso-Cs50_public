@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
         }
         else
         {
-            BYTE sucessul_write = fwrite (buffer, sizeof(BYTE), 512, img);
+            fwrite (buffer, sizeof(BYTE), 512, img);
             i--;
         }
             i++;
