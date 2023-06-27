@@ -39,6 +39,14 @@ int main(int argc, char *argv[])
             sprintf(image, "%03i.jpg", i);
             FILE *img = fopen(image, w);
             BYTE sucessul_write = fwrite (buffer, BYTE, 512, *img);
+
+            if (sucessul_read != sucessul_write)
+                {
+                    printf("Erro ao gravar no arquivo de saída.\n");
+                    fclose(inputFile);
+                    fclose(outputFile);
+                    return 1;
+                }
         }
         else
         {
@@ -47,13 +55,6 @@ int main(int argc, char *argv[])
         }
             i++;
 
-        if (sucessul_read != sucessul_write)
-        {
-            printf("Erro ao gravar no arquivo de saída.\n");
-            fclose(inputFile);
-            fclose(outputFile);
-            return 1;
-        }
     }while (sucessul_read == 512);
 
 
