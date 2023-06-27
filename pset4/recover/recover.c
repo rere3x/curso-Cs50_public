@@ -13,7 +13,6 @@ int main(int argc, char *argv[])
     return 1;
     }
 
-    char filename[] = "argv[1]";
     typedef uint8_t BYTE;
 
     BYTE buffer [512];
@@ -21,10 +20,8 @@ int main(int argc, char *argv[])
     //open the file
     FILE *f = fopen(argv[1], "r");
 
-
-
-
-    fread (buffer, BYTE, 512, )
+    fread (buffer, BYTE, 512, argv[1])
+    
 
     // separar em blocos do tamanho FAT(512) usando fread
 
