@@ -20,8 +20,13 @@ int main(int argc, char *argv[])
     //open the file
     FILE *f = fopen(argv[1], "r");
 
-    fread (buffer, BYTE, 512, argv[1])
-    
+    fread sucessul_read(buffer, BYTE, 512, argv[1])
+    if (sucessul_read != 512)
+    {
+    printf("Erro ao ler a memoria do arquivo.\n");
+    return 2;
+    }
+
 
     // separar em blocos do tamanho FAT(512) usando fread
 
