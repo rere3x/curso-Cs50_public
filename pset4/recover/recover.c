@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
             char image[10];
             sprintf(image, "%03i.jpg", i);
             FILE *img = fopen(image, "w");
-            size_t sucessul_write = fwrite (buffer, sizeof(BYTE), 512, img);
+            BYTE sucessul_write = fwrite (buffer, sizeof(BYTE), 512, img);
 
             if (sucessul_read != sucessul_write)
                 {
