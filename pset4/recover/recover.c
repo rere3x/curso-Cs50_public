@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     size_t sucessul_read;
 
     do{
-        size_t sucessul_read = fread(buffer, sizeof(BYTE), 512, f);
+        size_t sucessul_read = fread(buffer, sizeof(BYTE), BUFFER_SIZE, f);
 
         if (sucessul_read != 512)
         {
