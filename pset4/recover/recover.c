@@ -1,3 +1,4 @@
+//check
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
@@ -14,8 +15,8 @@ int main(int argc, char *argv[])
     return 1;
     }
 
-    //where the 
-    BYTE buffer [512];
+    const int BUFFER_SIZE = 512;
+    BYTE buffer [BUFFER_SIZE];
 
     //open the file
     FILE *f = fopen(argv[1], "r");
