@@ -20,6 +20,11 @@ int main(int argc, char *argv[])
 
     //open the file
     FILE *f = fopen(argv[1], "r");
+    if (f == NULL)
+    {
+        printf("Erro ao abrir o arquivo. \n");
+    }
+
     int i = 0;
     size_t sucessul_read;
 
