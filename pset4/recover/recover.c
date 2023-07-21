@@ -7,14 +7,14 @@ typedef uint8_t BYTE;
 
 int main(int argc, char *argv[])
 {
-    //check if de file exist
+    //check if the file exist and return a mesage if not
     if(argv[1] == NULL)
     {
     printf("Coloque o nome do arquivo a ser recuperado Ex. /recover card.raw");
     return 1;
     }
 
-
+    //where the 
     BYTE buffer [512];
 
     //open the file
