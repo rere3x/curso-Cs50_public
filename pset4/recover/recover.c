@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
     }
 
     const int BUFFER_SIZE = 512;
-    BYTE buffer [BUFFER_SIZE];
+    BYTE buffer[BUFFER_SIZE];
 
     //open the file
     FILE *f = fopen(argv[1], "r");
@@ -25,50 +25,62 @@ int main(int argc, char *argv[])
         printf("Erro ao abrir o arquivo. \n");
     }
 
-    int i = 0;
-    size_t sucessul_read;
+    FILE *img = NULL;
+
+    int count = 0;
+    int offsetcount = 1;
+
+
 
     do{
-        size_t sucessul_read = fread(buffer, sizeof(BYTE), BUFFER_SIZE, f);
-
-        if (sucessul_read != BUFFER_SIZE)
+        size_t sucessul_read = fread(buffer, sizeof(BYTE), BUFFER_SIZE, f);//le o bloco de dados do arquivo "f"
+        if (sucessul_read == 0) // Se não houver mais dados para ler
         {
-        printf("Erro ao ler a memoria do arquivo.\n");
-        return 2;
+            break; // Sai do loop
         }
+
 
         if(buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0 )
         {
-            if(i != 0)
-            {
-                fclose(img);
+            if(img != NULL){
+            fclose(img);
             }
+
             char image[10];
-            sprintf(image, "%03i.jpg", i);
-            FILE *img = fopen(image, "w");
-            BYTE sucessul_write = fwrite (buffer, sizeof(BYTE), BUFFER_SIZE, img);
+            sprintf(image, "%03d.jpg", count);
+            img = fopen(image, "w");
+            size_t sucessul_write = fwrite (buffer, sizeof(BYTE), BUFFER_SIZE, img);
 
-            if (sucessul_read != sucessul_write)
-                {
-                    printf("Erro ao gravar no arquivo de saída.\n");
-                    fclose(inputFile);
-                    fclose(outputFile);
-                    return 1;
-                }
-        }
-        else
+            offsetcount++;
+            count++;
+
+        }else if (img != NULL)
         {
-            fwrite (buffer, sizeof(BYTE), BUFFER_SIZE, img);
-            i--;
+            size_t sucessul_write = fwrite (buffer, sizeof(BYTE), BUFFER_SIZE, img);
+
+            if (sucessul_write != BUFFER_SIZE)
+                {
+                    if (feof(img))
+                    {
+                        printf("Alcançou o fim do arquivo. \n");
+                        return 1;
+                    } else if (ferror(img))
+                    {
+                        perror("Erro ao ler o arquivo.");
+                        return 1;
+                    }
+
+                }
+            fseek(img, (BUFFER_SIZE * offsetcount), SEEK_SET);
+            offsetcount++;
         }
-            i++;
+        fseek(f, (BUFFER_SIZE * offsetcount), SEEK_SET);
+
+        }while (sucessul_read == BUFFER_SIZE);
 
 
-    }while (sucessul_read == BUFFER_SIZE);
 
 
-
-    fclose(img);
     fclose(f);
 
     return 0;
