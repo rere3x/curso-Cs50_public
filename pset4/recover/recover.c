@@ -27,7 +27,6 @@ int main(int argc, char *argv[])
     FILE *img = NULL;
 
     int count = 0;
-    int offsetcount = 1;
     size_t sucessul_read = 0;
 
     do
@@ -53,7 +52,7 @@ int main(int argc, char *argv[])
             img = fopen(image, "w");
             size_t sucessul_write = fwrite(buffer, sizeof(BYTE), BUFFER_SIZE, img);
 
-            offsetcount++;
+
             count++;
         }
         else if (img != NULL)
@@ -72,7 +71,7 @@ int main(int argc, char *argv[])
 
         }
 
-        fseek(f, (BUFFER_SIZE * offsetcount), SEEK_SET);
+        ftell(f, 0, SEEK_SET);
     } while (sucessul_read == BUFFER_SIZE);
 
     fclose(img);
