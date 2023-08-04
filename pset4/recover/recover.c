@@ -1,6 +1,6 @@
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdint.h>
 
 typedef uint8_t BYTE;
 
@@ -15,6 +15,9 @@ int main(int argc, char *argv[])
 
     const int BUFFER_SIZE = 512;
     BYTE buffer[BUFFER_SIZE];
+    FILE *img = NULL;
+    int count = 0;
+    size_t sucessul_read = 0;
 
     // Abre o arquivo "f"
     FILE *f = fopen(argv[1], "r");
@@ -24,9 +27,6 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    FILE *img = NULL;
-    int count = 0;
-    size_t sucessul_read = 0;
 
     do
     {
@@ -66,9 +66,10 @@ int main(int argc, char *argv[])
                 return 1;
             }
         }
-    } while (sucessul_read == BUFFER_SIZE);
+    }
+    while (sucessul_read == BUFFER_SIZE);
     fclose(img);
     fclose(f);
-    
+
     return 0;
 }
