@@ -23,9 +23,7 @@ int main(int argc, char *argv[])
         printf("Erro ao abrir o arquivo. \n");
         return 1;
     }
-
     FILE *img = NULL;
-
     int count = 0;
     size_t sucessul_read = 0;
 
@@ -52,12 +50,10 @@ int main(int argc, char *argv[])
             img = fopen(image, "w");
             size_t sucessul_write = fwrite(buffer, sizeof(BYTE), BUFFER_SIZE, img);
 
-
             count++;
         }
         else if (img != NULL)
         {
-
             fseek(img, 0, SEEK_END);
 
             size_t sucessul_write = fwrite(buffer, sizeof(BYTE), BUFFER_SIZE, img);
@@ -68,15 +64,9 @@ int main(int argc, char *argv[])
                 fclose(f);
                 return 1;
             }
-
         }
-
-        ftell(f, 0, SEEK_SET);
     } while (sucessul_read == BUFFER_SIZE);
-
     fclose(img);
     fclose(f);
-
-
     return 0;
 }
