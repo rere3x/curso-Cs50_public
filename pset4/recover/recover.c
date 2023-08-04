@@ -65,11 +65,12 @@ int main(int argc, char *argv[])
                     if (feof(img))
                     {
                         printf("Alcançou o fim do arquivo. \n");
-                        break
+                        break;
                         return 1;
                     } else if (ferror(img))
                     {
                         perror("Erro ao ler o arquivo.");
+                        break; 
                         return 1;
                     }
 
