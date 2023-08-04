@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
     //check if the file exist and return a mesage if not
     if(argv[1] == NULL)
     {
-    printf("Coloque o nome do arquivo a ser recuperado Ex. /recover card.raw");
+    printf("Coloque o nome do arquivo a ser recuperado Ex. /recover card.raw \n");
     return 1;
     }
 
