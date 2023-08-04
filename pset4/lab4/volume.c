@@ -41,21 +41,14 @@ int main(int argc, char *argv[])
     size_t inputwave fread(buffer, sizeof(WAVE),HEADER_SIZE, input);
     if (inputwave != HEADER_SIZE)
             {
-                perror("Erro ao ler o arquivo.");
-                fclose(input);
-                fclose(output);
-                return 1;
+                error_check ("inputwave")
             }
     fseek(output, 0, SEEK_END);
     size_t outputwave fwrite(buffer, sizeof(WAVE),HEADER_SIZE, output);
     if (outputwave != HEADER_SIZE)
             {
-                perror("Erro ao escrever no arquivo.");
-                fclose(input);
-                fclose(output);
-                return 1;
+                error_check ("outputwave")
             }
-
 
     // Read samples from input file and write updated data to output file
     do{
