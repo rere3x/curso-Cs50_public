@@ -60,9 +60,13 @@ int main(int argc, char *argv[])
 
         inputwave = fread(buffer_S, sizeof(WAVE),SAMPLE_SIZE, input);
         if (inputwave != SAMPLE_SIZE)
-                {
-                    error_check ("inputwave");
-                }
+            {
+                error_check ("inputwave");
+            }
+        for(i = 0, i < SAMPLE_SIZE,i++)
+            {
+                buffer_S[i] *= factor;
+            }
         fseek(output, 0, SEEK_END);
         outputwave = fwrite(buffer_S, sizeof(WAVE),SAMPLE_SIZE, output);
         if (outputwave != SAMPLE_SIZE)
