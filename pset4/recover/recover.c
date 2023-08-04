@@ -64,16 +64,21 @@ int main(int argc, char *argv[])
 
             if (sucessul_write != BUFFER_SIZE)
                 {
-                    if (ferror(img))
+                    if (feof(img))
+                    {
+                        printf("Alcançou o fim do arquivo. \n");
+                        break;
+                        return 1;
+                    } else if (ferror(img))
                     {
                         perror("Erro ao ler o arquivo.");
-                        fclose(img);
-                        fclose(f)
+                        break;
                         return 1;
                     }
-                    fseek(img, (BUFFER_SIZE * offsetcount), SEEK_SET);
-                    offsetcount++;
+
                 }
+            fseek(img, (BUFFER_SIZE * offsetcount), SEEK_SET);
+            offsetcount++;
         }
         fseek(f, (BUFFER_SIZE * offsetcount), SEEK_SET);
 
