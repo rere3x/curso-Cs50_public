@@ -38,13 +38,13 @@ int main(int argc, char *argv[])
     //Copy header from input file to output file
     WAVE buffer[HEADER_SIZE];
 
-    size_t inputwave fread(buffer, sizeof(WAVE),HEADER_SIZE, input);
+    size_t inputwave = fread(buffer, sizeof(WAVE),HEADER_SIZE, input);
     if (inputwave != HEADER_SIZE)
             {
                 error_check ("inputwave")
             }
     fseek(output, 0, SEEK_END);
-    size_t outputwave fwrite(buffer, sizeof(WAVE),HEADER_SIZE, output);
+    size_t outputwave = fwrite(buffer, sizeof(WAVE),HEADER_SIZE, output);
     if (outputwave != HEADER_SIZE)
             {
                 error_check ("outputwave")
@@ -54,13 +54,13 @@ int main(int argc, char *argv[])
     do{
         WAVE buffer[SAMPLE_SIZE];
 
-    inputwave fread(buffer, sizeof(WAVE),SAMPLE_SIZE, input);
+    inputwave = fread(buffer, sizeof(WAVE),SAMPLE_SIZE, input);
     if (inputwave != SAMPLE_SIZE)
             {
                 error_check ("inputwave")
             }
     fseek(output, 0, SEEK_END);
-    outputwave fwrite(buffer, sizeof(WAVE),SAMPLE_SIZE, output);
+    outputwave = fwrite(buffer, sizeof(WAVE),SAMPLE_SIZE, output);
     if (outputwave != SAMPLE_SIZE)
             {
                 error_check ("outputwave")
