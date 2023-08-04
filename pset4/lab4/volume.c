@@ -64,13 +64,13 @@ int main(int argc, char *argv[])
     size_t inputwave fread(buffer, sizeof(WAVE),SAMPLE_SIZE, input);
     if (inputwave != SAMPLE_SIZE)
             {
-                error_check (inputwave)
+                error_check ("inputwave")
             }
     fseek(output, 0, SEEK_END);
     size_t outputwave fwrite(buffer, sizeof(WAVE),SAMPLE_SIZE, output);
     if (outputwave != SAMPLE_SIZE)
             {
-                error_check (outputwave)
+                error_check ("outputwave")
             }
     }
 
@@ -79,9 +79,9 @@ int main(int argc, char *argv[])
     fclose(output);
 }
 
-void error_check (valueCheck)
+void error_check (char valueCheck[0])
 {
-    if(valueCheck == 44)
+    if(valueCheck == "i")
     {
     perror("Erro ao ler o arquivo.");
                 fclose(input);
