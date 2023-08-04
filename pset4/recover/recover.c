@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 
     int count = 0;
     int offsetcount = 1;
-    size_t sucessul_write = 0;
+
 
 
 
@@ -65,6 +65,7 @@ int main(int argc, char *argv[])
                     if (feof(img))
                     {
                         printf("Alcançou o fim do arquivo. \n");
+                        break
                         return 1;
                     } else if (ferror(img))
                     {
