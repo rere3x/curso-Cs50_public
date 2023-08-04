@@ -72,9 +72,9 @@ int main(int argc, char *argv[])
     fclose(output);
 }
 
-void error_check (char valueCheck[0])
+void error_check (char valueCheck[10])
 {
-    if(valueCheck == "i")
+    if(valueCheck[0] == "i")
     {
     perror("Erro ao ler o arquivo.");
                 fclose(input);
