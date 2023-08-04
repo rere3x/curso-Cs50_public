@@ -9,6 +9,8 @@ const int HEADER_SIZE = 44;
 const int SAMPLE_SIZE = 2;
 typedef int16_t WAVE;
 
+void error_check (char valueCheck[10]);
+
 int main(int argc, char *argv[])
 {
     // Check command-line arguments
@@ -41,33 +43,33 @@ int main(int argc, char *argv[])
     size_t inputwave = fread(buffer, sizeof(WAVE),HEADER_SIZE, input);
     if (inputwave != HEADER_SIZE)
             {
-                error_check ("inputwave")
+                error_check ("inputwave");
             }
     fseek(output, 0, SEEK_END);
     size_t outputwave = fwrite(buffer, sizeof(WAVE),HEADER_SIZE, output);
     if (outputwave != HEADER_SIZE)
             {
-                error_check ("outputwave")
+                error_check ("outputwave");
             }
 
     // Read samples from input file and write updated data to output file
     do{
-        WAVE buffer[SAMPLE_SIZE];
+        buffer[SAMPLE_SIZE];
 
-    inputwave = fread(buffer, sizeof(WAVE),SAMPLE_SIZE, input);
-    if (inputwave != SAMPLE_SIZE)
-            {
-                error_check ("inputwave")
-            }
-    fseek(output, 0, SEEK_END);
-    outputwave = fwrite(buffer, sizeof(WAVE),SAMPLE_SIZE, output);
-    if (outputwave != SAMPLE_SIZE)
-            {
-                error_check ("outputwave")
-            }
+        inputwave = fread(buffer, sizeof(WAVE),SAMPLE_SIZE, input);
+        if (inputwave != SAMPLE_SIZE)
+                {
+                    error_check ("inputwave");
+                }
+        fseek(output, 0, SEEK_END);
+        outputwave = fwrite(buffer, sizeof(WAVE),SAMPLE_SIZE, output);
+        if (outputwave != SAMPLE_SIZE)
+                {
+                    error_check ("outputwave");
+                }
 
     }
-    while(inputwave == SAMPLE_SIZE)
+    while(inputwave == SAMPLE_SIZE);
 
     // Close files
     fclose(input);
