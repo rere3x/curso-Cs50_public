@@ -27,7 +27,6 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-
     do
     {
         // Le o bloco de dados do arquivo "f"
