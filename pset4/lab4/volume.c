@@ -54,15 +54,15 @@ int main(int argc, char *argv[])
 
     // Read samples from input file and write updated data to output file
     do{
-        buffer[SAMPLE_SIZE];
+        WAVE buffer_S [SAMPLE_SIZE];
 
-        inputwave = fread(buffer, sizeof(WAVE),SAMPLE_SIZE, input);
+        inputwave = fread(buffer_S, sizeof(WAVE),SAMPLE_SIZE, input);
         if (inputwave != SAMPLE_SIZE)
                 {
                     error_check ("inputwave");
                 }
         fseek(output, 0, SEEK_END);
-        outputwave = fwrite(buffer, sizeof(WAVE),SAMPLE_SIZE, output);
+        outputwave = fwrite(buffer_S, sizeof(WAVE),SAMPLE_SIZE, output);
         if (outputwave != SAMPLE_SIZE)
                 {
                     error_check ("outputwave");
@@ -78,7 +78,7 @@ int main(int argc, char *argv[])
 
 void error_check (char valueCheck[10])
 {
-    if(valueCheck[0] == "i")
+    if(valueCheck[0] == 'i')
     {
     perror("Erro ao ler o arquivo.");
                 fclose(input);
