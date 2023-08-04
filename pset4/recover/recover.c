@@ -45,6 +45,7 @@ int main(int argc, char *argv[])
             if (img != NULL)
             {
                 fclose(img);
+                img = NULL;
             }
 
             char image[10];
