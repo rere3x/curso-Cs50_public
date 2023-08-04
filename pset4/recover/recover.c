@@ -7,9 +7,9 @@ typedef uint8_t BYTE;
 int main(int argc, char *argv[])
 {
     // Verifica se o nome do arquivo foi passado como argumento
-    if (argv[1] == NULL)
+    if (argc != 2)
     {
-        printf("Coloque o nome do arquivo a ser recuperado. Ex.: ./recover card.raw\n");
+        printf("Uso: %s arquivo\n", argv[0]);
         return 1;
     }
 
@@ -27,15 +27,14 @@ int main(int argc, char *argv[])
     FILE *img = NULL;
 
     int count = 0;
-    int offsetcount = 1;
-    size_t sucessul_read = 0;
+    size_t successful_read = 0;
 
     do
     {
-        // Le o bloco de dados do arquivo "f"
-        sucessul_read = fread(buffer, sizeof(BYTE), BUFFER_SIZE, f);
+        // Lê o bloco de dados do arquivo "f"
+        successful_read = fread(buffer, sizeof(BYTE), BUFFER_SIZE, f);
 
-        if (sucessul_read == 0) // Se não houver mais dados para ler
+        if (successful_read == 0) // Se não houver mais dados para ler
         {
             break; // Sai do loop
         }
@@ -45,39 +44,32 @@ int main(int argc, char *argv[])
             if (img != NULL)
             {
                 fclose(img);
-                img = NULL;
             }
 
             char image[10];
             sprintf(image, "%03d.jpg", count);
             img = fopen(image, "w");
-            size_t sucessul_write = fwrite(buffer, sizeof(BYTE), BUFFER_SIZE, img);
+            size_t successful_write = fwrite(buffer, sizeof(BYTE), successful_read, img);
 
-            offsetcount++;
             count++;
         }
         else if (img != NULL)
         {
+            fseek(img, 0, SEEK_END); // Move o ponteiro para o final do arquivo img
+            size_t successful_write = fwrite(buffer, sizeof(BYTE), successful_read, img);
 
-            fseek(img, 0, SEEK_SET);
-
-            size_t sucessul_write = fwrite(buffer, sizeof(BYTE), BUFFER_SIZE, img);
-            if (sucessul_write != BUFFER_SIZE)
+            if (successful_write != successful_read)
             {
                 perror("Erro ao escrever no arquivo.");
                 fclose(img);
                 fclose(f);
                 return 1;
             }
-
         }
-
-        fseek(f, (BUFFER_SIZE * offsetcount), SEEK_SET);
-    } while (sucessul_read == BUFFER_SIZE);
+    } while (successful_read == BUFFER_SIZE);
 
     fclose(img);
     fclose(f);
-
 
     return 0;
 }
