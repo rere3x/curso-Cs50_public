@@ -64,23 +64,33 @@ int main(int argc, char *argv[])
     size_t inputwave fread(buffer, sizeof(WAVE),SAMPLE_SIZE, input);
     if (inputwave != SAMPLE_SIZE)
             {
-                perror("Erro ao ler o arquivo.");
-                fclose(input);
-                fclose(output);
-                return 1;
+                error_check (inputwave)
             }
     fseek(output, 0, SEEK_END);
     size_t outputwave fwrite(buffer, sizeof(WAVE),SAMPLE_SIZE, output);
     if (outputwave != SAMPLE_SIZE)
             {
-                perror("Erro ao escrever no arquivo.");
-                fclose(input);
-                fclose(output);
-                return 1;
+                error_check (outputwave)
             }
     }
 
     // Close files
     fclose(input);
     fclose(output);
+}
+
+void error_check (size_t )
+{
+    if(x)
+    {
+    perror("Erro ao ler o arquivo.");
+                fclose(input);
+                fclose(output);
+                return 1;
+    }else
+    perror("Erro ao escrever no arquivo.");
+                fclose(input);
+                fclose(output);
+                return 1;
+
 }
