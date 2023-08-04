@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
             offsetcount++;
             count++;
         }
-        else if (img != NULL)
+        else
         {
             size_t sucessul_write = fwrite(buffer, sizeof(BYTE), BUFFER_SIZE, img);
 
