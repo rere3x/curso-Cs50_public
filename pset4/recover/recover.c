@@ -23,6 +23,7 @@ int main(int argc, char *argv[])
     if (f == NULL)
     {
         printf("Erro ao abrir o arquivo. \n");
+        return 1;
     }
 
     FILE *img = NULL;
