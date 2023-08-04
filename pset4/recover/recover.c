@@ -66,8 +66,8 @@ int main(int argc, char *argv[])
                 fclose(f);
                 return 1;
             }
-            fseek(img, (BUFFER_SIZE * offsetcount), SEEK_SET);
             offsetcount++;
+            fseek(img, (BUFFER_SIZE * offsetcount), SEEK_SET);
         }
     } while (sucessul_read == BUFFER_SIZE);
 
