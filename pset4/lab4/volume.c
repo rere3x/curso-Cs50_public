@@ -6,7 +6,7 @@
 
 // Number of bytes in .wav header
 const int HEADER_SIZE = 44;
-typedef int16_t wave;
+typedef int16_t WAVE;
 
 int main(int argc, char *argv[])
 {
@@ -35,6 +35,25 @@ int main(int argc, char *argv[])
     float factor = atof(argv[3]);
 
     //Copy header from input file to output file
+    WAVE buffer[HEADER_SIZE];
+
+    size_t inputwave fread(buffer, sizeof(WAVE),HEADER_SIZE, input);
+    if (inputwave != HEADER_SIZE)
+            {
+                perror("Erro ao ler o arquivo.");
+                fclose(input);
+                fclose(output);
+                return 1;
+            }
+    fseek(output, 0, SEEK_END);
+    size_t outputwave fread(buffer, sizeof(WAVE),HEADER_SIZE, output);
+    if (outputwave != HEADER_SIZE)
+            {
+                perror("Erro ao escrever no arquivo.");
+                fclose(input);
+                fclose(output);
+                return 1;
+            }
 
 
     // Read samples from input file and write updated data to output file
