@@ -58,8 +58,8 @@ int main(int argc, char *argv[])
         }
         else if (img != NULL)
         {
-            offsetcount++;
-            fseek(img, (BUFFER_SIZE * offsetcount), SEEK_SET);
+
+            fseek(img, 0, SEEK_SET);
 
             size_t sucessul_write = fwrite(buffer, sizeof(BYTE), BUFFER_SIZE, img);
             if (sucessul_write != BUFFER_SIZE)
@@ -74,7 +74,7 @@ int main(int argc, char *argv[])
 
         fseek(f, (BUFFER_SIZE * offsetcount), SEEK_SET);
     } while (sucessul_read == BUFFER_SIZE);
-    
+
     fclose(img);
     fclose(f);
 
