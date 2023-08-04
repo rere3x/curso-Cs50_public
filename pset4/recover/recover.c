@@ -26,19 +26,20 @@ int main(int argc, char *argv[])
         printf("Erro ao abrir o arquivo. \n");
         return 1;
     }
-
+    // Loop para ler e recuperar blocos de dados do arquivo "f"
     do
     {
-        // Le o bloco de dados do arquivo "f"
+        // Lê o bloco de dados do arquivo "f" e armazena em "buffer"
         sucessul_read = fread(buffer, sizeof(BYTE), BUFFER_SIZE, f);
 
-        if (sucessul_read == 0) // Se não houver mais dados para ler
+        if (sucessul_read == 0) // Se não houver mais dados para ler, sai do loop
         {
-            break; // Sai do loop
+            break;
         }
-
+        // Verifica se o bloco de dados no "buffer" representa o início de um novo arquivo JPEG
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
+            //Confere se é o primeiro arquivo e se não for ele é fechado
             if (img != NULL)
             {
                 fclose(img);
