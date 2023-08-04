@@ -79,9 +79,9 @@ int main(int argc, char *argv[])
     fclose(output);
 }
 
-void error_check (size_t )
+void error_check (valueCheck)
 {
-    if(x)
+    if(valueCheck == 44)
     {
     perror("Erro ao ler o arquivo.");
                 fclose(input);
