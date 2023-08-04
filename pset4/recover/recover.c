@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
     BYTE buffer[BUFFER_SIZE];
 
     //open the file
+    printf("Nome do arquivo: %s\n", argv[1]);
     FILE *f = fopen(argv[1], "r");
     if (f == NULL)
     {
