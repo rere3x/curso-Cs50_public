@@ -10,6 +10,8 @@ const int SAMPLE_SIZE = 2;
 typedef int16_t WAVE;
 
 void error_check (char valueCheck[10]);
+FILE *input = NULL;
+FILE *output = NULL;
 
 int main(int argc, char *argv[])
 {
