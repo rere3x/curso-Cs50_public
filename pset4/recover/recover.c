@@ -29,6 +29,8 @@ int main(int argc, char *argv[])
 
     int count = 0;
     int offsetcount = 1;
+    size_t sucessul_write = 0;
+
 
 
 
@@ -49,7 +51,7 @@ int main(int argc, char *argv[])
             char image[10];
             sprintf(image, "%03d.jpg", count);
             img = fopen(image, "w");
-            size_t sucessul_write = fwrite (buffer, sizeof(BYTE), BUFFER_SIZE, img);
+            sucessul_write = fwrite (buffer, sizeof(BYTE), BUFFER_SIZE, img);
 
             offsetcount++;
             count++;
