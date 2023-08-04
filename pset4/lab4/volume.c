@@ -9,7 +9,7 @@ const int HEADER_SIZE = 44;
 const int SAMPLE_SIZE = 2;
 typedef int16_t WAVE;
 
-void error_check (char valueCheck[10]);
+int error_check (char valueCheck[10]);
 FILE *input = NULL;
 FILE *output = NULL;
 
@@ -78,7 +78,7 @@ int main(int argc, char *argv[])
     fclose(output);
 }
 
-void error_check (char valueCheck[10])
+int error_check (char valueCheck[10])
 {
     if(valueCheck[0] == 'i')
     {
