@@ -59,7 +59,25 @@ int main(int argc, char *argv[])
 
     // Read samples from input file and write updated data to output file
     do{
+        WAVE buffer[SAMPLE_SIZE];
 
+    size_t inputwave fread(buffer, sizeof(WAVE),SAMPLE_SIZE, input);
+    if (inputwave != SAMPLE_SIZE)
+            {
+                perror("Erro ao ler o arquivo.");
+                fclose(input);
+                fclose(output);
+                return 1;
+            }
+    fseek(output, 0, SEEK_END);
+    size_t outputwave fwrite(buffer, sizeof(WAVE),SAMPLE_SIZE, output);
+    if (outputwave != SAMPLE_SIZE)
+            {
+                perror("Erro ao escrever no arquivo.");
+                fclose(input);
+                fclose(output);
+                return 1;
+            }
     }
 
     // Close files
