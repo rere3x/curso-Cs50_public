@@ -60,9 +60,8 @@ int main(int argc, char *argv[])
         {
             offsetcount++;
             fseek(img, (BUFFER_SIZE * offsetcount), SEEK_SET);
-            
-            size_t sucessul_write = fwrite(buffer, sizeof(BYTE), BUFFER_SIZE, img);
 
+            size_t sucessul_write = fwrite(buffer, sizeof(BYTE), BUFFER_SIZE, img);
             if (sucessul_write != BUFFER_SIZE)
             {
                 perror("Erro ao escrever no arquivo.");
@@ -70,6 +69,7 @@ int main(int argc, char *argv[])
                 fclose(f);
                 return 1;
             }
+
         }
     } while (sucessul_read == BUFFER_SIZE);
 
