@@ -29,13 +29,13 @@ int main(int argc, char *argv[])
 
     int count = 0;
     int offsetcount = 1;
-
+    size_t sucessul_read = 0;
 
 
 
 
     do{
-        size_t sucessul_read = fread(buffer, sizeof(BYTE), BUFFER_SIZE, f);//le o bloco de dados do arquivo "f"
+        sucessul_read = fread(buffer, sizeof(BYTE), BUFFER_SIZE, f);//le o bloco de dados do arquivo "f"
         if (sucessul_read == 0) // Se não houver mais dados para ler
         {
             break; // Sai do loop
@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
             char image[10];
             sprintf(image, "%03d.jpg", count);
             img = fopen(image, "w");
-            sucessul_write = fwrite (buffer, sizeof(BYTE), BUFFER_SIZE, img);
+            size_t sucessul_write = fwrite (buffer, sizeof(BYTE), BUFFER_SIZE, img);
 
             offsetcount++;
             count++;
@@ -70,7 +70,7 @@ int main(int argc, char *argv[])
                     } else if (ferror(img))
                     {
                         perror("Erro ao ler o arquivo.");
-                        break; 
+                        break;
                         return 1;
                     }
 
