@@ -73,10 +73,7 @@ int main(int argc, char *argv[])
     } while (sucessul_read == BUFFER_SIZE);
 
     fclose(f);
-    if (img != NULL)
-    {
-        fclose(img);
-    }
+    
 
     return 0;
 }
