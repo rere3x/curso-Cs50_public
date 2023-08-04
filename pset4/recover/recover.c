@@ -34,6 +34,7 @@ int main(int argc, char *argv[])
     {
         // Le o bloco de dados do arquivo "f"
         sucessul_read = fread(buffer, sizeof(BYTE), BUFFER_SIZE, f);
+        fseek(f, (BUFFER_SIZE * offsetcount), SEEK_SET);
 
         if (sucessul_read == 0) // Se não houver mais dados para ler
         {
