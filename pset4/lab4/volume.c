@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
             {
                 error_check ("inputwave");
             }
-        for(i = 0, i < SAMPLE_SIZE,i++)
+        for(int i = 0; i < SAMPLE_SIZE;i++)
             {
                 buffer_S[i] *= factor;
             }
