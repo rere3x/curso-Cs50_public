@@ -64,14 +64,11 @@ int main(int argc, char *argv[])
 
             if (sucessul_write != BUFFER_SIZE)
                 {
-                    if (feof(img))
-                    {
-                        printf("Alcançou o fim do arquivo. \n");
-                        return 1;
-                    } else if (ferror(img))
+                    if (ferror(img))
                     {
                         perror("Erro ao ler o arquivo.");
-                        break;
+                        fclose(img);
+                        fclose(f)
                         return 1;
                     }
 
