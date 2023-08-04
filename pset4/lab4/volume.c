@@ -54,13 +54,13 @@ int main(int argc, char *argv[])
     do{
         WAVE buffer[SAMPLE_SIZE];
 
-    size_t inputwave fread(buffer, sizeof(WAVE),SAMPLE_SIZE, input);
+    inputwave fread(buffer, sizeof(WAVE),SAMPLE_SIZE, input);
     if (inputwave != SAMPLE_SIZE)
             {
                 error_check ("inputwave")
             }
     fseek(output, 0, SEEK_END);
-    size_t outputwave fwrite(buffer, sizeof(WAVE),SAMPLE_SIZE, output);
+    outputwave fwrite(buffer, sizeof(WAVE),SAMPLE_SIZE, output);
     if (outputwave != SAMPLE_SIZE)
             {
                 error_check ("outputwave")
