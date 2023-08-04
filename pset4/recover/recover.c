@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
             if (img != NULL)
             {
                 fclose(img);
-                img = NULL; // Define img como NULL para indicar que não há arquivo aberto
+                
             }
 
             char image[10];
@@ -73,7 +73,7 @@ int main(int argc, char *argv[])
     } while (sucessul_read == BUFFER_SIZE);
 
     fclose(f);
-    
+
 
     return 0;
 }
