@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
         else if (img != NULL)
         {
 
-            fseek(img, 0, SEEK_SET);
+            fseek(img, 0, SEEK_END);
 
             size_t sucessul_write = fwrite(buffer, sizeof(BYTE), BUFFER_SIZE, img);
             if (sucessul_write != BUFFER_SIZE)
