@@ -65,7 +65,9 @@ int main(int argc, char *argv[])
             {
                 error_check ("outputwave")
             }
+
     }
+    while(inputwave == SAMPLE_SIZE)
 
     // Close files
     fclose(input);
