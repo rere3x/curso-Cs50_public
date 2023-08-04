@@ -23,6 +23,7 @@ int main(int argc, char *argv[])
         printf("Erro ao abrir o arquivo. \n");
         return 1;
     }
+
     FILE *img = NULL;
     int count = 0;
     size_t sucessul_read = 0;
@@ -68,5 +69,6 @@ int main(int argc, char *argv[])
     } while (sucessul_read == BUFFER_SIZE);
     fclose(img);
     fclose(f);
+    
     return 0;
 }
