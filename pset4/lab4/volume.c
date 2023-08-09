@@ -73,7 +73,7 @@ int main(int argc, char *argv[])
                         buffer_S[i] = INT16_MIN;
                 }
             }
-        fseek(output, HEADER_SIZE * sizeof(WAVE), SEEK_SET);
+        fseek(output, 0, SEEK_END);
         outputwave = fwrite(buffer_S, sizeof(WAVE),SAMPLE_SIZE, output);
         if (outputwave != SAMPLE_SIZE)
                 {
