@@ -59,16 +59,11 @@ int main(int argc, char *argv[])
         WAVE buffer_S [SAMPLE_SIZE];
 
         inputwave = fread(buffer_S, sizeof(WAVE),SAMPLE_SIZE, input);
-        if (feof(input))
-        {
-            break;  // Reached end of file
-        }
-        else if (ferror(input) || inputwave != SAMPLE_SIZE)
-        {
-            error_check("inputwave");
-        }
+        if (inputwave != SAMPLE_SIZE)
+            {
+                error_check ("inputwave");
+            }
         fseek(output, 0, SEEK_END);
-
         for(int i = 0; i < SAMPLE_SIZE;i++)
             {
                 buffer_S[i] *= factor;
