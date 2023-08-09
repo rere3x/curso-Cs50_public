@@ -54,16 +54,19 @@ int main(int argc, char *argv[])
                 error_check ("outputwave");
             }
 
-    // Read samples from input file and write updated data to output file
+    // le os arquivos do SAMPLE e atualiza pra ser gravado
     do{
         WAVE buffer_S [SAMPLE_SIZE];
 
         inputwave = fread(buffer_S, sizeof(WAVE),SAMPLE_SIZE, input);
-        if (feof(input)) {
-        break;  // Reached end of file
-    } else if (ferror(input) || inputwave != SAMPLE_SIZE) {
+        if (feof(input))
+        {
+        break;  // para quando chegar no fim
+        }
+        else if (ferror(input) || inputwave != SAMPLE_SIZE)
+        {
         error_check("inputwave");
-    }
+        }
         for(int i = 0; i < SAMPLE_SIZE;i++)
             {
                 buffer_S[i] *= factor;
@@ -77,9 +80,9 @@ int main(int argc, char *argv[])
         fseek(output, 0, SEEK_END);
         outputwave = fwrite(buffer_S, sizeof(WAVE),SAMPLE_SIZE, output);
         if (outputwave != SAMPLE_SIZE)
-                {
-                    error_check ("outputwave");
-                }
+            {
+                error_check ("outputwave");
+            }
 
     }
     while(inputwave == SAMPLE_SIZE);
