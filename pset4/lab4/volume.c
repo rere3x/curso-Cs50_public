@@ -67,6 +67,8 @@ int main(int argc, char *argv[])
         {
             error_check("inputwave");
         }
+        fseek(output, 0, SEEK_END);
+
         for(int i = 0; i < SAMPLE_SIZE;i++)
             {
                 buffer_S[i] *= factor;
@@ -77,7 +79,6 @@ int main(int argc, char *argv[])
                         buffer_S[i] = INT16_MIN;
                 }
 }
-        fseek(output, 0, SEEK_END);
         outputwave = fwrite(buffer_S, sizeof(WAVE),SAMPLE_SIZE, output);
         if (outputwave != SAMPLE_SIZE)
                 {
