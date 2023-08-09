@@ -72,11 +72,6 @@ int main(int argc, char *argv[])
                 else if(buffer_S[i] < INT16_MIN){
                         buffer_S[i] = INT16_MIN;
                 }
-                if (factor < 1.0) {
-                    if (buffer_S[i] > INT16_MIN && buffer_S[i] < 0) {
-                        buffer_S[i] = INT16_MIN;
-                    }
-        }
 }
         fseek(output, 0, SEEK_END);
         outputwave = fwrite(buffer_S, sizeof(WAVE),SAMPLE_SIZE, output);
