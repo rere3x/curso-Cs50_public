@@ -66,6 +66,12 @@ int main(int argc, char *argv[])
         for(int i = 0; i < SAMPLE_SIZE;i++)
             {
                 buffer_S[i] *= factor;
+                if (buffer_S[i] > INT16_MAX){
+                    buffer_S[i] = INT16_MAX;
+                }
+                else if(buffer_S[i] < INT16_MIN){
+                        buffer_S[i] = INT16_MIN;
+                }
             }
         fseek(output, 0, SEEK_END);
         outputwave = fwrite(buffer_S, sizeof(WAVE),SAMPLE_SIZE, output);
@@ -80,7 +86,7 @@ int main(int argc, char *argv[])
     // Close files
     fclose(input);
     fclose(output);
-    
+
     return 0;
 }
 
