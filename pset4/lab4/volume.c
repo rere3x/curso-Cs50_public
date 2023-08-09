@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
         {
         break;  // para quando chegar no fim
         }
-        else if (ferror(input) || inputwave != SAMPLE_SIZE)
+        else if (inputwave != SAMPLE_SIZE)
         {
         error_check("inputwave");
         }
