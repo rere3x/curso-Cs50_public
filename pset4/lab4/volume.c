@@ -95,13 +95,17 @@ int error_check (char valueCheck[10])
     if(valueCheck[0] == 'i')
     {
     perror("Erro ao ler o arquivo.");
-                fclose(input);
-                fclose(output);
-                return 1;
-    }else
+    }
+    else
+    {
     perror("Erro ao escrever no arquivo.");
-                fclose(input);
-                fclose(output);
-                return 1;
+    }
+    if (input != NULL) {
+            fclose(input);
+    }
+    if (output != NULL) {
+        fclose(output);
+    }
+    return 1;
 
 }
