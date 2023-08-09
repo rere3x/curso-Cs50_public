@@ -66,10 +66,10 @@ int main(int argc, char *argv[])
         for(int i = 0; i < SAMPLE_SIZE;i++)
             {
                 buffer_S[i] *= factor;
-                if (buffer_S[i] > INT16_MAX){
+                if (buffer_S[i] > INT16_MAX ){
                     buffer_S[i] = INT16_MAX;
                 }
-                else if(buffer_S[i] < INT16_MIN){
+                else if(buffer_S[i] < INT16_MIN || 0.0){
                         buffer_S[i] = INT16_MIN;
                 }
             }
