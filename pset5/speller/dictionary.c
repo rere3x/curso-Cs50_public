@@ -29,6 +29,7 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO
+    
     return 0;
 }
 
@@ -41,7 +42,7 @@ bool load(const char *dictionary)
     //criar um novo node pra cada paalavra
     //usar o hash na palavra para ter um valor hash pra ela
     //colocar o node na tabela hash no local certo
-    
+
     return false;
 }
 
