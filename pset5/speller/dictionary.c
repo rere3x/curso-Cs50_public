@@ -58,7 +58,8 @@ bool load(const char *dictionary)
         strcpy(newNode->word, word);
         unsigned int index = hash(word);
 
-        
+        newNode->next = table[index];
+        table[index] = newNode;
     }
 
 
