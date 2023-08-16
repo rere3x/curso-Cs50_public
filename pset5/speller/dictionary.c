@@ -43,7 +43,7 @@ bool load(const char *dictionary)
         printf("Erro ao abrir o arquivo.\n");
         return false;
     }
-
+    char word[LENGTH + 1];
     // ler as strings do arquivo uma por uma
     while (fscanf(file, "%s", word) != EOF)
     {
