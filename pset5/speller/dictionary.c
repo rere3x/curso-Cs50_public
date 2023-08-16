@@ -49,6 +49,7 @@ bool load(const char *dictionary)
     while (fscanf(file, "%s", word) != EOF)
     {
         //criar um novo node pra cada palavra
+        
 
     }
 
