@@ -43,11 +43,6 @@ bool load(const char *dictionary)
         printf("Erro ao abrir o arquivo.\n");
         return false;
     }
-
-
-    // ler as strings do arquivo uma por uma
-    while (fscanf(file, "%s", word) != EOF)
-    {
         //criar um novo node pra cada palavra
         struct node *newNode = (struct Node *)malloc(sizeof(struct node));
         if(newNode == NULL)
@@ -55,6 +50,11 @@ bool load(const char *dictionary)
             printf("Error ao alocar memoria para o nó \n");
             return false;
         }
+
+
+    // ler as strings do arquivo uma por uma
+    while (fscanf(file, "%s", word) != EOF)
+    {
 
         strcpy(newNode->word, )
 
