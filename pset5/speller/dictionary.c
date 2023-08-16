@@ -43,6 +43,8 @@ bool load(const char *dictionary)
         printf("Erro ao abrir o arquivo.\n");
         return false;
     }
+
+    
     fscnaf(file, "%s", word)
 
 
