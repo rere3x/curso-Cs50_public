@@ -37,7 +37,7 @@ bool load(const char *dictionary)
 {
     // TODO
     //abrir o arquivo dictionary
-    FILE *file = fopen(dictionary, r)
+    FILE *file = fopen(dictionary, "r")
     if (file == NULL)
     {
         printf("Erro ao abrir o arquivo.\n");
@@ -45,14 +45,17 @@ bool load(const char *dictionary)
     }
 
 
-    fscanf(file, "%s", word)
-
-
     // ler as strings do arquivo uma por uma
-    //criar um novo node pra cada paalavra
+    while (fscanf(file, "%s", word) != EOF)
+    {
+        //criar um novo node pra cada palavra
+        
+    }
+
+
     //usar o hash na palavra para ter um valor hash pra ela
     //colocar o node na tabela hash no local certo
-
+    fclose(file);
     return true;
 }
 
