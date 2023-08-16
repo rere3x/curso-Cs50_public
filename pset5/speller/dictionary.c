@@ -43,7 +43,7 @@ bool load(const char *dictionary)
         printf("Erro ao abrir o arquivo.\n");
         return false;
     }
-   
+
     // ler as strings do arquivo uma por uma
     while (fscanf(file, "%s", word) != EOF)
     {
@@ -56,6 +56,8 @@ bool load(const char *dictionary)
             return false;
         }
         strcpy(newNode->word, word);
+        unsigned int index = hash(word);
+
     }
 
 
