@@ -44,8 +44,8 @@ bool load(const char *dictionary)
         return false;
     }
 
-    
-    fscnaf(file, "%s", word)
+
+    fscanf(file, "%s", word)
 
 
     // ler as strings do arquivo uma por uma
