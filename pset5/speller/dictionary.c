@@ -48,6 +48,13 @@ bool load(const char *dictionary)
     while (fscanf(file, "%s", word) != EOF)
     {
 
+        node *newNode = malloc(sizeof(node))
+        if (newNode == NULL)
+        {
+            printf("Erro ao alocar memória para o novo nó.\n");
+            fclose(file);
+            return false;
+        }
     //criar um novo node pra cada palavra
         strcpy(newNode->word, )
 
