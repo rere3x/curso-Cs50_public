@@ -1,7 +1,6 @@
 // Implements a dictionary's functionality
 
 #include <stdbool.h>
-
 #include "dictionary.h"
 
 // Represents a node in a hash table
@@ -38,7 +37,8 @@ bool load(const char *dictionary)
 {
     // TODO
     //abrir o arquivo dictionary
-    
+    size_t inputdict = fopen(dictionary, "r")
+    if(inputdict == NULL)
 
     // ler as strings do arquivo uma por uma
     //criar um novo node pra cada paalavra
