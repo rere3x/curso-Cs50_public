@@ -56,6 +56,7 @@ bool load(const char *dictionary)
             return false;
         }
         strcpy(newNode->word, word);
+        newNode->next = NULL;
         unsigned int index = hash(word);
 
         newNode->next = table[index];
