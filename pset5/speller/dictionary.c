@@ -49,7 +49,12 @@ bool load(const char *dictionary)
     while (fscanf(file, "%s", word) != EOF)
     {
         //criar um novo node pra cada palavra
-        
+        struct node *newNode = (struct Node *)malloc(sizeof(struct node));
+        if(newNode == NULL)
+        {
+            printf("Error ao alocar memoria para o nó \n");
+            return false;
+        }
 
     }
 
