@@ -43,6 +43,7 @@ bool load(const char *dictionary)
         printf("Erro ao abrir o arquivo.\n");
         return false;
     }
+    fscnaf(file, "%s", word)
 
 
     // ler as strings do arquivo uma por uma
