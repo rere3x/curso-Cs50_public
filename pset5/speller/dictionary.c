@@ -37,8 +37,13 @@ bool load(const char *dictionary)
 {
     // TODO
     //abrir o arquivo dictionary
-    FILE *file = fopen("dictionary", r)
-    
+    FILE *file = fopen(dictionary, r)
+    if (file == NULL)
+    {
+        printf("Erro ao abrir o arquivo.\n");
+        return false;
+    }
+
 
     // ler as strings do arquivo uma por uma
     //criar um novo node pra cada paalavra
