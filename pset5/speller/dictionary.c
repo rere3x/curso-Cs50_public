@@ -37,7 +37,7 @@ bool load(const char *dictionary)
 {
     // TODO
     //abrir o arquivo dictionary
-    size_t inputdict = fopen(dictionary, "r")
+    size_t inputdict = fopen(dictionary)
     if(inputdict == NULL)
 
     // ler as strings do arquivo uma por uma
