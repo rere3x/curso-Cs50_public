@@ -39,6 +39,7 @@ bool load(const char *dictionary)
     // TODO
     //abrir o arquivo dictionary
     
+
     // ler as strings do arquivo uma por uma
     //criar um novo node pra cada paalavra
     //usar o hash na palavra para ter um valor hash pra ela
