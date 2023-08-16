@@ -58,6 +58,7 @@ bool load(const char *dictionary)
         strcpy(newNode->word, word);
         unsigned int index = hash(word);
 
+        
     }
 
 
