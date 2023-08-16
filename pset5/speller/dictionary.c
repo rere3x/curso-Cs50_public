@@ -37,8 +37,8 @@ bool load(const char *dictionary)
 {
     // TODO
     //abrir o arquivo dictionary
-    size_t inputdict = fopen(dictionary)
-    if(inputdict == NULL)
+    FILE *file = fopen("dictionary", r)
+    
 
     // ler as strings do arquivo uma por uma
     //criar um novo node pra cada paalavra
