@@ -55,9 +55,7 @@ bool load(const char *dictionary)
             fclose(file);
             return false;
         }
-    //criar um novo node pra cada palavra
-        strcpy(newNode->word, )
-
+        
     }
 
 
