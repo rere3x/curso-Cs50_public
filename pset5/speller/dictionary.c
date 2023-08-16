@@ -50,7 +50,7 @@ bool load(const char *dictionary)
     //usar o hash na palavra para ter um valor hash pra ela
     //colocar o node na tabela hash no local certo
 
-    return false;
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
