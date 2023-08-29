@@ -82,7 +82,7 @@ bool load(const char *dictionary)
 
         unsigned int index = hash(word);
         tempNode->next = table[index];
-        
+        table[index] = tempNode;
     }
 
     fclose(file);
