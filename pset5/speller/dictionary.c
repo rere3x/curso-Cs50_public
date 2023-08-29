@@ -22,6 +22,12 @@ unsigned int sizeCount = 0;
 bool check(const char *word)
 {
     // TODO
+    
+
+    while ((cursor = cursor->next;) != NULL)
+    {
+        strcasecmp(cursor->word, word);
+    }
     return false;
 }
 
