@@ -31,9 +31,12 @@ unsigned int hash(const char *word)
     int c;
 
     while((c = *word++))
+    {
+        hash = ((hash << 5) + hash) + c;
+    }
 
 
-    return 0;
+    return hash % N;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
