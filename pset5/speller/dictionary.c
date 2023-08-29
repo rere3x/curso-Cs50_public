@@ -27,7 +27,11 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    // TODO
+    unsigned int long hash = 5381;
+    int c;
+
+    while((c = *word++))
+
 
     return 0;
 }
