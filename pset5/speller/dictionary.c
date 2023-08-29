@@ -38,9 +38,6 @@ bool check(const char *word)
         if(strcasecmp(cursor->word, word) == true)
         {
             return true;
-        }else
-        {
-            
         }
     }
     return false;
