@@ -12,7 +12,7 @@ typedef struct node
 node;
 
 // Number of buckets in hash table
-const unsigned int N = 26;
+const unsigned int N = 52;
 
 // Hash table
 node *table[N];
@@ -34,8 +34,6 @@ unsigned int hash(const char *word)
     {
         hash = ((hash << 5) + hash) + c;
     }
-
-
     return hash % N;
 }
 
