@@ -22,7 +22,15 @@ unsigned int sizeCount = 0;
 bool check(const char *word)
 {
     // TODO
-    
+    unsigned int index = hash(word);
+    node *cursor = malloc(sizeof(node))
+        if (cursor == NULL)
+        {
+            printf("Erro ao alocar memória para o novo nó.\n");
+            fclose(file);
+            return false;
+        }
+
 
     while ((cursor = cursor->next;) != NULL)
     {
