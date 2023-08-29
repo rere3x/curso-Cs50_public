@@ -31,7 +31,6 @@ bool check(const char *word)
             fclose(file);
             return false;
         }
-    cursor = table[index];
 
     while ((cursor->next = table[index];) != NULL)
     {
