@@ -47,7 +47,6 @@ bool load(const char *dictionary)
     // ler as strings do arquivo uma por uma
     while (fscanf(file, "%s", word) != EOF)
     {
-
         node *tempNode = malloc(sizeof(node))
         if (tempNode == NULL)
         {
@@ -63,9 +62,6 @@ bool load(const char *dictionary)
         table[index] = tempNode;
     }
 
-
-    //usar o hash na palavra para ter um valor hash pra ela
-    //colocar o node na tabela hash no local certo
     fclose(file);
     return true;
 }
