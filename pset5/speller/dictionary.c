@@ -48,19 +48,19 @@ bool load(const char *dictionary)
     while (fscanf(file, "%s", word) != EOF)
     {
 
-        node *newNode = malloc(sizeof(node))
-        if (newNode == NULL)
+        node *tempNode = malloc(sizeof(node))
+        if (tempNode == NULL)
         {
             printf("Erro ao alocar memória para o novo nó.\n");
             fclose(file);
             return false;
         }
-        strcpy(newNode->word, word);
-        newNode->next = NULL;
-        unsigned int index = hash(word);
+        strcpy(tempNode->word, word);
+        tempNode->next = NULL;
 
-        newNode->next = table[index];
-        table[index] = newNode;
+        unsigned int index = hash(word);
+        tempNode->next = table[index];
+        table[index] = tempNode;
     }
 
 
