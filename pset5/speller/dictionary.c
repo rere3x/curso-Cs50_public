@@ -23,6 +23,7 @@ bool check(const char *word)
 {
     // TODO
     unsigned int index = hash(word);
+
     node *cursor = malloc(sizeof(node))
         if (cursor == NULL)
         {
@@ -30,9 +31,9 @@ bool check(const char *word)
             fclose(file);
             return false;
         }
+    cursor = table[index];
 
-
-    while (!= NULL)
+    while ((cursor->next) != NULL)
     {
         strcasecmp(cursor->word, word);
     }
