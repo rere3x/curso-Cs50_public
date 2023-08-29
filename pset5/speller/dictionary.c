@@ -53,8 +53,9 @@ bool load(const char *dictionary)
     // ler as strings do arquivo uma por uma
     while (fscanf(file, "%s", word) != EOF)
     {
-        size(sizeCount++)
-        
+        sizeCount++;
+        size(sizeCount);
+
         node *tempNode = malloc(sizeof(node))
         if (tempNode == NULL)
         {
