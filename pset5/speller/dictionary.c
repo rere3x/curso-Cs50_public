@@ -1,6 +1,8 @@
 // Implements a dictionary's functionality
 
 #include <stdbool.h>
+#include <stdlib.h>
+#include <stdio.h>
 #include "dictionary.h"
 
 // Represents a node in a hash table
@@ -24,7 +26,7 @@ bool check(const char *word)
     // TODO
     unsigned int index = hash(word);
 
-    node *cursor = malloc(sizeof(node))
+    node *cursor = malloc(sizeof(node));
         if (cursor == NULL)
         {
             printf("Erro ao alocar memória para o novo nó.\n");
