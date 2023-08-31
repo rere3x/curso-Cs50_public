@@ -88,10 +88,10 @@ bool load(const char *dictionary)
             free(tempNode);
             return false;
         }
-        strcpy(tempNode->word, word);
+        strcpy(tempNode->word, buffer);
         tempNode->next = NULL;
 
-        unsigned int index = hash(word);
+        unsigned int index = hash(buffer);
         tempNode->next = table[index];
         table[index] = tempNode;
     }
