@@ -73,7 +73,7 @@ bool load(const char *dictionary)
         sizeCount++;
         size(sizeCount);
 
-        node *tempNode = malloc(sizeof(node))
+        node *tempNode = malloc(sizeof(node));
         if (tempNode == NULL)
         {
             printf("Erro ao alocar memória para o novo nó.\n");
