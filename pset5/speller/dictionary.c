@@ -19,6 +19,7 @@ const unsigned int N = 52;
 // Hash table
 node *table[N];
 unsigned int sizeCount = 0;
+FILE *file = fopen(dictionary, "r");
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
@@ -62,7 +63,7 @@ bool load(const char *dictionary)
 {
     // TODO
     //abrir o arquivo dictionary
-    FILE *file = fopen(dictionary, "r")
+    
     if (file == NULL)
     {
         printf("Erro ao abrir o arquivo.\n");
