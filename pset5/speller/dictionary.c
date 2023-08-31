@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include "dictionary.h"
 #include <strings.h>
+#include <string.h>
 
 // Represents a node in a hash table
 typedef struct node
