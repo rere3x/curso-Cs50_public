@@ -32,6 +32,7 @@ bool check(const char *word)
         if (cursor == NULL)
         {
             printf("Erro ao alocar memória para o novo nó.\n");
+            free(cursor);
             return false;
         }
 
@@ -67,6 +68,7 @@ bool load(const char *dictionary)
     if (file == NULL)
     {
         printf("Erro ao abrir o arquivo.\n");
+        fclose(file);
         return false;
     }
 
@@ -81,6 +83,7 @@ bool load(const char *dictionary)
         if (tempNode == NULL)
         {
             printf("Erro ao alocar memória para o novo nó.\n");
+            free(tempNode);
             return false;
         }
         strcpy(tempNode->word, word);
