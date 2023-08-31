@@ -34,7 +34,7 @@ bool check(const char *word)
 
     while ((cursor->next = table[index]) != NULL)
     {
-        if(strcasecmp(cursor->word, word) == true)
+        if(strcasecmp(cursor->word, word) == 0)
         {
             return true;
         }
