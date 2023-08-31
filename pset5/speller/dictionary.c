@@ -31,7 +31,6 @@ bool check(const char *word)
         if (cursor == NULL)
         {
             printf("Erro ao alocar memória para o novo nó.\n");
-            fclose(file);
             return false;
         }
 
