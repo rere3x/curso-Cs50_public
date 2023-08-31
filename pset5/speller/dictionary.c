@@ -71,7 +71,8 @@ bool load(const char *dictionary)
     }
 
     // ler as strings do arquivo uma por uma
-    while (fscanf(file, "%s", word) != EOF)
+    char buffer[42];
+    while (fscanf(file, "%s", buffer) != EOF)
     {
         sizeCount++;
         size(sizeCount);
