@@ -29,24 +29,15 @@ bool check(const char *word)
     // TODO
     unsigned int index = hash(word);
 
-    node *cursor = malloc(sizeof(node));
-        if (cursor == NULL)
-        {
-            printf("Erro ao alocar memória para o novo nó.\n");
-            free(cursor);
-            return false;
-        }
-    cursor = table[index];
+    node *cursor = table[index];
     while (cursor != NULL)
     {
         if(strcasecmp(cursor->word, word) == 0)
         {
-            free(cursor);
             return true;
         }
         cursor = cursor->next;
     }
-    free(cursor);
     return false;
 }
 
