@@ -105,16 +105,16 @@ unsigned int size(int countValue)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    for (i = 0; i < N; i++)
+    for (int i = 0; i < N; i++)
     {
         node *cursor = table[i];
-        node *temp = cursor;
 
         while (cursor != NULL)
         {
+            node *temp = cursor;
             cursor = cursor->next;
             free(temp);
         }
-        return false;
     }
+        return true;
 }
