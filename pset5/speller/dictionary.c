@@ -74,7 +74,8 @@ bool load(const char *dictionary)
         sizeCount++;
 
         node *tempNode = malloc(sizeof(node));
-        strcpy(tempNode->word, buffer);
+        strncpy(tempNode->word, buffer, LENGTH);
+        tempNode->word[LENGTH] = '\0';
         tempNode->next = NULL;
 
         if (tempNode == NULL)
