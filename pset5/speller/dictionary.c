@@ -104,8 +104,9 @@ bool load(const char *dictionary)
 unsigned int size(int countValue)
 {
     // TODO
+    countValue =
     return countValue;
-    return 0;
+
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
