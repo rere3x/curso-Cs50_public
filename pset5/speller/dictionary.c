@@ -72,7 +72,6 @@ bool load(const char *dictionary)
     while (fscanf(file, "%s", buffer) != EOF)
     {
         sizeCount++;
-        size(sizeCount);
 
         node *tempNode = malloc(sizeof(node));
         if (tempNode == NULL)
@@ -89,6 +88,7 @@ bool load(const char *dictionary)
         table[index] = tempNode;
     }
 
+    size(sizeCount);
     fclose(file);
     return true;
 }
