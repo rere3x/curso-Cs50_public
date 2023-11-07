@@ -16,7 +16,7 @@ typedef struct node
 node;
 
 // Number of buckets in hash table
-const unsigned int N = 52;
+const unsigned int N = 45;
 
 // Hash table
 node *table[N];
@@ -63,12 +63,11 @@ bool load(const char *dictionary)
     if (file == NULL)
     {
         printf("Erro ao abrir o arquivo.\n");
-        fclose(file);
         return false;
     }
 
     // ler as strings do arquivo uma por uma
-    char buffer[42];
+    char buffer[45];
     while (fscanf(file, "%s", buffer) != EOF)
     {
         sizeCount++;
@@ -81,7 +80,6 @@ bool load(const char *dictionary)
         if (tempNode == NULL)
         {
             printf("Erro ao alocar memória para o novo nó.\n");
-            free(tempNode);
             return false;
         }
         unsigned int index = hash(buffer);
@@ -89,18 +87,24 @@ bool load(const char *dictionary)
         table[index] = tempNode;
     }
 
-    size(sizeCount);
+    unsigned int count = size();
     fclose(file);
     return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
-unsigned int size(int countValue)
+unsigned int size(void)
 {
     // TODO
 
-    return countValue;
-
+    if(sizeCount != 0)
+    {
+        return sizeCount;
+    }
+    else
+    {
+        return 0;
+    }
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
