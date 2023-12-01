@@ -120,6 +120,7 @@ bool unload(void)
             cursor = cursor->next;
             free(temp);
         }
+        table[i] = NULL;
     }
         return true;
 }
