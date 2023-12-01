@@ -16,7 +16,7 @@ typedef struct node
 node;
 
 // Number of buckets in hash table
-const unsigned int N = 45;
+const unsigned int N = 52;
 
 // Hash table
 node *table[N];
