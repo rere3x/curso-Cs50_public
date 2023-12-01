@@ -16,7 +16,7 @@ typedef struct node
 node;
 
 // Number of buckets in hash table
-#define N = 52;
+#define N 52;
 
 // Hash table
 node *table[N];
