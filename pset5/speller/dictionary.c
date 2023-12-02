@@ -1,18 +1,17 @@
-
 #include <stdbool.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include "dictionary.h"
 #include <strings.h>
 #include <string.h>
+#include <ctype.h>
 
 // Represents a node in a hash table
 typedef struct node
 {
     char word[LENGTH + 1];
     struct node *next;
-}
-node;
+} node;
 
 // Number of buckets in hash table
 #define N 52
@@ -49,7 +48,7 @@ unsigned int hash(const char *word)
     unsigned int hash = 0;
     for (int i = 0; word[i] != '\0'; i++)
     {
-        hash = (hash * 31) + word[i];
+        hash = (hash * 31) + tolower(word[i]); // Converta para minúsculas antes de calcular o hash
     }
     return hash % N;
 }
