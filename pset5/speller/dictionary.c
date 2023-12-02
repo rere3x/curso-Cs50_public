@@ -78,6 +78,7 @@ bool load(const char *dictionary)
             sizeCount++;
 
         node *tempNode = malloc(sizeof(node));
+        if (tempNode == NULL)
         {
             printf("Erro ao alocar memória para o novo nó.\n");
             fclose(file);
@@ -87,7 +88,6 @@ bool load(const char *dictionary)
         tempNode->word[LENGTH] = '\0';
         tempNode->next = NULL;
 
-        if (tempNode == NULL)
         unsigned int index = hash(buffer);
         tempNode->next = table[index];
         table[index] = tempNode;
