@@ -27,6 +27,12 @@ unsigned int sizeCount = 0;
 bool check(const char *word)
 {
     // TODO
+
+    if (strlen(word) == 0)  
+    {
+        return true;
+    }
+
     unsigned int index = hash(word);
 
     node *cursor = table[index];
@@ -69,7 +75,7 @@ bool load(const char *dictionary)
     char buffer[LENGTH];
     while (fscanf(file, "%s", buffer) != EOF)
     {
-        if (strlen(buffer) > 0)  
+        if (strlen(buffer) > 0)
         {
             sizeCount++;
         }
