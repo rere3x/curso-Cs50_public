@@ -75,22 +75,25 @@ bool load(const char *dictionary)
     char buffer[LENGTH];
     while (fscanf(file, "%s", buffer) != EOF)
     {
+        if (strlen(buffer) > 0)  // Considerar apenas palavras não vazias
+        {
             sizeCount++;
 
-        node *tempNode = malloc(sizeof(node));
-        if (tempNode == NULL)
-        {
-            printf("Erro ao alocar memória para o novo nó.\n");
-            fclose(file);
-            return false;
-        }
-        strncpy(tempNode->word, buffer, LENGTH);
-        tempNode->word[LENGTH] = '\0';
-        tempNode->next = NULL;
+            node *tempNode = malloc(sizeof(node));
+            if (tempNode == NULL)
+            {
+                printf("Erro ao alocar memória para o novo nó.\n");
+                fclose(file);
+                return false;
+            }
+            strncpy(tempNode->word, buffer, LENGTH);
+            tempNode->word[LENGTH] = '\0';
+            tempNode->next = NULL;
 
-        unsigned int index = hash(buffer);
-        tempNode->next = table[index];
-        table[index] = tempNode;
+            unsigned int index = hash(buffer);
+            tempNode->next = table[index];
+            table[index] = tempNode;
+        }
     }
 
     unsigned int count = size();
