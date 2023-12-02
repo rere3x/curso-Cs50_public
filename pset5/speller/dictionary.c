@@ -63,6 +63,7 @@ bool load(const char *dictionary)
     if (file == NULL)
     {
         printf("Erro ao abrir o arquivo.\n");
+        fclose(file);
         return false;
     }
 
@@ -80,6 +81,7 @@ bool load(const char *dictionary)
         if (tempNode == NULL)
         {
             printf("Erro ao alocar memória para o novo nó.\n");
+            fclose(tempNode)
             return false;
         }
         unsigned int index = hash(buffer);
@@ -88,6 +90,7 @@ bool load(const char *dictionary)
     }
 
     unsigned int count = size();
+    fclose(tempNode)
     fclose(file);
     return true;
 }
