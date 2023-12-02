@@ -28,7 +28,7 @@ bool check(const char *word)
 {
     // TODO
 
-    if (strlen(word) == 0)  
+    if (strlen(word) == 0)
     {
         return true;
     }
@@ -81,16 +81,16 @@ bool load(const char *dictionary)
         }
 
         node *tempNode = malloc(sizeof(node));
-        strncpy(tempNode->word, buffer, LENGTH);
-        tempNode->word[LENGTH] = '\0';
-        tempNode->next = NULL;
-
-        if (tempNode == NULL)
         {
             printf("Erro ao alocar memória para o novo nó.\n");
             fclose(file);
             return false;
         }
+        strncpy(tempNode->word, buffer, LENGTH);
+        tempNode->word[LENGTH] = '\0';
+        tempNode->next = NULL;
+
+        if (tempNode == NULL)
         unsigned int index = hash(buffer);
         tempNode->next = table[index];
         table[index] = tempNode;
