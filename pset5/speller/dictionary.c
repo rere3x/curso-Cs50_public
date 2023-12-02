@@ -1,5 +1,3 @@
-// Implements a dictionary's functionality
-
 #include <stdbool.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -22,12 +20,9 @@ node;
 node *table[N];
 unsigned int sizeCount = 0;
 
-
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    // TODO
-
     if (strlen(word) == 0)
     {
         return true;
@@ -38,7 +33,7 @@ bool check(const char *word)
     node *cursor = table[index];
     while (cursor != NULL)
     {
-        if(strcasecmp(cursor->word, word) == 0)
+        if (strcasecmp(cursor->word, word) == 0)
         {
             return true;
         }
@@ -61,21 +56,17 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    // TODO
-    //abrir o arquivo dictionary
     FILE *file = fopen(dictionary, "r");
     if (file == NULL)
     {
         printf("Erro ao abrir o arquivo.\n");
-        fclose(file);
         return false;
     }
 
-    // ler as strings do arquivo uma por uma
     char buffer[LENGTH];
     while (fscanf(file, "%s", buffer) != EOF)
     {
-        if (strlen(buffer) > 0)  // Considerar apenas palavras não vazias
+        if (strlen(buffer) > 0)
         {
             sizeCount++;
 
@@ -86,9 +77,9 @@ bool load(const char *dictionary)
                 fclose(file);
                 return false;
             }
+
             strncpy(tempNode->word, buffer, LENGTH);
             tempNode->word[LENGTH] = '\0';
-            tempNode->next = NULL;
 
             unsigned int index = hash(buffer);
             tempNode->next = table[index];
@@ -96,7 +87,6 @@ bool load(const char *dictionary)
         }
     }
 
-    unsigned int count = size();
     fclose(file);
     return true;
 }
@@ -104,16 +94,7 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-    // TODO
-
-    if(sizeCount != 0)
-    {
-        return sizeCount;
-    }
-    else
-    {
-        return 0;
-    }
+    return sizeCount;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
@@ -131,5 +112,6 @@ bool unload(void)
         }
         table[i] = NULL;
     }
-        return true;
+
+    return true;
 }
