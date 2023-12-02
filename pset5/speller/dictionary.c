@@ -81,7 +81,7 @@ bool load(const char *dictionary)
         if (tempNode == NULL)
         {
             printf("Erro ao alocar memória para o novo nó.\n");
-            fclose(file)
+            fclose(file);
             return false;
         }
         unsigned int index = hash(buffer);
