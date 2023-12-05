@@ -41,6 +41,8 @@ person *create_family(int generations)
 {
     // TODO: Allocate memory for new person
 
+    
+
     // Generation with parent data
     if (generations > 1)
     {
