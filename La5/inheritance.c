@@ -41,7 +41,7 @@ person *create_family(int generations)
 {
     // TODO: Allocate memory for new person
 
-    person *person = malloc(sizeof(person));
+    person *newPerson = malloc(sizeof(person));
 
 
     // Generation with parent data
@@ -57,13 +57,13 @@ person *create_family(int generations)
     else
     {
         // TODO: Set parent pointers to NULL
-        
+
 
         // TODO: Randomly assign alleles
     }
 
     // TODO: Return newly created person
-    return NULL;
+    return newPerson;
 }
 
 // Free `p` and all ancestors of `p`.
