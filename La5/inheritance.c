@@ -41,7 +41,7 @@ person *create_family(int generations)
 {
     // TODO: Allocate memory for new person
 
-    person *p = malloc(sizeof(person));
+    person *parents = malloc(sizeof(person));
 
 
     // Generation with parent data
