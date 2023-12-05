@@ -48,6 +48,8 @@ person *create_family(int generations)
     if (generations > 1)
     {
         newPerson = crate_family(generation-1)
+        newPerson.alleles = newPerson->alleles[0];
+        newPerson.alleles = newPerson->alleles[0];
     }
 
     // Generation without parent data
