@@ -57,8 +57,8 @@ person *create_family(int generations)
         }
     else
         {
-            person.alleles[0] = person.parents[0]-->alleles[0];
-            person.alleles[1] = person.parents[1]-->alleles[0];
+            person.alleles[0] = person.parents[0]->alleles[0];
+            person.alleles[1] = person.parents[1]->alleles[0];
         }
     }
 
