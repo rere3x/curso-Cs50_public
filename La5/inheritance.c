@@ -43,6 +43,13 @@ person *create_family(int generations)
 
     person *person = malloc(sizeof(person));
 
+
+    // Generation with parent data
+    if (generations > 1)
+    {
+        // TODO: Recursively create blood type histories for parents
+
+        // TODO: Randomly assign child alleles based on parents
     if (person.parents != NULL)
         {
             person.alleles[0] = srand();
@@ -53,13 +60,6 @@ person *create_family(int generations)
             person.alleles[0] = person.parents[0]-->alleles[0];
             person.alleles[1] = person.parents[1]-->alleles[0];
         }
-
-    // Generation with parent data
-    if (generations > 1)
-    {
-        // TODO: Recursively create blood type histories for parents
-
-        // TODO: Randomly assign child alleles based on parents
     }
 
     // Generation without parent data
