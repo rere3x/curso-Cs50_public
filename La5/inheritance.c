@@ -50,16 +50,8 @@ person *create_family(int generations)
         // TODO: Recursively create blood type histories for parents
 
         // TODO: Randomly assign child alleles based on parents
-    if (person.parents != NULL)
-        {
-            person.alleles[0] = srand();
-            person.alleles[1] = srand();
-        }
-    else
-        {
-            person.alleles[0] = person.parents[0]->alleles[0];
-            person.alleles[1] = person.parents[1]->alleles[0];
-        }
+            
+
     }
 
     // Generation without parent data
