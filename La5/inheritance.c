@@ -45,7 +45,13 @@ person *create_family(int generations)
 
     if (person.parents != NULL)
         {
-            
+            person.alleles[0] = srand();
+            person.alleles[1] = srand();
+        }
+    else
+        {
+            person.alleles[0] = person.parents[0]-->alleles[0];
+            person.alleles[1] = person.parents[1]-->alleles[0];
         }
 
     // Generation with parent data
