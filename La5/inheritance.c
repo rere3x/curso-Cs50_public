@@ -48,8 +48,8 @@ person *create_family(int generations)
     if (generations > 1)
     {
         // TODO: Recursively create blood type histories for parents
-        newPerson->parents[0] = create_family(generation - 1);
-        newPerson->parents[1] = create_family(generation - 1);
+        newPerson->parents[0] = create_family(generations - 1);
+        newPerson->parents[1] = create_family(generations - 1);
 
         // TODO: Randomly assign child alleles based on parents
         newPerson->alleles[0] = newPerson->parent[0]->alleles[rand() % 2];
