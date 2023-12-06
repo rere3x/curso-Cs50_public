@@ -7,7 +7,7 @@
 
 // Each person has two parents and two alleles
 typedef struct person
-{
+{   
     struct person *parents[2];
     char alleles[2];
 }
