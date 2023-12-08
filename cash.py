@@ -2,17 +2,11 @@ from cs50 import get_float
 
 def main ():
 
-    prodecutPrice = get_float("Your cash: ")
-    while prodecutPrice < 0.00001:
-        prodecutPrice = get_float("Your cash: ")
-
     answer = get_float("Your cash: ")
     while answer < 0.00001:
         answer = get_float("Your cash: ")
 
-    change value
-
-    print(coins())
+    print(coins(answer))
 
 
 
