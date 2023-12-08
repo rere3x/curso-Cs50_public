@@ -11,8 +11,8 @@ y = " "
 for y in text:
     words += 1
 
-letters = len(text) - (senteses + words)
+letters = len(text) - (sentenses + words)
 
 letters = letters/words
 
-print((0.0588 * letters) - (0.296 * senteses) - 15.8)
+print((0.0588 * letters) - (0.296 * sentenses) - 15.8)
