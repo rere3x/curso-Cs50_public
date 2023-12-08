@@ -8,7 +8,7 @@ while len(number) < 15:
 if number[0] == '3':
     print("AMEX")
 elif number[0] == '5':
-    print("MASTERCAD")
+    print("MASTERCARD")
 elif number[0] == '4':
     print("VISA")
 else:
