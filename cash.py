@@ -17,7 +17,7 @@ def coins(value):
     newValue = int(value * 100)
     print(newValue)
     if (newValue/25) > 0:
-        coins = coins + (newValue/25)
+        coins = coins + int(newValue/25)
         newValue = newValue%25
         print(f"new {newValue}")
         print (f"coins {coins}")
