@@ -4,4 +4,5 @@ altura = get_int("indique a altura: ")
 
 while True:
     print(" "*(altura - 1))
-    print("#" * altura)
+    print("#" * altura + 1)
+    altura -= 1
