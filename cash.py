@@ -23,19 +23,19 @@ def coins(value):
         print (f"coins {coins}")
 
     if (newValue/10) > 0:
-        coins = coins + (newValue/10)
+        coins = coins + int(newValue/10)
         newValue = newValue%10
         print(f"new {newValue}")
         print (f"coins {coins}")
 
     if (newValue/5) > 0:
-        coins = coins + (newValue/5)
+        coins = coins + int(newValue/5)
         newValue = newValue%5
         print(f"new {newValue}")
         print (f"coins {coins}")
 
     if (newValue/1) > 0:
-        coins = coins + (newValue/1)
+        coins = coins + int(newValue/1)
         print(f"new {newValue}")
         print (f"coins {coins}")
     return coins
