@@ -8,7 +8,7 @@ def main ():
 
     change = coins(answer)
 
-    def coins(answer):
+    def int coins(answer):
         coins = 0
         x = int(answer * 100)
         if (x/25) > 0:
@@ -23,5 +23,6 @@ def main ():
         if (x/1) > 0:
             coins = coins + (x/1)
             print("Coins owed: "+coins)
+        return coins
 
 main ()
