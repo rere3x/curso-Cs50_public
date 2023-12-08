@@ -3,7 +3,7 @@ from cs50 import get_float
 
 
 answer = get_float("Your cash: ")
-    while answer < 0.01:
+while answer < 0.01:
     answer = get_float("Your cash: ")
 
 print(coins(answer))
