@@ -12,6 +12,7 @@ for y in text:
     words += 1
 
 letters = len(text) - (sentenses + words)
+print(letters)
 
 letters = letters/words
 
