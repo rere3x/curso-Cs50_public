@@ -6,9 +6,9 @@ def main ():
     while answer < 0.00001:
         answer = get_float("Your cash: ")
 
-    change = coins(answer)
+    change = coins()
 
-    def int coins(answer):
+    def int coins():
         coins = 0
         x = int(answer * 100)
         if (x/25) > 0:
