@@ -1,6 +1,6 @@
 from cs50 import get_float
 
-def main ()
+def main ():
 answer = get_float("Your cash: ")
 while answer < 0.00001:
     answer = get_float("Your cash: ")
