@@ -1,2 +1,5 @@
+from cs50 import get_int
 
-in
+altura = get_int("indique a altura: ")
+
+
