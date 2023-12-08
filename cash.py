@@ -7,6 +7,8 @@ while answer < 0.00001:
 change = coins(answer)
 
 def coins(answer)
+    coins = 0
     x = int(answer * 100)
-    x / 25 > 0
+    if (x/25) > 0:
+        coins = coins + (x/25)
 
