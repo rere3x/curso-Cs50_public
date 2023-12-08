@@ -1,6 +1,6 @@
 
-from cs50 import get_int
+from cs50 import get_string
 
-number = get_int("Card number: ")
+number = get_string("Card number: ")
 while number.len != 15:
-    number= get_int("Card number: ")
+    number= get_string("Card number: ")
