@@ -8,5 +8,5 @@ change = coins(answer)
 
 def coins(answer)
     x = int(answer * 100)
-    
+    x / 25 > 0
 
