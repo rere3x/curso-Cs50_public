@@ -8,10 +8,10 @@ def main ():
 
     change = coins(answer)
 
-    def coins(x):
+    def coins(value):
         coins = 0
 
-        x = int(x * 100)
+        newValue = int(value * 100)
         if (x/25) > 0:
             coins = coins + (x/25)
             x = x%25
