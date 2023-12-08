@@ -1,10 +1,11 @@
 from cs50 import get_string
 
 text = get_string("Digite seu texto: ")
-
-for ['?', '!', '.'] in text:
+x = {'?', '!', '.'}
+for x in text:
     sentenses += 1
-for ' ' in text
+y = " "
+for y in text:
     words += 1
 
 letters = len(text) - (senteses + words)
