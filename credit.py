@@ -11,7 +11,7 @@ elif number[0] == '5':
     print("MASTERCAD")
 elif number[0] == '4':
     print("VISA")
-else
+else:
     print("INVALID")
 
 
