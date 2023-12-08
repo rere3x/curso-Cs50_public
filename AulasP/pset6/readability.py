@@ -9,4 +9,4 @@ for ' ' in text
 
 letters = len(text) - (senteses + words)
 
-print (0,0588 * letters - 0,296 * senteses - 15,8)
+print(0,0588 * letters - 0,296 * senteses - 15,8)
