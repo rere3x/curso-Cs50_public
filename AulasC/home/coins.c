@@ -8,9 +8,9 @@ float positive_int(void);
 
 int main(void)
 {
-    float valoritem = positive_int();
+    float valoritem     = positive_int();
     float valorDinheiro = get_money();
-    int trocoInt = troco (valoritem,valorDinheiro);
+    int   trocoInt      = troco (valoritem,valorDinheiro);
 
 
     int coin25 = 0;
