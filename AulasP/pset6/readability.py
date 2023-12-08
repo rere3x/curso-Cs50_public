@@ -1,7 +1,10 @@
 from cs50 import get_string
 
 text = get_string("Digite seu texto: ")
+
 x = {'?', '!', '.'}
+sentenses = 1
+words = 0
 for x in text:
     sentenses += 1
 y = " "
