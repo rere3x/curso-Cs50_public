@@ -1,4 +1,6 @@
-from cs50 import get_int
+from cs50 import get_float
 
-answer = get_int("Your cash: ")
+answer = get_float("Your cash: ")
+if (answer > -1):
+    
 
