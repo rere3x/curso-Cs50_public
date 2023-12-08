@@ -19,25 +19,25 @@ def coins(value):
     if (newValue/25) > 0:
         coins = coins + (newValue/25)
         newValue = newValue%25
-        print("new" + newValue)
-        print ("coins" + coins)
+        print(f"new {newValue}")
+        print (f"coins {coins}")
 
     if (newValue/10) > 0:
         coins = coins + (newValue/10)
         newValue = newValue%10
-        print("new" + newValue)
-        print ("coins" + coins)
+        print(f"new {newValue}")
+        print (f"coins {coins}")
 
     if (newValue/5) > 0:
         coins = coins + (newValue/5)
         newValue = newValue%5
-        print("new" + newValue)
-        print ("coins" + coins)
+        print(f"new {newValue}")
+        print (f"coins {coins}")
 
     if (newValue/1) > 0:
         coins = coins + (newValue/1)
-        print("new" + newValue)
-        print ("coins" + coins)
+        print(f"new {newValue}")
+        print (f"coins {coins}")
     return coins
 
 main()
