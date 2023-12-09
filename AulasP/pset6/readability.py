@@ -5,7 +5,7 @@ text = get_string("Digite seu texto: ")
 print (text)
 sentenses = 0
 words = 0
-for x in text:
+for  in text:
     sentenses += 1
     print(sentenses)
 y = " "
