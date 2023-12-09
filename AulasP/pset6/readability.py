@@ -2,18 +2,11 @@ from cs50 import get_string
 
 text = get_string("Digite seu texto: ")
 
-print (text)
-sentenses = 0
-words = 0
-for  in text:
-    sentenses += 1
-    print(sentenses)
-y = " "
-for y in text:
-    words += 1
-    print(words)
 
-letters = len(text) - (sentenses + words)
+sentenses = text.punctuation
+words = text.whitespace
+letters = text.ascii_letters
+
 print(letters)
 
 letters = letters/words
