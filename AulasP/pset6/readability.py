@@ -5,7 +5,8 @@ text = get_string("Digite seu texto: ")
 
 sentenses = 0
 for string.punctuation in text:
-    sentenses +=1
+    
+
 
 
 
