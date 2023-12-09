@@ -4,7 +4,7 @@ import _string
 text = get_string("Digite seu texto: ")
 
 
-sentenses = text.punctuation
+sentenses = punctuation(text)
 words = text.whitespace
 letters = text.ascii_letters
 
