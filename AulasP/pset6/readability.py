@@ -2,7 +2,7 @@ from cs50 import get_string
 
 text = get_string("Digite seu texto: ")
 
-x = {'?', '!', '.'}
+x = '?', '!', '.'
 sentenses = 0
 words = 0
 for x in text:
