@@ -5,6 +5,7 @@ text        = get_string("Digite seu texto: ")
 letters    = 0
 words       = 0
 sentenses   = 0
+print(string.punctuation)
 
 for i in range(len(text)):
     if str.isalpha(text[i]):
