@@ -2,13 +2,13 @@ from cs50 import get_string
 
 
 text = get_string("Digite seu texto: ")
-words = 
+words =
 sentenses = 0
 for i in range(len(text)):
     if str.isalpha(text[i]):
         words +=1
 for i in range(len(text)):
-    if str.isalpha(text[i]):
+    if str.isspace(text[i]):
         words +=1
 
 
