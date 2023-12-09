@@ -1,13 +1,11 @@
 from cs50 import get_string
-
+import string
 
 text = get_string("Digite seu texto: ")
 
-print(string.punctuation)
 sentenses = 0
-#for string.punctuation in text:
-#   sentenses +=1
- #   print(sentenses)
+for string.punctuation in text:
+    sentenses +=1
 
 
 
