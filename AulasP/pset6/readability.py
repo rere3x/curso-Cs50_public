@@ -17,6 +17,7 @@ for i in range(len(text)):
 for i in range(len(text)):
     if string.punctuation in text:
         sentenses +=1
+        
 print(f"{letters}, {words}, {sentenses}")
 
 print((0.0588 * letters) - (0.296 * sentenses) - 15.8)
