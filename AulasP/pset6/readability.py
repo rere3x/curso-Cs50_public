@@ -1,4 +1,5 @@
 from cs50 import get_string
+import _string
 
 text = get_string("Digite seu texto: ")
 
