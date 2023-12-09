@@ -15,8 +15,8 @@ for i in range(len(text)):
     if str.isspace(text[i]):
         words +=1
 for i in range(len(text)):
-    if ('?' or '!' or '.') in text[i]:
-        sentenses +=1
+    
+        print(text[i])
 
 print(f"{letters}, {words}, {sentenses}")
 
