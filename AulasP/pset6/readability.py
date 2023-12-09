@@ -15,9 +15,9 @@ for i in range(len(text)):
     if str.isspace(text[i]):
         words +=1
 for i in range(len(text)):
-    if string.punctuation in text:
+    if ('?' or '!' or '.') in text:
         sentenses +=1
-        
+
 print(f"{letters}, {words}, {sentenses}")
 
 print((0.0588 * letters) - (0.296 * sentenses) - 15.8)
