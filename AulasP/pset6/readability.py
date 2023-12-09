@@ -5,7 +5,10 @@ text = get_string("Digite seu texto: ")
 
 sentenses = 0
 for i in range(len(text + 1)):
-    if text[i]
+    if isalpha(text[i]):
+        sentenses +=1
+
+
 
 
 
