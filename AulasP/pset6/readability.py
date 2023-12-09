@@ -15,7 +15,7 @@ for i in range(len(text)):
     if str.isspace(text[i]):
         words +=1
 for i in range(len(text)):
-    
+    if '.' in text[i]:
         print(text[i])
 
 print(f"{letters}, {words}, {sentenses}")
