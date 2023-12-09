@@ -4,8 +4,8 @@ import string
 text = get_string("Digite seu texto: ")
 
 sentenses = 0
-for string.punctuation in text:
-    
+for len(text)  text:
+
 
 
 
