@@ -1,19 +1,17 @@
 from cs50 import get_string
-import string
+
 
 text = get_string("Digite seu texto: ")
 
-
+print(string.punctuation)
 sentenses = 0
+#for string.punctuation in text:
+#   sentenses +=1
+ #   print(sentenses)
 
-for string.punctuation in text:
-    sentenses +=1
-    print(sentenses)
 
 
-print(letters)
+#letters = letters/words
+#print(letters)
 
-letters = letters/words
-print(letters)
-
-print((0.0588 * letters) - (0.296 * sentenses) - 15.8)
+#print((0.0588 * letters) - (0.296 * sentenses) - 15.8)
