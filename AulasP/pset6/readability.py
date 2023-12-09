@@ -4,7 +4,7 @@ import string
 text = get_string("Digite seu texto: ")
 
 sentenses = 0
-for len(text)  text:
+for i in range(len(text)):
 
 
 
