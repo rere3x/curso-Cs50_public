@@ -1,11 +1,11 @@
 from cs50 import get_string
-from 
+
 
 text = get_string("Digite seu texto: ")
 
 sentenses = 0
 for i in range(len(text)):
-    if isalpha(text[i]):
+    #if str.isalpha(text[i]):
         sentenses +=1
         print(sentenses)
 
