@@ -10,6 +10,10 @@ for i in range(len(text)):
 for i in range(len(text)):
     if str.isspace(text[i]):
         words +=1
+for i in range(len(text)):
+    if str.find(string.punctuation) in text:
+        
+
 
 
 
