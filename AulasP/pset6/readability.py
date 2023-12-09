@@ -1,12 +1,13 @@
 from cs50 import get_string
-import string
+from 
 
 text = get_string("Digite seu texto: ")
 
 sentenses = 0
-for i in range(len(text + 1)):
+for i in range(len(text)):
     if isalpha(text[i]):
         sentenses +=1
+        print(sentenses)
 
 
 
