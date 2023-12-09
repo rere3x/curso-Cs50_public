@@ -1,10 +1,10 @@
 from cs50 import get_string
-import _string
+import string
 
 text = get_string("Digite seu texto: ")
 
 
-sentenses = punctuation(text)
+sentenses = string.punctuation(text)
 words = text.whitespace
 letters = text.ascii_letters
 
