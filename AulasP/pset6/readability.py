@@ -4,9 +4,12 @@ import string
 text = get_string("Digite seu texto: ")
 
 
-sentenses = text.punctuation
-words = text.whitespace
-letters = text.ascii_letters
+sentenses = 0
+
+for string.punctuation in text:
+    sentenses +=1
+    print(sentenses)
+
 
 print(letters)
 
