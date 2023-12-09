@@ -17,7 +17,7 @@ for i in range(len(text)):
 for i in range(len(text)):
 
     if  in text[i]:
-        print(text[i])
+
 
 print(f"{letters}, {words}, {sentenses}")
 
