@@ -23,7 +23,7 @@ for i in range(len(sequence)):
         for l in range(len(database_data[0][j + 1])):
             if (l + i) >= len(sequence):
                 break
-            if database_data[0][j + 1][l] != sequence[l + i]:
+            elif database_data[0][j + 1][l] != sequence[l + i]:
                 test_count = 0
                 break
             else:
