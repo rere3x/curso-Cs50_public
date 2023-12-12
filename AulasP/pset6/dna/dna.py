@@ -17,6 +17,9 @@ for i in range(len(sequence)):
     for j in range(len(database[0]) - 1)
         for l in range(len(database[0][j + 1]))
             if database[0][j + 1][l] != sequence[i]:
-                
+                print("N")
+            else
+                print("S")
+
 
 
