@@ -22,11 +22,14 @@ for i in range(len(sequence)):
         for l in range(len(database_data[0][j + 1])):
             test_count = 0
             if database_data[0][j + 1][l] != sequence[l + i]:
+                test_count = 0
                 break
             else:
                 test_count += 1
 
             if len(database_data[0][j + 1]) == test_count:
 
-                dna_count += 1
+                dna_count[j] += 1
+    print(dna_count[j])
+
 
