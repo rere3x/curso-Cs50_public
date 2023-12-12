@@ -38,7 +38,7 @@ for i in range(len(database_data) - 1):
 
     for j in range(len(database_data[i + 1])):
 
-        if dna_count[j] == database_data[i + 1][j]:
+        if dna_count[j] == len(database_data[i + 1][j]):
             check_count += 1
         else:
             check_count = 0
