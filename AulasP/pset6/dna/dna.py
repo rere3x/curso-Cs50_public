@@ -18,7 +18,5 @@ for i in range(len(sequence)):
     for j in range(len(database_data[0]) - 1):
 
         for l in range(len(database_data[0][j + 1])):
-
-            test_match[l] = sequence[l]
-            if database_data[0][j + 1][l] != test_match[l]:
+            if database_data[0][j + 1][l] != sequence[l]:
 
