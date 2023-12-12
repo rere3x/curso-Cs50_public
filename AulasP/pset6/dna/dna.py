@@ -18,7 +18,12 @@ for i in range(len(sequence)):
     for j in range(len(database_data[0]) - 1):
 
         for l in range(len(database_data[0][j + 1])):
+            count = 0
             if database_data[0][j + 1][l] != sequence[l + i]:
                 break
-            
+            else:
+                count += 1
+            if count == test:
+
+                dna_count += 1
 
