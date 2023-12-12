@@ -23,5 +23,11 @@ letters = round((letters / words) * 100, 2)
 sentenses = round((sentenses / words) * 100, 2)
 
 result = (0.0588 * letters) - (0.296 * sentenses) - 15.8
-print("Grade: " + str(round(result)))
+
+if result in range (1,16):
+    print("Grade: " + str(round(result)))
+elif result < 1:
+    print ("Before Grade 1.")
+else:
+    print("Grade 16+")
 
