@@ -14,11 +14,11 @@ with open(sys.argv[2], 'r') as sequence_file:
     sequence = sequence_file.read()
 
 for i in range(len(sequence)):
-    for j in range(len(database[0]) - 1)
-        for l in range(len(database[0][j + 1]))
+    for j in range(len(database[0]) - 1):
+        for l in range(len(database[0][j + 1])):
             if database[0][j + 1][l] != sequence[i]:
                 print("N")
-            else
+            else:
                 print("S")
 
 
