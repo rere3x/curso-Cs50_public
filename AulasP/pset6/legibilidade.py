@@ -3,7 +3,7 @@ import string
 
 text        = get_string("Digite seu texto: ")
 letters    = 0
-words       = 1
+words       = 0
 sentenses   = 0
 
 
@@ -16,7 +16,7 @@ for i in range(len(text)):
         words +=1
 
 for i in range(len(text)):
-    if  '!' or '?' or '.' in  text[i]:
+    if  text[i] in ['!', '?', '.']:
         sentenses +=1
 
 print(f"{letters}, {words}, {sentenses}")
