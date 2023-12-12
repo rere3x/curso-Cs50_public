@@ -8,3 +8,4 @@ if len(sys.argv) < 2:
 
 with open(sys.argv[1], 'r') as database:
     database_reader = csv.reader(database)
+    
