@@ -10,6 +10,6 @@ with open(sys.argv[1], 'r') as database:
     database_reader = csv.reader(database)
     database_data = [row for row in database_reader]
 
-with open(sys.argv[2], 'r') as sequence:
-    sequence_reader = sequence.read()
+with open(sys.argv[2], 'r') as sequence_file:
+    sequence = sequence.read()
 
