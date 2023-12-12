@@ -13,5 +13,6 @@ with open(sys.argv[1], 'r') as database:
 with open(sys.argv[2], 'r') as sequence_file:
     sequence = sequence_file.read()
 
-for len(database_data) 
+for len(database_data) in database:
+    
 
