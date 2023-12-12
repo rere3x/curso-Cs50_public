@@ -23,5 +23,5 @@ letters = round((letters / words) * 100, 2)
 sentenses = round((sentenses / words) * 100, 2)
 
 result = (0.0588 * letters) - (0.296 * sentenses) - 15.8
-
+print(round (result))
 
