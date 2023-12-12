@@ -3,7 +3,7 @@ import string
 
 text        = get_string("Digite seu texto: ")
 letters    = 0
-words       = 0
+words       = 1
 sentenses   = 0
 
 
