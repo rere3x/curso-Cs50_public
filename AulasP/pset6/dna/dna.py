@@ -20,4 +20,5 @@ for i in range(len(sequence)):
         for l in range(len(database_data[0][j + 1])):
 
             test_match[l] = sequence[l]
+            if database_data[0][j + 1][]
 
