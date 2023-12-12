@@ -7,4 +7,4 @@ if len(sys.argv) < 2:
     sys.exit(1)
 
 with open(sys.argv[1], 'r') as database:
-    databaseReader = csv.reader(database)
+    database_reader = csv.reader(database)
