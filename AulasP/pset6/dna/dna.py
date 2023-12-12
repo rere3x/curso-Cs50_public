@@ -1,4 +1,5 @@
 import csv
 import sys
 
-with open(ag)
+with open(sys.argv[1], 'r') as file:
+    
