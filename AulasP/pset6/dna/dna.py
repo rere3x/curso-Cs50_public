@@ -13,5 +13,4 @@ with open(sys.argv[1], 'r') as database:
 with open(sys.argv[2], 'r') as sequence_file:
     sequence = sequence_file.read()
 
-#quero armazenar o valor em string de cada elemento da primeira linha do arquivo csv
-#e conferir quantas vezes a sequencia se repete
+for len(database_data[0][1])
