@@ -19,10 +19,10 @@ for i in range(len(text)):
     if  text[i] in ['!', '?', '.']:
         sentenses +=1
 
-letters = round((letters / words) * 100, 2)
-sentenses = round((sentenses / words) * 100, 2)
+letters     = round((letters / words) * 100, 2)
+sentenses   = round((sentenses / words) * 100, 2)
 
-result = round((0.0588 * letters) - (0.296 * sentenses) - 15.8)
+result      = round((0.0588 * letters) - (0.296 * sentenses) - 15.8)
 print(result)
 
 if result in range (1, 17):
