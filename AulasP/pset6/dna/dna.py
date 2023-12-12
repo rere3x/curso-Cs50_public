@@ -40,7 +40,6 @@ for i in range(len(database_data) - 1):
             check_count += 1
         else:
             check_count = 0
-
     if check_count == len(database_data[i + 1]):
         print(database_data[i + 1][0])
 
