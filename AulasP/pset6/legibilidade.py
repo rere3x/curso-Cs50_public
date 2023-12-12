@@ -18,7 +18,8 @@ for i in range(len(text)):
 for i in range(len(text)):
     if  text[i] in ['!', '?', '.']:
         sentenses +=1
-
+letters = round((letters / words) * 100)
+sentenses = round((sentenses / words) * 100)
 print(f"{letters}, {words}, {sentenses}")
 
 print((0.0588 * letters) - (0.296 * sentenses) - 15.8)
