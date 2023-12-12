@@ -26,7 +26,7 @@ for i in range(len(sequence)):
                 break
             else:
                 test_count += 1
-            if dna_count == test_count:
+            if dna_count[]== test_count:
 
                 dna_count += 1
 
