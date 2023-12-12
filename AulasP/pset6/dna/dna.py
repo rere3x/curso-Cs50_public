@@ -13,7 +13,7 @@ with open(sys.argv[1], 'r') as database:
 with open(sys.argv[2], 'r') as sequence_file:
     sequence = sequence_file.read()
 
-for len(sequence) in sequence:
-    for len(database[0] - 1) in database_data:
+for i in range(len(sequence)):
+    for j in range(len(database[0]))
     if database_data[0][i + 1][0] == sequence[i]:
-        
+
