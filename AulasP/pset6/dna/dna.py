@@ -33,11 +33,9 @@ for i in range(len(sequence)):
 
                 dna_count[j] += 1
 
-check_count = 0
 for i in range(len(database_data) - 1):
-    for j in range(len(database_data[i + 1])):
-        if 
-    if check_count == len(database_data[i + 1]):
+    for j in range(len(database_data[i + 1]) - 1):
+        if dna_count[j] != database_data[i + 1][j + 1]
         print(database_data[i + 1][0])
 
 
