@@ -13,7 +13,7 @@ with open(sys.argv[1], 'r') as database:
 with open(sys.argv[2], 'r') as sequence_file:
     sequence = sequence_file.read()
 
-dna_count[len(database_data[0]) - 1] = 0
+dna_count = [0] * len(database_data[0]) - 1
 
 for i in range(len(sequence)):
 
