@@ -15,4 +15,5 @@ with open(sys.argv[2], 'r') as sequence_file:
 
 for len(sequence) in sequence:
     for len(database[0] - 1) in database_data:
-    if database_data[0][i + 1][0] == sequence[i]
+    if database_data[0][i + 1][0] == sequence[i]:
+        
