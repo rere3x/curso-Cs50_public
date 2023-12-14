@@ -41,9 +41,9 @@ for i in range(len(database_data) - 1):
 
         if right_count == int(len(database_data[i]) - 1):
             print(database_data[i + 1][0])
-            
+            sys.exit()
 
-
+print("No match")
 
 
 
