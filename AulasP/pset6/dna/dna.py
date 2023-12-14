@@ -32,12 +32,6 @@ for i in range(len(sequence)):
             if len(database_data[0][j + 1]) == test_count:
 
                 dna_count[j] += 1
-print(dna_count[0])
-print(dna_count[1])
-print(dna_count[2])
-print()
-
-print()
 
 for i in range(len(database_data) - 1):
     right_count = 0
@@ -47,6 +41,7 @@ for i in range(len(database_data) - 1):
 
         if right_count == int(len(database_data[i]) - 1):
             print(database_data[i + 1][0])
+            
 
 
 
