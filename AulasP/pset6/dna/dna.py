@@ -33,7 +33,7 @@ for i in range(len(sequence)):
 
                 dna_count[j] += 1
 right_count = 0
-for i in range(len(database_data)):
+for i in range(len(database_data) - 1):
     for l in range(len(database_data[i + 1]) - 1):
         if dna_count[i] != database_data[i + 1][l + 1]:
             break
