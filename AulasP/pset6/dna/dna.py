@@ -22,18 +22,18 @@ def read_csv(path):
         reader = csv.DictReader(csvfile)
         return {"columns": reader.fieldnames, "data": list(reader)}
 
-def Max_consecutive_reps(substring,strig):
+def Max_consecutive_reps(substring,string):
     total_reps = len(string)
     while (substring * total_reps) not in string and total_reps > 0:
         total_reps -= 1
     return total_reps
 
-
 def read_dna_sequence(path, sequences):
     with open(path) as file:
         dna_seq = file.read()
-        return {seq: str(max_consecutive_reps(seq, dna_seq)) for seq in sequences}
-def indentify_dna(user_data, seq_count):
+        return {seq: str(Max_consecutive_reps(seq, dna_seq)) for seq in sequences}
+
+def identify_dna(user_data, seq_count):
     return next(
         (data["name"] for data in user_data if seq_count.items() <= data.items()),
         "No match",
