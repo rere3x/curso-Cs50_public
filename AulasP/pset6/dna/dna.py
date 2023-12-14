@@ -49,7 +49,7 @@ for i in range(len(database_data) - 1):
             right_count += 1
             print(right_count)
 
-        if(len(database_data) == right_count):
+        if len(database_data[i + 1]) == right_count:
             print(database_data[i + 1][0])
 
 
