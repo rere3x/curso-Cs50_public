@@ -6,10 +6,15 @@ from sys import argv, exit
 def main()
     if argv != 3:
         print(f" Usage: python {argv[0]} data.csv sequence.txt")
-        exit(0)
+        exit(1)
 
         _,data_file, sequence_file = agrv
 
+        content = read_csv(data)
+        seq_count = read_dna_sequence(sequence_file, content["columns"][1:])
+
+        print(identify_dna(content["data"], seq_count))
+        exit(0)
 
 
 def read_csv(path):
