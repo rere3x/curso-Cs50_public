@@ -42,7 +42,7 @@ for i in range(len(database_data) - 1):
 
     for l in range(len(database_data[i + 1]) - 1):
 
-        print(int(database_data[i + 1][l + 1]))
+        print(len(database_data[i + 1]) - 1)
         if dna_count[i] != int(database_data[l + 1][i + 1]):
             break
         else:
