@@ -16,6 +16,7 @@ def read_csv(path):
     with open(path) as csvfile:
         reader = csv.DictReader(csvfile)
         return {"columns": reader.fieldnames, "data": list(reader)}
+def Max
 
 def read_dna_sequence(path, sequences)
     with open(path) as file:
