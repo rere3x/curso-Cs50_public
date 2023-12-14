@@ -15,10 +15,9 @@ with open(sys.argv[2], 'r') as sequence_file:
 
 dna_count = [0] * (len(database_data[0]) - 1)
 
-for i in range(6034):
-    print(i)
-
+for i in range(0, len(sequence)):
     for j in range(len(database_data[0]) - 1):
+        print (j)
         test_count = 0
         for l in range(len(database_data[0][j + 1])):
             if (l + i) >= len(sequence):
