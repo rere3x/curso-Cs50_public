@@ -17,10 +17,10 @@ dna_count = [0] * (len(database_data[0]) - 1)
 
 for i in range(len(sequence)):
 
-    for j in range(len(database_data[0]) - 1):
+    for j in range(len(database_data) - 1):
         test_count = 0
 
-        for l in range(len(database_data[0][j + 1])):
+        for l in range(len(database_data[j + 1][l + 1])):
             if (l + i) >= len(sequence):
                 break
             elif database_data[0][j + 1][l] != sequence[l + i]:
