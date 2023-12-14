@@ -39,7 +39,9 @@ print()
 
 for i in range(len(database_data) - 1):
     right_count = 0
+    
     for l in range(len(database_data[i + 1]) - 2):
+
         print(int(database_data[l + 1][i + 1]))
         if dna_count[i] != int(database_data[l + 1][i + 1]):
             break
