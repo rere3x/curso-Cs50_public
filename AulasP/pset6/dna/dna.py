@@ -44,9 +44,8 @@ for i in range(len(database_data) - 1):
     for j in range(len(database_data[i + 1]) - 1):
         if int(database_data[i + 1][j + 1]) == int(dna_count[j]):
             right_count += 1
-            print(right_count)
 
-        if right_count == int(database_data[i] - 1):
+        if right_count == int(len(database_data[i]) - 1):
             print(database_data[i + 1][0])
 
 
