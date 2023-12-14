@@ -15,7 +15,7 @@ def main()
 def read_csv(path):
     with open(path) as csvfile:
         reader = csv.DictReader(csvfile)
-        return {"columns": reader.fieldnames, "data":}
+        return {"columns": reader.fieldnames, "data": list(reader)}
 main()
 
 
