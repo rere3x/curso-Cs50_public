@@ -16,10 +16,10 @@ def read_csv(path):
     with open(path) as csvfile:
         reader = csv.DictReader(csvfile)
         return {"columns": reader.fieldnames, "data": list(reader)}
-    
+
 def Max_consecutive_reps(substring,strig)
     total_reps = len(string)
-    while (substring * total_reps) not in string and total_ > 0:
+    while (substring * total_reps) not in string and total_reps > 0:
         total_reps -= 1
     return total_reps
 
