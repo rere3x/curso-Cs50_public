@@ -16,6 +16,11 @@ def read_csv(path):
     with open(path) as csvfile:
         reader = csv.DictReader(csvfile)
         return {"columns": reader.fieldnames, "data": list(reader)}
+
+def read_dna_sequence(path, sequences)
+    with open(path) as file:
+        dna_seq = file.read()
+        return {seq: str(max_consecutive_reps(seq, dna_seq)) for seq in sequences}
 main()
 
 
