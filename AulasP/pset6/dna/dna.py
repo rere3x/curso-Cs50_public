@@ -33,9 +33,8 @@ for i in range(len(sequence)):
 
                 dna_count[j] += 1
 
-print(dna_count[0])
-print(dna_count[1])
-print(dna_count[2])
+for i in range(len(database_data[0]) - 1)
+
 
 
 
