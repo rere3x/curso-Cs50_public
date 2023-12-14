@@ -36,6 +36,8 @@ print(dna_count[0])
 print(dna_count[1])
 print(dna_count[2])
 print()
+print(len(database_data[1][2]))
+print()
 
 for i in range(len(database_data) - 1):
     right_count = 0
