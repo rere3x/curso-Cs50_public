@@ -16,7 +16,8 @@ def main():
 
     _,teams_to_read = argv
 
-    
+    with open(teams_to_read) as teams_
+
     teams = []
 
 
