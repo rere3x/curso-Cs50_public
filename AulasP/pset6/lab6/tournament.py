@@ -15,6 +15,7 @@ def main():
         sys.exit("Usage: python tournament.py FILENAME")
 
     _,teams_to_read = argv
+
     
     teams = []
 
