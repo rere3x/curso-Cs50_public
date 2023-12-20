@@ -16,12 +16,12 @@ def main():
 
     _,teams_to_read = argv
 
-    with open(teams_to_read) as teams_read
+    with open(teams_to_read) as teams_read:
         reader = csv.DictReader(teams_read)
 
-        teams = []
-        for row in reader
-            teams.append(row)
+    teams = []
+    for row in reader:
+        teams.append(row)
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
