@@ -15,8 +15,9 @@ def main():
         sys.exit("Usage: python tournament.py FILENAME")
 
     _,teams_to_read = argv
-    teams = [teams_to_read]
     
+    teams = []
+
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
