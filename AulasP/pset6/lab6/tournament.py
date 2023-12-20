@@ -13,7 +13,7 @@ def main():
     # Ensure correct usage
     if len(sys.argv) != 2:
         sys.exit("Usage: python tournament.py FILENAME")
-
+    _,teams_to_Read
     teams = []
     # TODO: Read teams into memory from file
 
