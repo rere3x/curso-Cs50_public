@@ -14,7 +14,7 @@ def main():
     if len(sys.argv) != 2:
         sys.exit("Usage: python tournament.py FILENAME")
 
-    _,teams_to_read = argv
+    _,teams_to_read = sys.argv
 
     with open(teams_to_read) as teams_read:
         reader = csv.DictReader(teams_read)
