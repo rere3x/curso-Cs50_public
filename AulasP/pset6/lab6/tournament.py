@@ -16,7 +16,9 @@ def main():
 
     _,teams_to_read = argv
 
-    with open(teams_to_read) as teams_
+    with open(teams_to_read) as teams_read
+    reader = csv.DictReader(teams_read)
+    
 
     teams = []
 
