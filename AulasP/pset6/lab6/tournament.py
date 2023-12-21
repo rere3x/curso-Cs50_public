@@ -25,7 +25,9 @@ def main():
         teams.append(row)
 
     counts = {}
-    # TODO: Simulate N tournaments and keep track of win counts
+    for _ in range(N):
+        winner = simulate_tournament(teams)
+        counts[winner["team"]] = counts.get(winner["team"], 0) + 1
 
 
     # Print each team's chances of winning, according to simulation
