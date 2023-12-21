@@ -19,10 +19,10 @@ def main():
     with open(teams_to_read) as teams_read:
         reader = csv.DictReader(teams_read)
 
-    teams = []
-    for row in reader:
-        row["rating"] = int(row["rating"])
-        teams.append(row)
+        teams = []
+        for row in reader:
+            row["rating"] = int(row["rating"])
+            teams.append(row)
 
     counts = {}
     for _ in range(N):
