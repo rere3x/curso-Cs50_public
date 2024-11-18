@@ -1,4 +1,4 @@
-SELECT name FROM songs;
-SELECT name, tempo FROM songs ORDER BY tempo ASC;
-SELECT name FROM songs ORDER BY duration_ms DESC LIMIT 5;
-
+1.sql - SELECT name FROM songs;
+2.sql - SELECT name, tempo FROM songs ORDER BY tempo ASC;
+3.sql - SELECT name FROM songs ORDER BY duration_ms DESC LIMIT 5;
+4.sql - 
