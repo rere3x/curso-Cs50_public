@@ -5,4 +5,4 @@
 5.sql - SELECT AVG(energy) AS Average_energy FROM songs;
 6.sql - SELECT name AS "Post_Malone_songs" FROM songs WHERE artist_id = 54;
 7.sql - SELECT AVG(energy) AS "Average_energy_from_drake's_song" FROM songs WHERE artist_id = 23;
-8.sql - SELECT
+8.sql - SELECT name FROM songs where name LIKE "%feat%";
