@@ -1,1 +1,1 @@
-1.sql - SELECT name FROM songs;
+SELECT name FROM songs;
