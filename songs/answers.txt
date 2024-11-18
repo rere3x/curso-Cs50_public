@@ -1,0 +1,3 @@
+ To capture the listener's audio aura, you can look at the average danceability, energy, and valence of their top 100 songs.
+ However, this might not fully reflect their true preferences since it's based on limited data from a specific time.
+ Expanding the dataset and factoring in context or listening habits could give a more accurate picture.
