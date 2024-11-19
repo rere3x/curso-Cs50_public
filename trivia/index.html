@@ -11,7 +11,6 @@
                 let button = event.target;
                 if(button.innerHTML === "Right Value"){
                     button.style.backgroundcolor = "Green";
-                    button.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
                 }else{
                     button.style.backgroundcolor = "Red";
                 }
@@ -33,11 +32,11 @@
                 <h2>Part 1: Multiple Choice </h2>
                 <hr>
                     <h3>Texto de teste pra testar o teste mesmo, TESTANDO!!!</h3>
-                    <button onclick="checkchoices">Wrong Value</button>
-                    <button onclick="checkchoices">Wrong Value</button>
-                    <button onclick="checkchoices">Right Value</button>
-                    <button onclick="checkchoices">Wrong Value</button>
-                    <button onclick="checkchoices">Wrong Value</button>
+                    <button onclick="checkchoices(event)">Wrong Value</button>
+                    <button onclick="checkchoices(event)">Wrong Value</button>
+                    <button onclick="checkchoices(event)">Right Value</button>
+                    <button onclick="checkchoices(event)">Wrong Value</button>
+                    <button onclick="checkchoices(event)">Wrong Value</button>
 
             </div>
 
