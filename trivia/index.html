@@ -7,13 +7,18 @@
         <title>Trivia!</title>
         <script>
             // TODO: Add code to check answers to questions
-            function checkchoices(event) {
+            function checkchoices(event)
+            {
                 let button = event.target;
-                if(button.innerHTML === "Right Value"){
-                    button.style.backgroundcolor = "Green";
-                }else{
-                    button.style.backgroundcolor = "Red";
+
+                if (button.innerHTML == 'Right Value') {
+                    button.style.backgroundColor = 'Green';
+                    button.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
                 }
+                else
+                    {
+                        button.style.backgroundcolor = 'Red';
+                    }
 
             }
             function freeChoices(event) {
