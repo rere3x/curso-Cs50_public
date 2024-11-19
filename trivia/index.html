@@ -11,18 +11,34 @@
             {
                 let button = event.target;
 
-                if (button.innerHTML == 'Right Value') {
+                if (button.innerHTML == 'Right Value')
+                {
                     button.style.backgroundColor = 'Green';
                     button.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
                 }
                 else
-                    {
-                        button.style.backgroundcolor = 'Red';
-                    }
+                {
+                    button.style.backgroundColor = 'Red';
+                    button.parentElement.querySelector('.feedback').innerHTML = 'Incorrect!';
+                }
 
             }
-            function freeChoices(event) {
+            function freeChoices(event)
+            {
+                let button = event.target
 
+                let input = button.parentElement.querySelector('input');
+
+                if (input.value == 'Test')
+                {
+                    input.style.backgroundColor = 'Green';
+                    button.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
+                }
+                else
+                {
+                    button.style.backgroundcolor = 'Red';
+                    button.parentElement.querySelector('.feedback').innerHTML = 'Incorrect!';
+                }
             }
         </script>
     </head>
