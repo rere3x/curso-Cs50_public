@@ -11,7 +11,7 @@
                 let button = event.target;
                 if(button.innerHTML === "Right Value"){
                     button.style.backgroundcolor = "Green";
-                    
+                    button.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
                 }else{
                     button.style.backgroundcolor = "Red";
                 }
