@@ -15,11 +15,13 @@
                 {
                     button.style.backgroundColor = 'Green';
                     button.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
+                    button.parentElement.querySelector('.feedback').style.color = 'Green';
                 }
                 else
                 {
                     button.style.backgroundColor = 'Red';
                     button.parentElement.querySelector('.feedback').innerHTML = 'Incorrect!';
+                    button.parentElement.querySelector('.feedback').style.color = 'Red';
                 }
 
             }
