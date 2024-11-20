@@ -3,7 +3,7 @@ body {
     display: flex;                 /* Habilita o Flexbox */
     justify-content: center;       /* Centraliza horizontalmente */
     align-items: center;           /* Centraliza verticalmente */
-    height: 100vh;                 /* Faz o corpo da página ocupar toda a altura da janela */
+    height: 80vh;                 /* Faz o corpo da página ocupar toda a altura da janela */
     margin: 0;                     /* Remove a margem padrão */
     background: #f0f0f0;           /* Cor de fundo */
   }
