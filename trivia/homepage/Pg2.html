@@ -8,17 +8,28 @@
     <title>My Webpage</title>
 
     <script>
-
+        // Função para randomizar o texto
+        function SaveAnswer(id) {
+            // Salva o ID no localStorage
+            localStorage.setItem("selectedButtonId", id);
+            window.location.href = "Pg2.html";
+        }
     </script>
 </head>
-<a href="index.html">Go to index2</a>
 <body>
-    
     <div class="container">
-        <!-- Texto inicial -->
-        <p id="texto">está é a pagina 2</p>
+        <img src="Door.png" alt="oshi no ko" width="300">
 
     </div>
-
+    <div>
+        <p>Qual sentimento essa AI te traz </p>
+    </div>
+    <div>
+        <!-- Botão para randomizar o texto -->
+        <button id="btn1" onclick="SaveAnswer(this.id)">Feliz</button>
+        <button id="btn2" onclick="SaveAnswer(this.id)">Triste</button>
+        <button id="btn3" onclick="SaveAnswer(this.id)">Eu tenho que achar meu pai</button>
+        <button id="btn4" onclick="SaveAnswer(this.id)">Era uma boa cantora</button>
+    </div>
 </body>
 </html>
