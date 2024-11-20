@@ -8,11 +8,27 @@
     <title>My Webpage</title>
 
     <script>
-        // Função para randomizar o texto
+        // Função para carregar e exibir os valores armazenados
         window.onload = function() {
             const storedAnswers = JSON.parse(localStorage.getItem("answers")) || [];
-            
-            window.location.href = "Pg2.html";
+            const displayDiv = document.getElementById("display");
+
+            // Exibe os valores salvos
+            if (storedAnswers.length > 0) {
+                displayDiv.innerHTML = "Respostas salvas: " + storedAnswers.join(", ");
+            } else {
+                displayDiv.innerHTML = "Nenhuma resposta salva ainda.";
+            }
+        };
+
+        // Função para salvar novos IDs clicados
+        function SaveAnswer(id) {
+            let storedAnswers = JSON.parse(localStorage.getItem("answers")) || [];
+            storedAnswers.push(id);
+            localStorage.setItem("answers", JSON.stringify(storedAnswers));
+
+            // Atualiza a página para refletir o novo valor
+            location.reload();
         }
     </script>
 </head>
