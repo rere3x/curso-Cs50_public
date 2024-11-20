@@ -11,14 +11,6 @@
         // Função para carregar e exibir os valores armazenados
         window.onload = function() {
             const storedAnswers = JSON.parse(localStorage.getItem("answers")) || [];
-            const displayDiv = document.getElementById("display");
-
-            // Exibe os valores salvos
-            if (storedAnswers.length > 0) {
-                displayDiv.innerHTML = "Respostas salvas: " + storedAnswers.join(", ");
-            } else {
-                displayDiv.innerHTML = "Nenhuma resposta salva ainda.";
-            }
         };
 
         // Função para salvar novos IDs clicados
@@ -28,7 +20,7 @@
             localStorage.setItem("answers", JSON.stringify(storedAnswers));
 
             // Atualiza a página para refletir o novo valor
-            location.reload();
+            window.location.href = "index.html";
         }
     </script>
 </head>
