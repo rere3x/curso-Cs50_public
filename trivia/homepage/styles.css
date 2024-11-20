@@ -9,10 +9,9 @@ body {
 }
 
 .centercontainer {
-    margin-left: center;
-    margin-right: center;
-    padding-left: 15px;
-    padding-right: 15px;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .container {
