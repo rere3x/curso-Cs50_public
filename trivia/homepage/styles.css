@@ -11,6 +11,7 @@ body {
 .centercontainer {
     text-align: center;
     
+    align-items: center;
 }
 
 .container {
