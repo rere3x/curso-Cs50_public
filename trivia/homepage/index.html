@@ -9,12 +9,10 @@
 
     <script>
         // Função para randomizar o texto
-        function SaveAnswer(answer) {
-
-            localStorage.setItem("userAnswer", answer);
+        function SaveAnswer(id) {
+            // Salva o ID no localStorage
+            localStorage.setItem("selectedButtonId", id);
             window.location.href = "next_page.html";
-
-
         }
     </script>
 </head>
@@ -28,12 +26,10 @@
     </div>
     <div>
         <!-- Botão para randomizar o texto -->
-        <button onclick="SaveAnswer()">Feliz</button>
-        <button onclick="SaveAnswer()">Triste</button>
-        <button onclick="SaveAnswer()">Eu tenho que achar meu pai</button>
-        <button onclick="SaveAnswer()">Era uma boa cantera</button>
-
-
+        <button id="btn1" onclick="SaveAnswer(this.id)">Feliz</button>
+        <button id="btn2" onclick="SaveAnswer(this.id)">Triste</button>
+        <button id="btn3" onclick="SaveAnswer(this.id)">Eu tenho que achar meu pai</button>
+        <button id="btn4" onclick="SaveAnswer(this.id)">Era uma boa cantora</button>
     </div>
 </body>
 </html>
