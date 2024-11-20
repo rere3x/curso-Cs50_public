@@ -10,9 +10,17 @@
     <script>
         // Função para randomizar o texto
         function SaveAnswer(id) {
-            // Salva o ID no localStorage
-            localStorage.setItem("selectedButtonId", id);
-            window.location.href = "Pg2.html";
+            // Recupera os valores existentes no localStorage (ou cria um array vazio)
+            let storedAnswers = JSON.parse(localStorage.getItem("answers")) || [];
+
+            // Adiciona o novo ID ao array
+            storedAnswers.push(id);
+
+            // Atualiza o localStorage com os novos valores
+            localStorage.setItem("answers", JSON.stringify(storedAnswers));
+
+            // Redireciona para a próxima página
+            window.location.href = "next_page.html";
         }
     </script>
 </head>
