@@ -9,7 +9,10 @@ body {
   }
 
   .container {
-    text-align: center;            /* Centraliza o texto dentro do container */
+    display: flex;             /* Ativa o Flexbox dentro da div */
+    flex-direction: column;    /* Coloca os itens em coluna (um abaixo do outro) */
+    align-items: center;       /* Centraliza os itens horizontalmente */
+    text-align: center;        /* Centraliza o texto dentro dos itens */
     background: #fff;
     padding: 20px;
     border-radius: 10px;
