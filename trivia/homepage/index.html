@@ -8,8 +8,9 @@
     <title>My Webpage</title>
 
     <script>
-        function ChanceText(event){
-            
+        function ChangeText(event){
+            document.getElementById("texto 1").innerHTML = "A fernanda n sabe colocar o background"
+
         }
     </script>
 
@@ -17,10 +18,10 @@
 <body>
     <div class="container">
         <div class="item">
-            <p class="text-center">texto motivacional</p>
+            <p id="texto 1">Qual a tristeza do dia.</p>
         </div>
         <div>
-            <button>Show another Motivational Text</button>
+            <button onclick="ChangeText(event)"> botão test </button>
         </div>
     </div>
 </body>
