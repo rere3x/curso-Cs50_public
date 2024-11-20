@@ -9,7 +9,18 @@
 
     <script>
         function ChangeText(event){
-            document.getElementById("texto 1").innerHTML = "A fernanda n sabe colocar o background"
+
+            var texto = [
+
+            "Texto número 1: a fernanda n sabe colocar o background!",
+                "Texto número 2: n sabe fazer a flor ficar tranparente",
+                "Texto número 3: ta preciando dar uma sentada",
+                "Texto número 4: é burra"
+            ];
+
+            var indiceAleatorio = Math.floor(Math.random() * textos.length);
+
+                document.getElementById("texto").innerHTML = textos[indiceAleatorio];
 
         }
     </script>
@@ -18,7 +29,7 @@
 <body>
     <div class="container">
         <div class="item">
-            <p id="texto 1">Qual a tristeza do dia.</p>
+            <p id="texto">Qual a tristeza do dia.</p>
         </div>
         <div>
             <button onclick="ChangeText(event)"> botão test </button>
