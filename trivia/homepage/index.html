@@ -8,31 +8,32 @@
     <title>My Webpage</title>
 
     <script>
-        function ChangeText(event){
-
-            var texto = [
-                "Texto número 1: a fernanda n sabe colocar o background!",
-                "Texto número 2: n sabe fazer a flor ficar tranparente",
-                "Texto número 3: ta preciando dar uma sentada",
-                "Texto número 4: é burra"
+        // Função para randomizar o texto
+        function randomizarTexto() {
+            // Array com os textos
+            var textos = [
+                "Você pode conquistar o mundo!",
+                "A vida é uma aventura.",
+                " O sol sempre volta a brilhar.",
+                "Cada dia é uma nova chance.",
+                "Acredite em você!"
             ];
 
+            // Seleciona um índice aleatório do array de textos
             var indiceAleatorio = Math.floor(Math.random() * textos.length);
 
-                document.getElementById("texto").innerHTML = textos[indiceAleatorio];
-
+            // Altera o conteúdo do parágrafo para o texto aleatório
+            document.getElementById("texto").innerHTML = textos[indiceAleatorio];
         }
     </script>
-
 </head>
 <body>
-    <div class="container">
-        <div class="item">
-            <p id="texto">Verdades do dia</p>
-        </div>
-        <div>
-            <button onclick="ChangeText(event)"> botão test </button>
-        </div>
+    <div>
+        <!-- Texto inicial -->
+        <p id="texto">Clique no botão para ver um texto aleatório.</p>
+
+        <!-- Botão para randomizar o texto -->
+        <button onclick="randomizarTexto()">Randomizar Texto</button>
     </div>
 </body>
 </html>
