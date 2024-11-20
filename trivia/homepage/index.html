@@ -9,7 +9,11 @@
 
     <script>
         // Função para randomizar o texto
-        function SaveAnswer() {
+        function SaveAnswer(answer) {
+
+            localStorage.setItem("userAnswer", answer);
+            window.location.href = "next_page.html";
+
 
         }
     </script>
