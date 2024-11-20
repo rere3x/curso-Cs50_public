@@ -9,9 +9,9 @@
 
     <script>
         // Função para randomizar o texto
-        function SaveAnswer(id) {
-            // Salva o ID no localStorage
-            localStorage.setItem("selectedButtonId", id);
+        window.onload = function() {
+            const storedAnswers = JSON.parse(localStorage.getItem("answers")) || [];
+            
             window.location.href = "Pg2.html";
         }
     </script>
