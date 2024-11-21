@@ -8,16 +8,9 @@
     <title>My Webpage</title>
 
     <script>
-        // Função para randomizar o texto
-        function SaveAnswer(id) {
-            // Recupera os valores existentes no localStorage (ou cria um array vazio)
-            let storedAnswers = JSON.parse(localStorage.getItem("answers")) || [];
-
-            // Adiciona o novo ID ao array
-            storedAnswers.push(id);
-
-            // Atualiza o localStorage com os novos valores
-            localStorage.setItem("answers", JSON.stringify(storedAnswers));
+        function SaveAnswer(questionKey, answerText) {
+            // Salva a resposta no localStorage com a chave específica
+            localStorage.setItem(questionKey, answerText);
 
             // Redireciona para a próxima página
             window.location.href = "Pg2.html";
@@ -33,11 +26,11 @@
         <p>Qual dessas frases descrevem o que vc sente </p>
     </div>
     <div>
-        <!-- Botão para randomizar o texto -->
-        <button id="btn1" onclick="SaveAnswer(this.id)">Feliz</button>
-        <button id="btn2" onclick="SaveAnswer(this.id)">Triste</button>
-        <button id="btn3" onclick="SaveAnswer(this.id)">Eu tenho que achar meu pai</button>
-        <button id="btn4" onclick="SaveAnswer(this.id)">vingança</button>
+        <p>Qual dessas frases descrevem o que você sente?</p>
+        <button onclick="SaveAnswer('question1', 'Feliz')">Feliz</button>
+        <button onclick="SaveAnswer('question1', 'Triste')">Triste</button>
+        <button onclick="SaveAnswer('question1', 'Eu tenho que achar meu pai')">Eu tenho que achar meu pai</button>
+        <button onclick="SaveAnswer('question1', 'Vingança')">Vingança</button>
     </div>
 </body>
 </html>
