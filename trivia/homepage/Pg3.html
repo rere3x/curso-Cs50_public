@@ -8,19 +8,12 @@
     <title>My Webpage</title>
 
     <script>
-        // Função para carregar e exibir os valores armazenados
-        window.onload = function() {
-            const storedAnswers = JSON.parse(localStorage.getItem("answers")) || [];
-        };
+        function SaveAnswer(questionKey, answerText) {
+            // Salva a resposta no localStorage com a chave específica
+            localStorage.setItem(questionKey, answerText);
 
-        // Função para salvar novos IDs clicados
-        function SaveAnswer(id) {
-            let storedAnswers = JSON.parse(localStorage.getItem("answers")) || [];
-            storedAnswers.push(id);
-            localStorage.setItem("answers", JSON.stringify(storedAnswers));
-
-            // Atualiza a página para refletir o novo valor
-            window.location.href = "Pg4.html";
+            // Redireciona para a próxima página
+            window.location.href = "Pg3.html";
         }
     </script>
 </head>
@@ -34,10 +27,11 @@
     </div>
 
     <div>
-        <button id="btn1" onclick="SaveAnswer(this.id)">sensei...</button>
-        <button id="btn2" onclick="SaveAnswer(this.id)">um doutor?</button>
-        <button id="btn3" onclick="SaveAnswer(this.id)">era ai que eu tava</button>
-        <button id="btn4" onclick="SaveAnswer(this.id)">vingança</button>
+        <p>Qual dessas cores você prefere?</p>
+        <button onclick="SaveAnswer('question3', 'Azul')">Azul</button>
+        <button onclick="SaveAnswer('question3', 'Vermelho')">Vermelho</button>
+        <button onclick="SaveAnswer('question3', 'Verde')">Verde</button>
+        <button onclick="SaveAnswer('question3', 'Amarelo')">Amarelo</button>
     </div>
 </body>
 </html>
