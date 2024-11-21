@@ -10,20 +10,34 @@
 
 </head>
 <body>
-
-    <div class="container">
-        <p>Seus olhos de:</p>
-        <img src="Cartão.png" alt="oshi no ko" width="300">
-        <b>Olhos de Ruby</b>
+    <h1>Imagem Escolhida</h1>
+    <div id="image-container">
+        <!-- A imagem será exibida aqui -->
     </div>
 
-    <div>
-        <button onclick="window.location.href='index.html'">Refazer o teste</button>
-    </div>
-        <p>
-            vc se sento como xxxxxxx olhos da cor x e tudo que vc procura é x
-        </p>
+    <script>
+        // Mapeamento de números para imagens
+        const imageMapping = {
+            1: 'image1.png', // Substitua pelos caminhos das suas imagens
+            2: 'image2.png',
+            3: 'image3.jpg',
+        };
 
+        // Obtendo os parâmetros da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const num1 = parseInt(urlParams.get('num1'));
+        const num2 = parseInt(urlParams.get('num2'));
+        const num3 = parseInt(urlParams.get('num3'));
 
+        // Escolhendo uma imagem com base nos números (exemplo simples)
+        const chosenImage = imageMapping[Math.max(num1, num2, num3)] || 'default.jpg';
+
+        // Atualizando o HTML para exibir a imagem
+        const imageContainer = document.getElementById('image-container');
+        const imgElement = document.createElement('img');
+        imgElement.src = chosenImage;
+        imgElement.alt = "Imagem escolhida";
+        imageContainer.appendChild(imgElement);
+    </script>
 </body>
 </html>
