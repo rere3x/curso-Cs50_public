@@ -8,18 +8,11 @@
     <title>My Webpage</title>
 
     <script>
-        // Função para carregar e exibir os valores armazenados
-        window.onload = function() {
-            const storedAnswers = JSON.parse(localStorage.getItem("answers")) || [];
-        };
+        function SaveAnswer(questionKey, answerText) {
+            // Salva a resposta no localStorage com a chave específica
+            localStorage.setItem(questionKey, answerText);
 
-        // Função para salvar novos IDs clicados
-        function SaveAnswer(id) {
-            let storedAnswers = JSON.parse(localStorage.getItem("answers")) || [];
-            storedAnswers.push(id);
-            localStorage.setItem("answers", JSON.stringify(storedAnswers));
-
-            // Atualiza a página para refletir o novo valor
+            // Redireciona para a próxima página
             window.location.href = "Pg3.html";
         }
     </script>
