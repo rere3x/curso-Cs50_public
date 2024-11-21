@@ -8,24 +8,22 @@
     <title>My Webpage</title>
 </head>
 <body>
-    <h1>Imagem Escolhida</h1>
-    <div id="image-container">
-        <!-- A imagem será exibida aqui -->
-    </div>
-
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             // Recupera as respostas do localStorage
             const answer1 = localStorage.getItem("question1");
             const answer2 = localStorage.getItem("question2");
+            const answer3 = localStorage.getItem("question3");
 
             // Usa as respostas como necessário
             console.log("Resposta 1:", answer1);
             console.log("Resposta 2:", answer2);
+            console.log("Resposta 3:", answer3);
 
             // Exemplo: Exibindo no HTML (se necessário)
             document.getElementById("result1").textContent = answer1 || "Não respondida";
             document.getElementById("result2").textContent = answer2 || "Não respondida";
+            document.getElementById("result3").textContent = answer3 || "Não respondida";
         });
     </script>
 </body>
